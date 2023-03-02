@@ -309,7 +309,7 @@ div#masthead a {
 div#masthead img {
   display: inline-block;
   max-width: 20%;
-  padding-left: 0.5em !important;
+  padding-left: 0.3em !important;
   height: auto;
 }
 @media (min-width: 37.5em) {
@@ -447,16 +447,6 @@ footer p {
   color: #f1b712;
   float: right;
   text-decoration: underline;
-}
-.articles article .tags {
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-}
-.articles article .tags li {
-  float: left;
-  padding: 0;
 }
 
 /* END ARTICLES */
@@ -596,6 +586,17 @@ footer p {
 
 /* END ARTICLE */
 /* TAGS */
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.tags li {
+  float: left;
+  padding: 0;
+}
+
 .tag {
   background: #E1ECF4;
   border-radius: 3px;
@@ -610,11 +611,11 @@ footer p {
   -webkit-transition: color 0.2s;
 }
 .tag:hover {
-  background-color: crimson;
+  background-color: #f1b712;
   color: white;
 }
 .tag:hover::after {
-  border-left-color: crimson;
+  border-left-color: #f1b712;
 }
 
 .category-tag {
@@ -695,6 +696,10 @@ img.emoji {
 }
 
 .share_post span {
+  font-weight: 600;
+}
+
+.author_post span {
   font-weight: 600;
 }
 

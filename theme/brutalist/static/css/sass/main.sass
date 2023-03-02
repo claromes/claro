@@ -56,7 +56,7 @@ div#masthead
   img
     display: inline-block
     max-width: 20%
-    padding-left: 0.5em !important
+    padding-left: 0.3em !important
     height: auto
     @include breakpoint(small)
       max-width: 10%
@@ -155,14 +155,6 @@ footer
       color: $color-secondary
       float: right
       text-decoration: underline
-    .tags
-      list-style: none
-      margin: 0
-      overflow: hidden
-      padding: 0
-      li
-        float: left
-        padding: 0
 /* END ARTICLES */
 
 /* ARTICLE */
@@ -280,6 +272,14 @@ footer
 /* END ARTICLE */
 
 /* TAGS */
+.tags
+  list-style: none
+  margin: 0
+  overflow: hidden
+  padding: 0
+  li
+    float: left
+    padding: 0
 .tag
   background: $color-third
   border-radius: 3px
@@ -293,10 +293,10 @@ footer
   text-decoration: none
   -webkit-transition: color 0.2s
   &:hover
-    background-color: crimson
+    background-color: #f1b712
     color: white
     &::after
-      border-left-color: crimson
+      border-left-color: #f1b712
 
 .category-tag
   font-style: italic
@@ -361,6 +361,10 @@ img.emoji
   width: 100%
 
 .share_post
+  span
+    font-weight: 600
+
+.author_post
   span
     font-weight: 600
 

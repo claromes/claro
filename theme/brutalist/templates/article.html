@@ -60,9 +60,21 @@
       <div class="content">
          {{ article.content|safe }}
 
-         <p>
-          {{ article.author }}
+        <br>
+
+         <p class="author_post">
+          <span>by </span>{{ article.author }}
          </p>
+      </div>
+
+      <br>
+
+      <div class="tags">
+        <ul class="tags">
+        {% for tag in article.tags %}
+            <li><a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
+        {% endfor %}
+        </ul>
       </div>
 
       {% if article.share_post and article.status != 'draft' %}
