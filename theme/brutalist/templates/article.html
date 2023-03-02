@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
   {{ super() }}
+  <title>{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock title %}</title>
   {% if article.description %}
     <meta name="description" content="{{ article.description }}" />
   {% endif %}
@@ -15,16 +16,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
 <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
-{% elif GRAVATAR %}
+{% elif SITEIMAGE %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ GRAVATAR }}">
-{% elif LOGO %}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ SITEURL }}/images/{{ LOGO }}">
+<meta name="twitter:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
 {% endif %}
 <meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
 <meta name="twitter:title" content="{{ article.title }}">
 <meta name="twitter:description" content="{{ article.description }}">
+<meta name="twitter:image" content="{{ SITEURL }}/images/{{ LOGO }}">
 {% endblock twittercard %}
 <!-- OG Tags -->
 {% block ogtags %}
