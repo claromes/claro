@@ -12,13 +12,13 @@
 
 {% endblock %}
 {% block twittercard %}
-{% if article.cover_image %}
+{% if SITEIMAGE %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
+{% elif article.cover_image %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
 <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
-{% elif SITEIMAGE %}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
 {% endif %}
 <meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
 <meta name="twitter:title" content="{{ article.title }}">
@@ -30,7 +30,9 @@
 <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
 <meta property="og:title" content="{{ SITENAME }} | {{ article.title }}" />
 <meta property="og:description" content="{{ article.description }}" />
-{% if article.cover_image %}
+{% if SITEIMAGE %}
+<meta property="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}" />
+{% elif article.cover_image %}
 <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}" />
 {% endif %}
 {% endblock ogtags %}
