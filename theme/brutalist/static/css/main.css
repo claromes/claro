@@ -298,7 +298,7 @@ a {
   color: #232a2e;
 }
 a:hover {
-  color: #f1b712;
+  background-color: #f1b712;
 }
 
 /* END LINKS */
@@ -523,9 +523,11 @@ footer p {
   font-weight: 900;
 }
 .article article .content blockquote {
-  padding-left: 25px;
+  padding-left: 10px;
   font-weight: 300;
   color: #abb4b9;
+  border-left: 0.3rem solid;
+  margin: 0 25px 25px;
 }
 .article article .content ul, .article article .content ol {
   width: 85%;
