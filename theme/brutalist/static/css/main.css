@@ -298,7 +298,7 @@ a {
   color: #232a2e;
 }
 a:hover {
-  background-color: #f1b712;
+  color: #f1b712;
 }
 
 /* END LINKS */
@@ -375,6 +375,7 @@ div#masthead nav#menu li a {
   display: block;
   padding: 0.8em;
   text-decoration: none;
+  background-color: transparent;
 }
 @media (min-width: 55em) {
   div#masthead nav#menu li a {
