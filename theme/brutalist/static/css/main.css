@@ -298,6 +298,9 @@ a {
   color: #232a2e;
 }
 a:hover {
+  background-color: #f1b712;
+}
+a h2:hover {
   color: #f1b712;
 }
 
