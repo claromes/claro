@@ -1,8 +1,9 @@
 @charset "UTF-8";
 /************************
  * *
- * *Brutal Pelican Theme for mamcmanus.com
+ * *Brutalist Pelican Theme for mamcmanus.com
  * *© 2018 Matt McManus
+ * *Custom by Clarissa R Mendes
  * *
  * ***********************
  * */
@@ -380,6 +381,9 @@ div#masthead nav#menu li a {
   text-decoration: none;
   background-color: transparent;
 }
+div#masthead nav#menu li a:hover {
+  color: #f1b712;
+}
 @media (min-width: 55em) {
   div#masthead nav#menu li a {
     border: 0;
@@ -604,7 +608,7 @@ footer p {
 }
 
 .tag {
-  background: #E1ECF4;
+  background: #e1ecf4;
   border-radius: 3px;
   color: #f1b712;
   display: inline-block;
@@ -673,6 +677,9 @@ footer p {
 
 .icons {
   margin: 1em auto;
+}
+.icons a:hover {
+  background-color: transparent;
 }
 
 /* DISQUS COMMENTS */

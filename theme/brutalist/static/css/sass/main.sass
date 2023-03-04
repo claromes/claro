@@ -1,7 +1,8 @@
 /************************
  *
- *Brutal Pelican Theme for mamcmanus.com
+ *Brutalist Pelican Theme for mamcmanus.com
  *© 2018 Matt McManus
+ *Custom by Clarissa R Mendes
  *
  ***********************
  */
@@ -15,7 +16,7 @@
 /* VARIABLES */
 $color-primary: #232a2e
 $color-secondary: #f1b712
-$color-third: #E1ECF4
+$color-third: #e1ecf4
 $color-gray: #abb4b9
 $fonts: 'Lato', sans-serif
 /* END VARIABLES */
@@ -107,6 +108,8 @@ div#masthead
       padding: 0.8em
       text-decoration: none
       background-color: transparent
+      &:hover
+        color: $color-secondary
       @include breakpoint(medium)
         border: 0
 
@@ -194,7 +197,7 @@ footer
         padding-bottom: 1em
         font-weight: 300
         text-align: center
-        color: #abb4b9
+        color: $color-gray
     /* Article content styles */
     .content
       font-size: 1.125em
@@ -221,7 +224,7 @@ footer
       blockquote
         padding-left: 10px
         font-weight: 300
-        color: #abb4b9
+        color: $color-gray
         border-left: 0.3rem solid
         margin: 0 25px 25px
       /* article lists */
@@ -299,10 +302,10 @@ footer
   text-decoration: none
   -webkit-transition: color 0.2s
   &:hover
-    background-color: #f1b712
+    background-color: $color-secondary
     color: white
     &::after
-      border-left-color: #f1b712
+      border-left-color: $color-secondary
 
 .category-tag
   font-style: italic
@@ -343,6 +346,9 @@ footer
 
 .icons
   margin: 1em auto
+  a
+    &:hover
+      background-color: transparent
 
 /* DISQUS COMMENTS */
 #disqus_thread
