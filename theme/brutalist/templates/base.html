@@ -85,7 +85,6 @@
             <a href="#menu" id="menu-link">more</a>
             <nav id="menu">
                 <ul>
-                    <li><a href="/">$ whoami</a></li>
                     {% if DISPLAY_PAGES_ON_MENU %}
                       {% for p in pages %}
                         <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">$ {{ p.title }}</a></li>
@@ -101,6 +100,7 @@
                             {% endif %}
                         {% endfor %}
                     {% endif %}
+                    <li><a href="/">$ whoami</a></li>
                 </ul>
             </nav>
         </header>
