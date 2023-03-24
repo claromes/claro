@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
   {{ super() }}
-  <title>{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock title %}</title>
+  <title>{% block title %}{{ article.title }} — {{ SITENAME }}{% endblock title %}</title>
   {% if article.description %}
     <meta name="description" content="{{ article.description }}" />
   {% endif %}
@@ -12,19 +12,26 @@
 
 {% endblock %}
 {% block twittercard %}
-<meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
-<meta name="twitter:title" content="{{ article.title }}">
+<meta name="twitter:title" content="{{ article.title }} | {{ SITENAME }}">
 <meta name="twitter:description" content="{{ article.description }}">
 <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
+{% if article.cover_image %}
+  <meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
+{% else %}
+  <meta name="twitter:image" content="{{ SITEURL }}/images/{{ SITENAME }}">
+{% endif %}
 {% endblock twittercard %}
 <!-- OG Tags -->
 {% block ogtags %}
 <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
 <meta property="og:title" content="{{ article.title }} | {{ SITENAME }}" />
 <meta property="og:description" content="{{ article.description }}" />
-<meta property="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}" />
+{% if article.cover_image %}
+  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}" />
+{% else %}
+  <meta property="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}" />
+{% endif %}
 {% endblock ogtags %}
 
 {% block content %}
@@ -49,7 +56,10 @@
           </p>
         </header>
       <div class="content">
-         {{ article.content|safe }}
+        {% if article.cover_image %}
+          <img src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }} — CC BY-NC-SA 4.0">
+        {% endif %}
+        {{ article.content|safe }}
 
         <br>
 

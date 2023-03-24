@@ -11,28 +11,26 @@
 
 {% endblock %}
 {% block twittercard %}
-{% if page.cover_image %}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ SITEURL }}/images/{{ page.cover_image }}">
-<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
-{% elif GRAVATAR %}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ GRAVATAR }}">
-{% elif LOGO %}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ SITEURL }}/images/{{ LOGO }}">
-{% endif %}
-<meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
-<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:title" content="{{ page.title }} | {{ SITENAME }}">
 <meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
+<meta name="twitter:card" content="summary_large_image">
+{% if page.cover_image %}
+  <meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
+{% else %}
+  <meta name="twitter:image" content="{{ SITEURL }}/images/{{ SITENAME }}">
+{% endif %}
 {% endblock twittercard %}
 <!-- OG Tags -->
 {% block ogtags %}
-<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
-<meta property="og:title" content="{{ SITENAME }} | {{ page.title }}" />
-<meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
+  <meta property="og:title" content="{{ page.title }} | {{ SITENAME }}" />
+  <meta property="og:description" content="{{ page.description }}" />
 {% if page.cover_image %}
-<meta property="og:image" content="{{ SITEURL }}/images/{{ page.cover_image }}" />
+  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}" />
+{% else %}
+  <meta name="og:image" content="{{ SITEURL }}/images/{{ SITENAME }}">
 {% endif %}
 {% endblock ogtags %}
 {% block content %}
