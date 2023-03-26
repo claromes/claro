@@ -1,4 +1,4 @@
-# Terminal::Blog
+# ~/index/blog
 
 ## build
 
