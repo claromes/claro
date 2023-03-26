@@ -77,9 +77,9 @@
     <div role="banner" id="masthead">
         <header>
             {% if GRAVATAR %}
-            <a href="/blog"><img src="{{ GRAVATAR }}" alt="Avatar" class="gravatar"></a>
+            <a class="header-background" href="/blog"><img src="{{ GRAVATAR }}" alt="Avatar" class="gravatar"></a>
             {% elif LOGO %}
-            <a href="/blog"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="Logo"></a>
+            <a class="header-background" href="/blog"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="Logo"></a>
             {% else %}
             <h1><a href="/blog">{{ FIRST_NAME }}</a></h1>
             {% endif %}
