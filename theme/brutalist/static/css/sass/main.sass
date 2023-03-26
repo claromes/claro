@@ -46,7 +46,7 @@ a
   text-decoration: underline
   color: $color-primary
   &:hover
-    background-color: $color-secondary
+    background-color: $color-primary
   h2
     &:hover
       color: $color-secondary
@@ -56,6 +56,8 @@ a
 div#masthead
   a
     width: fit-content
+    &:hover
+      background-color: transparent
   img
     display: inline-block
     max-width: 20%
@@ -378,11 +380,5 @@ img.emoji
 .author_post
   span
     font-weight: 600
-
-.header-background
-  a
-    background-color: transparent !important
-    &:hover
-      background-color: transparent !important
 
 /* END CUSTOM */
