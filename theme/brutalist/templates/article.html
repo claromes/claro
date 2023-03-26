@@ -78,22 +78,24 @@
         </ul>
       </div>
 
-      <p class="share_post">
-        <span>comments?</span>
-        ping me on
-        <a href="https://twitter.com/compose/tweet?text=@{{ TWITTER_USERNAME }}" title="Tweet me" target="_blank" rel="noopener noreferrer">twitter</a>
-        or
-        <a href="https://matrix.to/#/@claromes:matrix.org" title="Send me a message" target="_blank" rel="noopener noreferrer">matrix</a>
-        <br>
-        <span>share:</span>
-        <a href="{{article.share_post['twitter']}}" title="Share on Twitter" target="_blank" rel="noopener noreferrer">twitter</a>
-        •
-        <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank" rel="noopener noreferrer">mastodon</a>
-        •
-        <a href="{{article.share_post['hacker-news']}}" title="Share on HackerNews" target="_blank" rel="noopener noreferrer">hackernews</a>
-        •
-        <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank" rel="noopener noreferrer">email</a>
-      </p>
+      {% if article.share_post and article.status != 'draft' %}
+        <p class="share_post">
+          <span>comments?</span>
+          ping me on
+          <a href="https://twitter.com/compose/tweet?text=@{{ TWITTER_USERNAME }}" title="Tweet me" target="_blank" rel="noopener noreferrer">twitter</a>
+          or
+          <a href="https://matrix.to/#/@claromes:matrix.org" title="Send me a message" target="_blank" rel="noopener noreferrer">matrix</a>
+          <br>
+          <span>share:</span>
+          <a href="{{article.share_post['twitter']}}" title="Share on Twitter" target="_blank" rel="noopener noreferrer">twitter</a>
+          •
+          <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank" rel="noopener noreferrer">mastodon</a>
+          •
+          <a href="{{article.share_post['hacker-news']}}" title="Share on HackerNews" target="_blank" rel="noopener noreferrer">hackernews</a>
+          •
+          <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank" rel="noopener noreferrer">email</a>
+        </p>
+      {% endif %}
 
       <div class="back-to-top">
           <a href="#top">back to top</a>
