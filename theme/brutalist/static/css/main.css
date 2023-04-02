@@ -3,6 +3,7 @@
  * *
  * *Brutalist Pelican Theme for mamcmanus.com
  * *© 2018 Matt McManus
+ * *
  * *Custom by Clarissa R Mendes
  * *
  * ***********************
@@ -252,6 +253,10 @@ table {
   border-spacing: 0;
 }
 
+div#masthead a:hover {
+  background-color: transparent;
+}
+
 /********HTML5 ELEMENT DECLARATIONS*******/
 section, article, header, footer, nav, aside, hgroup {
   display: block;
@@ -264,14 +269,13 @@ section, article, header, footer, nav, aside, hgroup {
 /* FONTS */
 body {
   font-family: "Ubuntu Mono", monospace;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* END FONTS */
 /* MAIN CONTENT CONTAINER */
 .page {
-  max-width: 42.5em;
-  /* 680/16 = 42.5 */
+  max-width: 50em;
+  /* 768/16 = 48 (~50) */
   margin: auto;
   text-align: center;
   line-height: 1.5;
@@ -299,7 +303,7 @@ a {
   color: #232a2e;
 }
 a:hover {
-  background-color: #f1b712;
+  background-color: #232a2e;
 }
 a h2:hover {
   color: #f1b712;
@@ -309,6 +313,9 @@ a h2:hover {
 /* NAVIGATION */
 div#masthead a {
   width: fit-content;
+}
+div#masthead a:hover {
+  background-color: transparent;
 }
 div#masthead img {
   display: inline-block;
@@ -467,7 +474,7 @@ footer p {
 }
 .article article {
   display: inline-block;
-  width: 85%;
+  width: 95%;
   /* results in ~60-70 characters per line */
   text-align: left;
   line-height: 1.75;
