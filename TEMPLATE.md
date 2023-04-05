@@ -4,7 +4,7 @@ slug:
 tags:
 authors: claromes
 description:
-cover_image: images/elementary.jpg
+cover_image: image.jpg
 cover_image_credit: claromes
 status: published
 
