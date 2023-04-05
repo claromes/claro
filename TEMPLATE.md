@@ -6,6 +6,7 @@ authors: claromes
 description:
 cover_image: image.jpg
 cover_image_credit: claromes
+show_cover_image: false
 status: published
 
 *Edited 14 February, 2023*
