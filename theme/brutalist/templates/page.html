@@ -11,7 +11,7 @@
 
 {% endblock %}
 {% block twittercard %}
-<meta name="twitter:title" content="{{ page.title }} | {{ SITENAME }}">
+<meta name="twitter:title" content="{{ page.title }} {{ SITENAME }}">
 <meta name="twitter:description" content="{{ page.description }}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
@@ -25,7 +25,7 @@
 <!-- OG Tags -->
 {% block ogtags %}
   <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
-  <meta property="og:title" content="{{ page.title }} | {{ SITENAME }}" />
+  <meta property="og:title" content="{{ page.title }} {{ SITENAME }}" />
   <meta property="og:description" content="{{ page.description }}" />
 {% if page.cover_image %}
   <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}" />
