@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
   {{ super() }}
-  <title>{% block title %}{{ article.title }} — {{ SITENAME }}{% endblock title %}</title>
+  <title>{% block title %}{{ article.title }} {{ SITENAME }}{% endblock title %}</title>
   {% if article.description %}
     <meta name="description" content="{{ article.description }}" />
   {% endif %}
