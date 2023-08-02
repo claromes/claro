@@ -687,9 +687,11 @@ footer p {
   margin: 1em auto;
   filter: grayscale(1) blur(1px) !important;
 }
+.icons:hover {
+  filter: blur(0) !important;
+}
 .icons a:hover {
   background-color: transparent;
-  filter: blur(0) !important;
 }
 
 /* DISQUS COMMENTS */
