@@ -2,7 +2,6 @@ title:
 date: 2023-03-24
 slug:
 tags:
-authors: claromes
 description:
 cover_image: image.jpg
 cover_image_credit: claromes
