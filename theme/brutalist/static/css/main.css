@@ -685,10 +685,6 @@ footer p {
 
 .icons {
   margin: 1em auto;
-  filter: grayscale(1) blur(1px);
-}
-.icons:hover {
-  filter: grayscale(1) blur(0);
 }
 .icons a:hover {
   background-color: transparent;
