@@ -2,69 +2,83 @@
 .icon-strava {
 	background-image: url('png/strava.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-github {
 	background-image: url('png/github.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-goodreads {
 	background-image: url('png/goodreads.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-instagram {
 	background-image: url('png/instagram.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-medium {
 	background-image: url('png/medium.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-telegram {
 	background-image: url('png/telegram.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-twitter {
 	background-image: url('png/twitter.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-untappd {
 	background-image: url('png/untappd.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-facebook {
 	background-image: url('png/facebook.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-foursquare {
 	background-image: url('png/foursquare.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-mastodon {
 	background-image: url('png/mastodon.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-gitlab {
 	background-image: url('png/gitlab.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-rss {
 	background-image: url('png/rss.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
 
 .icon-matrix {
 	background-image: url('png/matrix.png');
 	background-repeat: no-repeat;
+	filter: greyscale(1);
 }
