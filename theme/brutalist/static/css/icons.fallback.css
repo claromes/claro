@@ -68,3 +68,8 @@
 	background-image: url('png/matrix.png');
 	background-repeat: no-repeat;
 }
+
+.icon-bsky {
+	background-image: url('png/bsky.png');
+	background-repeat: no-repeat;
+}
