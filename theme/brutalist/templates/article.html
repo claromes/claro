@@ -59,6 +59,9 @@
         {% if article.cover_image and article.show_cover_image == 'true' %}
           <img src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }} — CC BY-NC-SA 4.0">
         {% endif %}
+
+        <br>
+
         {{ article.content|safe }}
 
         <br>
