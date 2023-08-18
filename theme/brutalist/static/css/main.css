@@ -724,7 +724,7 @@ img.emoji {
   font-weight: 600;
 }
 
-code {
+code:not(pre code) {
   padding: 0.2em 0.3em;
   color: #4d4d4d;
   background-color: #d3d3d3;
