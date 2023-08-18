@@ -14,7 +14,7 @@ status: published
 ![Alt]({static}/images/)
 
 <p align="center">
-    <img src="" width="300" alt="" title="">
+    <img src="{static}/images/" width="300" alt="" title="">
 </p>
 
 <iframe class="video-yt" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
