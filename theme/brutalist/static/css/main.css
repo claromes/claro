@@ -731,6 +731,10 @@ code:not(pre code) {
   border-radius: 6px;
 }
 
+ul li ul, ul li ul li ul {
+  padding-bottom: 0 !important;
+}
+
 /* END CUSTOM */
 
 /*# sourceMappingURL=main.css.map */
