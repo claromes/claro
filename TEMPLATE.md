@@ -8,7 +8,7 @@ cover_image_credit: claromes
 show_cover_image: false
 status: published
 
-*Edited 14 February, 2023*
+*Edited August 19, 2023*
 *Originally published at: [example.com](https://example.com)*
 
 ![Alt]({static}/images/)
