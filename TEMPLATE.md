@@ -9,7 +9,6 @@ show_cover_image: false
 status: published
 
 *Edited August 20, 2023*
-*Editado em 20 de agosto de 2023*
 
 *Originally published at: [example.com](https://example.com)*
 
