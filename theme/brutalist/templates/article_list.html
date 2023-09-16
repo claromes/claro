@@ -16,11 +16,34 @@
                         </p>
                     </footer>
                     <header>
-                        <a href="{{ SITEURL }}/{{ article.url }}">
-                            <h2>{{ article.title }}</h2>
-                        </a>
+                        {% if article.micro == 'true' %}
+                            <h2 title="micropost"><a href="{{ SITEURL }}/tag/micropost">🗨️</a></h2>
+                            <div class="article" role="article">
+                                <article class="micro">
+                                    <div class="article">
+                                        <div class="content">
+                                            <blockquote>
+                                                <p>{{ article.title }}</p>
+                                                {% if article.micro_image %}
+                                                    <a href="{{ SITEURL }}/images/{{ article.micro_image }}">
+                                                        <img src="{{ SITEURL }}/images/{{ article.micro_image }}" width="736" alt="" title="">
+                                                    </a>
+                                                {% endif %}
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        {% endif %}
+                        {% if not article.micro %}
+                            <a href="{{ SITEURL }}/{{ article.url }}">
+                                <h2>{{ article.title }}</h2>
+                            </a>
+                        {% endif %}
                     </header>
-                    <div class="summary">{{ article.description }} </div>
+                        {% if not article.micro %}
+                            <div class="summary">{{ article.description }} </div>
+                        {% endif %}
                 </article>
             </li>
             {% endfor %}
@@ -28,5 +51,4 @@
         {% if articles_page.has_other_pages() %}
             {% include 'pagination.html' %}
         {% endif %}
-
 </div>
