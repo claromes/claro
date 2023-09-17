@@ -3,7 +3,8 @@ date: 2023-03-24
 slug:
 tags:
 description:
-cover_image: image.jpg
+notes: true
+notes_image:
 cover_image_credit: claromes
 show_cover_image: false
 status: published
