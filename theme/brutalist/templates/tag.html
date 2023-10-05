@@ -5,7 +5,11 @@
 {% endblock ogtags %}
 {% block content %}
 <div class="page-title">
-    <h1>{{ tag }}</h1>
+    {% if tag == 'tweet' %}
+        <h1>this should be a tweet</h1>
+    {% else %}
+        <h1>{{ tag }}</h1>
+    {% endif %}
 </div>
 {% include 'article_list.html' %}
 {% endblock content %}

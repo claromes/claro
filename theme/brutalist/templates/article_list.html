@@ -16,17 +16,17 @@
                         </p>
                     </footer>
                     <header>
-                        {% if article.notes == 'true' %}
-                            <h2 title="notes"><a href="{{ SITEURL }}/tag/notes">🗨️</a></h2>
+                        {% if article.tweet == 'true' %}
+                            <h2 title="tweet"><a href="{{ SITEURL }}/tag/tweet">🗨️</a></h2>
                             <div class="article" role="article">
-                                <article class="notes">
+                                <article class="tweet">
                                     <div class="article">
                                         <div class="content">
                                             <blockquote>
                                                 <p>{{ article.title }}</p>
-                                                {% if article.notes_image %}
-                                                    <a href="{{ SITEURL }}/images/{{ article.notes_image }}">
-                                                        <img src="{{ SITEURL }}/images/{{ article.notes_image }}" width="736" alt="notes by claromes" title="notes by claromes">
+                                                {% if article.tweet_image %}
+                                                    <a href="{{ SITEURL }}/images/{{ article.tweet_image }}">
+                                                        <img src="{{ SITEURL }}/images/{{ article.tweet_image }}" width="736" alt="tweet by claromes" title="tweet by claromes">
                                                     </a>
                                                 {% endif %}
                                             </blockquote>
@@ -35,13 +35,13 @@
                                 </article>
                             </div>
                         {% endif %}
-                        {% if not article.notes %}
+                        {% if not article.tweet %}
                             <a href="{{ SITEURL }}/{{ article.url }}">
                                 <h2>{{ article.title }}</h2>
                             </a>
                         {% endif %}
                     </header>
-                        {% if not article.notes %}
+                        {% if not article.tweet %}
                             <div class="summary">{{ article.description }} </div>
                         {% endif %}
                 </article>
