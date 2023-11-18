@@ -62,6 +62,7 @@
 .icon-rss {
 	background-image: url('png/rss.png');
 	background-repeat: no-repeat;
+	scale: 0.88;
 }
 
 .icon-matrix {
@@ -72,4 +73,5 @@
 .icon-bsky {
 	background-image: url('png/bsky.png');
 	background-repeat: no-repeat;
+	padding-left: 4px !important;
 }

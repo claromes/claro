@@ -392,4 +392,48 @@ code:not(pre code)
 
 ul li ul, ul li ul li ul
   padding-bottom: 0 !important
+
+.more
+  padding: 1px 0px 3px 0px
+  color: #fafafa
+  text-decoration: none
+  background: #070707
+  -webkit-background-clip: border-box
+  background-clip: border-box
+
+.more:hover
+  color: #070707
+
+.container-bar
+  padding-left: 12px
+  padding-top: 8px
+
+.bar
+  display: inline-block
+  margin-bottom: 4px
+  width: 9px
+  height: 17px
+  vertical-align: middle
+  background-color: #070707
+  opacity: 0
+  -webkit-animation: bar-anima 1.2s infinite
+  -moz-animation: bar-anima 1.2s infinite
+  -ms-animation: bar-anima 1.2s infinite
+  -o-animation: bar-anima 1.2s infinite
+  animation: bar-anima 1.2s infinite
+
+@keyframes bar-anima
+  0%
+    opacity: 0
+  65%
+    opacity: 0
+  100%
+    opacity: 1
+
+.custom-page
+  font-size: 0.8em
+  ul
+    margin: 0 !important
+  li
+    list-style: none
 /* END CUSTOM */
