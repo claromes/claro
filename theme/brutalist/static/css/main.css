@@ -4,7 +4,7 @@
  * *Brutalist Pelican Theme for mamcmanus.com
  * *© 2018 Matt McManus
  * *
- * *Custom by claromes
+ * *Custom by Claromes
  * *
  * ***********************
  * */
@@ -358,6 +358,9 @@ div#masthead nav#menu {
   overflow: hidden;
   max-height: 0;
 }
+div#masthead nav#menu li {
+  font-weight: 600;
+}
 @media (min-width: 55em) {
   div#masthead nav#menu {
     max-height: none;
@@ -365,13 +368,12 @@ div#masthead nav#menu {
   }
   div#masthead nav#menu li {
     display: block;
-    font-weight: 600;
     font-size: 14px;
   }
 }
 div#masthead nav#menu#menu.active {
   max-height: 15em;
-  padding: 2em 0;
+  padding: 0.5em 0;
 }
 div#masthead nav#menu ul {
   text-align: center;
@@ -456,6 +458,9 @@ footer p {
 .articles article .tweet {
   padding-top: 1em !important;
 }
+.articles article .tweet .content {
+  font-family: "Ubuntu Mono", monospace;
+}
 .articles article .summary {
   padding-bottom: 1em;
   font-size: 1.125em;
@@ -514,10 +519,14 @@ footer p {
   font-size: 1.125em;
   /* 18/16 = 1.125 */
   font-weight: 300;
+  font-family: "Roboto", sans-serif;
   /* article headers */
   /* article lists */
   /* italics */
   /* code blocks */
+}
+.article article .content .author_post {
+  font-family: "Ubuntu Mono", monospace;
 }
 .article article .content p {
   padding-bottom: 1.5em;
@@ -736,6 +745,66 @@ code:not(pre code) {
 
 ul li ul, ul li ul li ul {
   padding-bottom: 0 !important;
+}
+
+.more {
+  padding: 1px 0px 3px 0px;
+  color: #fafafa;
+  text-decoration: none;
+  background: #070707;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
+.more:hover {
+  color: #070707;
+}
+
+.container-bar {
+  padding-left: 12px;
+  padding-top: 8px;
+}
+@media (max-width: 55em) {
+  .container-bar {
+    display: none;
+  }
+}
+
+.bar {
+  display: inline-block;
+  margin-bottom: 4px;
+  width: 9px;
+  height: 17px;
+  vertical-align: middle;
+  background-color: #070707;
+  opacity: 0;
+  -webkit-animation: bar-anima 1.2s infinite;
+  -moz-animation: bar-anima 1.2s infinite;
+  -ms-animation: bar-anima 1.2s infinite;
+  -o-animation: bar-anima 1.2s infinite;
+  animation: bar-anima 1.2s infinite;
+}
+
+@keyframes bar-anima {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.custom-page {
+  font-size: 0.85em;
+  font-family: "Ubuntu Mono", monospace;
+}
+.custom-page ul {
+  margin: 0 !important;
+}
+.custom-page li {
+  list-style: none;
 }
 
 /* END CUSTOM */

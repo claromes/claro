@@ -44,7 +44,7 @@
         <script src="{{ SITEURL }}/theme/js/moment.js"></script>
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto&display=swap" />
         <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 		<script>
 
@@ -77,11 +77,11 @@
     <div role="banner" id="masthead">
         <header>
             {% if GRAVATAR %}
-            <a href="/blog"><img src="{{ GRAVATAR }}" alt="Avatar" class="gravatar"></a>
+            <a href="/"><img src="{{ GRAVATAR }}" alt="Avatar" class="gravatar"></a>
             {% elif LOGO %}
-            <a href="/blog"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="Logo"></a>
+            <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="Logo"></a>
             {% else %}
-            <h1><a href="/blog">{{ FIRST_NAME }}</a></h1>
+            <h1><a href="/">{{ FIRST_NAME }}</a></h1>
             {% endif %}
             <a href="#menu" id="menu-link">more</a>
             <nav id="menu">
@@ -101,6 +101,9 @@
                             {% endif %}
                         {% endfor %}
                     {% endif %}
+                    <li class="container-bar">
+                        $ <span class="bar"></span>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -112,7 +115,12 @@
             {% block footer %}
                 <footer>
                     <div class="icons">
-                        <a href="{{ SITEURL }}/feeds/all.atom.xml" title="RSS"><div class="icon-rss icon"></div></a>
+                        {% if GITHUB %}
+                        <a href="{{ GITHUB }}" target="_blank" title="GitHub"><div class="icon-github icon"></div></a>
+                        {% endif %}
+                        {% if GITLAB %}
+                        <a href="{{ GITLAB }}" target="_blank" title="GitLab"><div class="icon-gitlab icon"></div></a>
+                        {% endif %}
                         {% if TWITTER %}
                         <a href="{{ TWITTER }}" target="_blank"><div class="icon-twitter icon"></div></a>
                         {% endif %}
@@ -124,12 +132,6 @@
                         {% endif %}
                         {% if BSKY %}
                         <a href="{{ BSKY }}" target="_blank" title="Bluesky"><div class="icon-bsky icon"></div></a>
-                        {% endif %}
-                        {% if GITLAB %}
-                        <a href="{{ GITLAB }}" target="_blank" title="GitLab"><div class="icon-gitlab icon"></div></a>
-                        {% endif %}
-                        {% if GITHUB %}
-                        <a href="{{ GITHUB }}" target="_blank" title="GitHub"><div class="icon-github icon"></div></a>
                         {% endif %}
                         {% if INSTAGRAM %}
                         <a href="{{ INSTAGRAM }}" target="_blank"><div class="icon-instagram icon"></div></a>
@@ -146,6 +148,7 @@
                         {% if UNTAPPD %}
                         <a href="{{ UNTAPPD }}" target="_blank"><div class="icon-untappd icon"></div></a>
                         {% endif %}
+                        <a href="{{ SITEURL }}/feeds/all.atom.xml" title="RSS"><div class="icon-rss icon"></div></a>
                     </div>
                     <p>© <script>document.write(moment().format('YYYY'));</script> {{ AUTHOR }}</p>
                     {% if ATTRIBUTION %}
@@ -155,5 +158,14 @@
                 </footer>
         {% endblock footer %}
         </div>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "jobTitle": "Software Developer",
+            "alternateName":"claromes",
+            "url": "https://claromes.gitlab.io"
+        }
+    </script>
 </body>
 </html>
