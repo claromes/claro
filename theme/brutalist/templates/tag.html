@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block ogtags %}
+<title>{% block title %}{{ tag }} {{ SITENAME }}{% endblock title %}</title>
 <meta property="og:url" content="{{ SITEURL }}/tag/{{ tag }}"/>
 <meta property="og:title" content="{{ SITENAME }} {{ tag }}" />
 {% endblock ogtags %}

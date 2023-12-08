@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
   {{ super() }}
+  <title>{% block title %}{{ page.title }} {{ SITENAME }}{% endblock title %}</title>
   {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
   {% endif %}
