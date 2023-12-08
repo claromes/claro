@@ -1,4 +1,4 @@
-# ~/index/blog
+# ~/claromes
 
 ## build
 

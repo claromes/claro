@@ -61,8 +61,11 @@ div#masthead
   img
     display: inline-block
     max-width: 20%
-    padding-left: 0.3em !important
+    padding-left: 0.5em !important
     height: auto
+    @include breakpoint(mobile)
+      padding-top: 1.5em !important
+      padding-left: 1.5em !important
     @include breakpoint(small)
       max-width: 10%
     @include breakpoint(medium)
@@ -439,7 +442,6 @@ ul li ul, ul li ul li ul
     opacity: 1
 
 .custom-page
-  font-size: 0.85em
   font-family: 'Ubuntu Mono', monospace
   ul
     margin: 0 !important
