@@ -84,7 +84,7 @@
             {% else %}
             <h1><a href="/">{{ FIRST_NAME }}</a></h1>
             {% endif %}
-            <a href="#menu" id="menu-link">menu</a>
+            <a href="#menu" id="menu-link">more</a>
             <nav id="menu">
                 <ul>
                     {% if DISPLAY_PAGES_ON_MENU %}
@@ -113,51 +113,6 @@
         <div class="page" role="main">
             {% block content %}
             {% endblock content %}
-            {% block footer %}
-                <footer>
-                    <div class="icons">
-                        {% if GITHUB %}
-                        <a href="{{ GITHUB }}" target="_blank" title="GitHub"><div class="icon-github icon"></div></a>
-                        {% endif %}
-                        {% if GITLAB %}
-                        <a href="{{ GITLAB }}" target="_blank" title="GitLab"><div class="icon-gitlab icon"></div></a>
-                        {% endif %}
-                        {% if TWITTER %}
-                        <a href="{{ TWITTER }}" target="_blank"><div class="icon-twitter icon"></div></a>
-                        {% endif %}
-                        {% if MASTODON %}
-                        <a rel="me" href="{{ MASTODON }}" target="_blank" title="Mastodon"><div class="icon-mastodon icon"></div></a>
-                        {% endif %}
-                        {% if MATRIX %}
-                        <a href="{{ MATRIX }}" target="_blank" title="Matrix"><div class="icon-matrix icon"></div></a>
-                        {% endif %}
-                        {% if BSKY %}
-                        <a href="{{ BSKY }}" target="_blank" title="Bluesky"><div class="icon-bsky icon"></div></a>
-                        {% endif %}
-                        {% if INSTAGRAM %}
-                        <a href="{{ INSTAGRAM }}" target="_blank"><div class="icon-instagram icon"></div></a>
-                        {% endif %}
-                        {% if TELEGRAM %}
-                        <a href="{{ TELEGRAM }}" target="_blank"><div class="icon-telegram icon"></div></a>
-                        {% endif %}
-                        {% if GOODREADS %}
-                        <a href="{{ GOODREADS }}" target="_blank"><div class="icon-goodreads icon"></div></a>
-                        {% endif %}
-                        {% if FOURSQUARE %}
-                        <a href="{{ FOURSQUARE }}" target="_blank"><div class="icon-foursquare icon"></div></a>
-                        {% endif %}
-                        {% if UNTAPPD %}
-                        <a href="{{ UNTAPPD }}" target="_blank"><div class="icon-untappd icon"></div></a>
-                        {% endif %}
-                        <a href="{{ SITEURL }}/feeds/all.atom.xml" title="RSS"><div class="icon-rss icon"></div></a>
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> {{ AUTHOR }}</p>
-                    {% if ATTRIBUTION %}
-                    <p>Brutalist Pelican Theme (with custom code)</p>
-                    {% endif %}
-                    <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></p>
-                </footer>
-        {% endblock footer %}
         </div>
     <script type="application/ld+json">
         {
