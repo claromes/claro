@@ -35,95 +35,105 @@
 {% endblock ogtags %}
 
 {% block content %}
+  {% if article.title == '404' %}
   <div class="article" role="article">
     <article>
-      {% if article.date %}
-        <footer>
-            <a name="top"></a>
-            <p>
-              <time datetime=" {{ article.date }}">
-                <script>document.write(moment('{{ article.date }}').format('LL'));</script>
-              </time>
-            </p>
-        </footer>
-      {% endif %}
-        <header>
-          <h2>
-            {{ article.title }}
-          </h2>
-          <p>
-            {{ article.description }}
-          </p>
-        </header>
-      <div class="content">
-        {% if article.cover_image and article.show_cover_image == 'true' %}
-          <img src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }}">
-        {% endif %}
-
-        <br>
-
+      <div class="content post_404">
         {{ article.content|safe }}
+      </div>
+    <article>
+  </div>
+  {% else %}
+    <div class="article" role="article">
+      <article>
+        {% if article.date %}
+          <footer>
+              <a name="top"></a>
+              <p>
+                <time datetime=" {{ article.date }}">
+                  <script>document.write(moment('{{ article.date }}').format('LL'));</script>
+                </time>
+              </p>
+          </footer>
+        {% endif %}
+          <header>
+            <h2>
+              {{ article.title }}
+            </h2>
+            <p>
+              {{ article.description }}
+            </p>
+          </header>
+        <div class="content">
+          {% if article.cover_image and article.show_cover_image == 'true' %}
+            <img src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }}">
+          {% endif %}
+
+          <br>
+
+          {{ article.content|safe }}
+
+          <br>
+
+          <p class="author_post">
+            <span>by </span><a href="/pages/whoami">claromes</a>
+          </p>
+        </div>
 
         <br>
 
-         <p class="author_post">
-          <span>by </span><a href="/pages/whoami">claromes</a>
-         </p>
-      </div>
+        <div class="tags">
+          <ul class="tags">
+          {% for tag in article.tags %}
+              <li><a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
+          {% endfor %}
+          </ul>
+        </div>
 
-      <br>
-
-      <div class="tags">
-        <ul class="tags">
-        {% for tag in article.tags %}
-            <li><a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
-        {% endfor %}
-        </ul>
-      </div>
-
-      {% if article.share_post and article.status != 'draft' %}
-        <p class="share_post">
-          <span>comments?</span>
-          ping me on
-          <a href="{{ MASTODON }}" title="Toot me" target="_blank" rel="noopener noreferrer">mastodon</a>
-          or
-          <a href="{{ MATRIX }}" title="Send me a message" target="_blank" rel="noopener noreferrer">matrix</a>
-          <br>
-          <span>share:</span>
-          <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank" rel="noopener noreferrer">mastodon</a>
-          •
-          <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank" rel="noopener noreferrer">órbita</a>
-          •
-          <a href="{{article.share_post['hacker-news']}}" title="Share on HackerNews" target="_blank" rel="noopener noreferrer">hackernews</a>
-          •
-          <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank" rel="noopener noreferrer">email</a>
-        </p>
-      {% endif %}
-
-      <div class="back-to-top">
-          <a href="#top">back to top</a>
-      </div>
-      {% if DISQUS_SITENAME %}
-      <div id="disqus_thread"></div>
-        {% if SITEURL %}
-        <script>
-          var disqus_config = function () {
-          this.page.url = "{{ SITEURL }}/{{ article.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = "{{ article.slug }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-          };
-        </script>
+        {% if article.share_post and article.status != 'draft' %}
+          <p class="share_post">
+            <span>comments?</span>
+            ping me on
+            <a href="{{ MASTODON }}" title="Toot me" target="_blank" rel="noopener noreferrer">mastodon</a>
+            or
+            <a href="{{ MATRIX }}" title="Send me a message" target="_blank" rel="noopener noreferrer">matrix</a>
+            <br>
+            <span>share:</span>
+            <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank" rel="noopener noreferrer">mastodon</a>
+            •
+            <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank" rel="noopener noreferrer">órbita</a>
+            •
+            <a href="{{article.share_post['hacker-news']}}" title="Share on HackerNews" target="_blank" rel="noopener noreferrer">hackernews</a>
+            •
+            <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank" rel="noopener noreferrer">email</a>
+          </p>
         {% endif %}
-        <script>
-        (function() {
-              var d = document, s = d.createElement('script');
-              s.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      {% endif %}
-    </article>
-  </div>
+
+        <div class="back-to-top">
+            <a href="#top">back to top</a>
+        </div>
+        {% if DISQUS_SITENAME %}
+        <div id="disqus_thread"></div>
+          {% if SITEURL %}
+          <script>
+            var disqus_config = function () {
+            this.page.url = "{{ SITEURL }}/{{ article.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "{{ article.slug }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+          </script>
+          {% endif %}
+          <script>
+          (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        {% endif %}
+      </article>
+    </div>
+  {% endif %}
 <!-- end article -->
 {% endblock content %}

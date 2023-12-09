@@ -521,6 +521,9 @@ footer p {
   text-align: center;
   color: #abb4b9;
 }
+.article article .content.post_404 {
+  font-family: "Ubuntu Mono", monospace;
+}
 .article article .content {
   font-size: 1.125em;
   /* 18/16 = 1.125 */
