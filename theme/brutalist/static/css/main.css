@@ -545,7 +545,8 @@ footer p a:hover {
   font-family: "Ubuntu Mono", monospace;
 }
 .article article .content p {
-  padding-bottom: 1.5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.8em;
 }
 .article article .content h2 {
   font-size: 1.4em;
