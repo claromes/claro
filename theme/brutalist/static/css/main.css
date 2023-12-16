@@ -312,35 +312,25 @@ a h2:hover {
 
 /* END LINKS */
 /* NAVIGATION */
+div#masthead {
+  margin-bottom: 2em;
+}
+div#masthead h1 {
+  padding-left: 0.7em;
+}
+div#masthead h1 a {
+  text-decoration: none;
+}
+@media (max-width: 55em) {
+  div#masthead h1 {
+    margin: 1em 0.9em 0.5em;
+  }
+}
 div#masthead a {
   width: fit-content;
 }
 div#masthead a:hover {
   background-color: transparent;
-}
-div#masthead img {
-  display: inline-block;
-  max-width: 20%;
-  padding-left: 0.5em !important;
-  height: auto;
-}
-@media (max-width: 55em) {
-  div#masthead img {
-    padding-top: 1.5em !important;
-    padding-left: 1.5em !important;
-  }
-}
-@media (min-width: 37.5em) {
-  div#masthead img {
-    max-width: 10%;
-  }
-}
-@media (min-width: 55em) {
-  div#masthead img {
-    display: block;
-    max-width: 50%;
-    padding: 0;
-  }
 }
 @media (min-width: 55em) {
   div#masthead {
@@ -375,7 +365,7 @@ div#masthead nav#menu li {
 }
 div#masthead nav#menu#menu.active {
   max-height: 15em;
-  padding: 0.5em 0.9em;
+  padding: 0 0.9em 0.5em;
 }
 div#masthead nav#menu ul {
   text-align: center;
@@ -401,11 +391,21 @@ div#masthead nav#menu li a:hover {
   }
 }
 div#masthead a#menu-link {
-  float: right;
+  float: left;
   display: block;
-  padding: 1em;
-  line-height: 4em;
-  font-size: 1.2em;
+  padding: 0.2em 0;
+  margin: 1.6em;
+  font-size: 1em;
+  color: #fafafa;
+  text-decoration: none;
+  background: #070707;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 @media (min-width: 55em) {
   div#masthead a#menu-link {
@@ -424,7 +424,7 @@ footer p:first-child {
 }
 footer p {
   color: #abb4b9;
-  margin: 0.5em 1em;
+  margin: 0.5em 1em 0.5em 0;
 }
 footer p a {
   color: #abb4b9;
@@ -777,19 +777,9 @@ ul li ul, ul li ul li ul {
   color: #070707;
 }
 
-.container-bar {
-  padding-left: 12px;
-  padding-top: 8px;
-}
-@media (max-width: 55em) {
-  .container-bar {
-    display: none;
-  }
-}
-
 .bar {
   display: inline-block;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   width: 9px;
   height: 17px;
   vertical-align: middle;
@@ -821,6 +811,11 @@ ul li ul, ul li ul li ul {
 }
 .custom-page li {
   list-style: none;
+}
+
+.whoami {
+  float: left;
+  padding-right: 20px;
 }
 
 /* END CUSTOM */
