@@ -76,7 +76,7 @@
           <br>
 
           <p class="author_post">
-            <span>by </span><a href="/pages/whoami">claromes</a>
+            <span>by </span><a href="/pages/whoami">{{ AUTHOR }}</a>
           </p>
         </div>
 
@@ -94,22 +94,22 @@
           <p class="share_post">
             <span>comments?</span>
             ping me on
-            <a href="{{ MASTODON }}" title="Toot me" target="_blank" rel="noopener noreferrer">mastodon</a>, 
-            <a href="https://discord.com/users/964243777004925008" title="Send me a DM" target="_blank" rel="noopener">discord</a>
+            <a href="{{ MASTODON }}" title="Toot me" target="_blank">mastodon</a>, 
+            <a href="https://discord.com/users/964243777004925008" title="Send me a DM" target="_blank" >discord</a>
             or
-            <a href="{{ MATRIX }}" title="Send me a message" target="_blank" rel="noopener noreferrer">matrix</a>
+            <a href="{{ MATRIX }}" title="Send me a message" target="_blank">matrix</a>
 
             <br>
             <span>share:</span>
-            <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank" rel="noopener noreferrer">mastodon</a>
+            <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">mastodon</a>
             ·
-            <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank" rel="noopener noreferrer">órbita</a>
+            <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank">órbita</a>
             ·
-            <a href="{{article.share_post['hacker-news']}}" title="Share on HackerNews" target="_blank" rel="noopener noreferrer">hackernews</a>
+            <a href="{{article.share_post['hacker-news']}}" title="Share on HackerNews" target="_blank">hackernews</a>
             ·
-            <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank" rel="noopener noreferrer">email</a>
+            <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank">email</a>
             <br>
-            <span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+            <span>licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
           </p>
         {% endif %}
 

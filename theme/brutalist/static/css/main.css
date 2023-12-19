@@ -364,7 +364,7 @@ div#masthead nav#menu li {
   }
 }
 div#masthead nav#menu#menu.active {
-  max-height: 15em;
+  max-height: 20em;
   padding: 0 0.9em 0.5em;
 }
 div#masthead nav#menu ul {
