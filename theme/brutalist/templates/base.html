@@ -2,7 +2,6 @@
 <html lang="{{ DEFAULT_LANG }}">
 <head>
         {% block head %}
-        {% include 'analytics.html' %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
@@ -48,7 +47,6 @@
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto&display=swap" />
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/icons.fallback.css">
         <!--goatcounter -->
         <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         <!-- moment.js for date formatting -->
@@ -78,13 +76,10 @@
         {% endblock head %}
 </head>
 <body>
-    {% include 'github.html' %}
     {% block header %}
     <div role="banner" id="masthead">
         <header>
-            {% if GRAVATAR %}
-            <a href="/"><img src="{{ GRAVATAR }}" alt="Avatar" class="gravatar"></a>
-            {% elif LOGO %}
+            {% if LOGO %}
             <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="Logo"></a>
             {% else %}
             <h1><a href="/">{{ FIRST_NAME }} $ <span class="bar"></span></a></h1>
@@ -120,7 +115,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "Person",
-            "jobTitle": "Software Developer",
+            "jobTitle": "Programmer",
             "alternateName":"Claromes",
             "url": "https://claromes.gitlab.io"
         }
