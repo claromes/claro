@@ -20,19 +20,13 @@
                                     <div class="article">
                                         <div class="content">
                                             <blockquote>
-                                                <p>{{ article.title }}</p>
-                                                {% if article.tweet_image %}
-                                                    <a href="{{ SITEURL }}/images/{{ article.tweet_image }}">
-                                                        <img src="{{ SITEURL }}/images/{{ article.tweet_image }}" width="736" alt="tweet by claromes" title="tweet by claromes">
-                                                    </a>
-                                                {% endif %}
+                                                <p>{{ article.tweet_content }}</p>
                                             </blockquote>
                                         </div>
                                     </div>
                                 </article>
                             </div>
-                        {% endif %}
-                        {% if not article.tweet %}
+                        {% else %}
                             <a href="{{ SITEURL }}/{{ article.url }}">
                                 <h2>{{ article.title }}</h2>
                             </a>

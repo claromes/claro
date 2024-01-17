@@ -59,7 +59,11 @@
         {% endif %}
           <header>
             <h2>
-              {{ article.title }}
+              {% if article.tweet == 'true' %}
+                {{ article.tweet_content }}
+              {% else %}
+                {{ article.title }}
+              {% endif %}
             </h2>
             <p>
               {{ article.description }}
