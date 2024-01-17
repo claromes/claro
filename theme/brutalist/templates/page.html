@@ -3,11 +3,11 @@
   {{ super() }}
   <title>{% block title %}{{ page.title }} {{ SITENAME }}{% endblock title %}</title>
   {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
+    <meta name="description" content="{{ page.description }}">
   {% endif %}
 
   {% for tag in page.tags %}
-    <meta name="tags" content="{{tag}}" />
+    <meta name="tags" content="{{tag}}">
   {% endfor %}
 
 {% endblock %}
@@ -24,11 +24,11 @@
 {% endblock twittercard %}
 <!-- OG Tags -->
 {% block ogtags %}
-  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
-  <meta property="og:title" content="{{ page.title }} {{ SITENAME }}" />
-  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
+  <meta property="og:title" content="{{ page.title }} {{ SITENAME }}">
+  <meta property="og:description" content="{{ page.description }}">
 {% if page.cover_image %}
-  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}" />
+  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
 {% else %}
   <meta name="og:image" content="{{ SITEURL }}/images/{{ SITENAME }}">
 {% endif %}

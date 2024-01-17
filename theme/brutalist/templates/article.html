@@ -3,11 +3,11 @@
   {{ super() }}
   <title>{% block title %}{{ article.title }} {{ SITENAME }}{% endblock title %}</title>
   {% if article.description %}
-    <meta name="description" content="{{ article.description }}" />
+    <meta name="description" content="{{ article.description }}">
   {% endif %}
 
   {% for tag in article.tags %}
-    <meta name="tags" content="{{tag}}" />
+    <meta name="tags" content="{{tag}}">
   {% endfor %}
 
 {% endblock %}
@@ -23,13 +23,13 @@
 {% endblock twittercard %}
 <!-- OG Tags -->
 {% block ogtags %}
-<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
-<meta property="og:title" content="{{ article.title }} {{ SITENAME }}" />
-<meta property="og:description" content="{{ article.description }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta property="og:title" content="{{ article.title }} {{ SITENAME }}">
+<meta property="og:description" content="{{ article.description }}">
 {% if article.cover_image %}
-  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}" />
+  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
 {% else %}
-  <meta property="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}" />
+  <meta property="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
 {% endif %}
 {% endblock ogtags %}
 
