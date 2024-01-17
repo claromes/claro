@@ -5,7 +5,7 @@ tags:
 description:
 tweet: true
 tweet_image:
-cover_image_credit: claromes
+cover_image_credit: Claromes
 show_cover_image: false
 status: published
 
