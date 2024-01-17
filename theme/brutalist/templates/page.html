@@ -42,8 +42,10 @@
       <footer>
           <a name="top"></a>
           <p>
-            <time datetime=" {{ page.date }}">
-              <script>document.write(moment('{{ page.date }}').format('LL'));</script>
+            <time id="pageDate" datetime=" {{ article.date }}">
+              <script>
+                document.getElementById('pageDate').textContent = moment('{{ article.date }}').format('LL');
+              </script>
             </time>
           </p>
       </footer>
