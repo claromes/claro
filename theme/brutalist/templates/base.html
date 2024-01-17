@@ -4,6 +4,9 @@
         {% block head %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="title" content="{{ SITENAME }}">
+        <meta name="description" content="{{ SITEDESCRIPTION }}" />
+        <meta name="keywords" content="{{ KEYWORDS }}">
         <meta charset="utf-8" />
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -32,7 +35,7 @@
         <!-- twitter card metadata -->
         {% block twittercard %}
         {% endblock twittercard %}
-        <!-- OG Tags -->
+        <!-- og tags -->
         {% block ogtags %}
         {% endblock ogtags %}
         <!-- favicon -->
@@ -41,33 +44,12 @@
         {% endif %}
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto&display=swap" />
-        <!--goatcounter -->
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto&display=swap" as="font">
+        <!-- goatcounter -->
         <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-        <!-- moment.js for date formatting -->
-        <script src="{{ SITEURL }}/theme/js/moment.js"></script>
-        <!-- menu toggle -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-
-            function initMenu(){
-                const menu = document.getElementById("menu");
-                const menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle("active");
-                        menu.classList.toggle("active");
-
-                        if (menulink.classList.contains("active")) {
-                            menulink.innerHTML = "Menu (END)";
-                            menulink.style.marginTop = "0.4em";
-                        } else {
-                            menulink.innerHTML = "--More--";
-                            menulink.style.marginTop = "1.6em";
-                        }
-                    });
-            };
-        </script>
+        <!-- date formatting and menu -->
+        <script refer src="{{ SITEURL }}/theme/js/menu.js"></script>
+        <script refer src="{{ SITEURL }}/theme/js/moment.js"></script>
         {% endblock head %}
 </head>
 <body>
