@@ -572,6 +572,9 @@ footer p a:hover {
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
 }
+.article article .content blockquote h6 {
+  font-weight: 400;
+}
 .article article .content ul, .article article .content ol {
   width: 85%;
   margin: 0 auto;

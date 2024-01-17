@@ -65,9 +65,12 @@
                 {{ article.title }}
               {% endif %}
             </h2>
-            <p>
-              {{ article.description }}
-            </p>
+            {% if article.tweet == 'true' %}
+            {% else %}
+              <p>
+                {{ article.description }}
+              </p>
+            {% endif %}
           </header>
         <div class="content">
           {% if article.cover_image and article.show_cover_image == 'true' %}
@@ -77,7 +80,6 @@
           <br>
 
           {% if article.tweet == 'true' %}
-          <span>🐦</span>
           {% else %}
             {{ article.content|safe }}
           {% endif %}
