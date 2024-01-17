@@ -60,7 +60,7 @@
           <header>
             <h2>
               {% if article.tweet == 'true' %}
-                {{ article.tweet_content }}
+                {{ article.content|safe }}
               {% else %}
                 {{ article.title }}
               {% endif %}
@@ -76,7 +76,10 @@
 
           <br>
 
-          {{ article.content|safe }}
+          {% if article.tweet == 'true' %}
+          {% else %}
+            {{ article.content|safe }}
+          {% endif %}
 
           <br>
 
