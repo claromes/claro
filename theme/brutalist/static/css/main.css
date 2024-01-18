@@ -422,11 +422,11 @@ footer p:first-child {
   margin-top: 1.4em;
 }
 footer p {
-  color: #abb4b9;
+  color: #999999;
   margin: 0.5em 1em 0.5em 0;
 }
 footer p a {
-  color: #abb4b9;
+  color: #999999;
 }
 footer p a:hover {
   background-color: #f1b712 !important;
@@ -474,7 +474,7 @@ footer p a:hover {
   font-family: "Ubuntu Mono", monospace;
 }
 .articles article .tweet p {
-  color: #abb4b9;
+  color: #999999;
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
   margin-bottom: 0;
@@ -535,7 +535,7 @@ footer p a:hover {
   padding-bottom: 1em;
   font-weight: 300;
   text-align: center;
-  color: #abb4b9;
+  color: #999999;
 }
 .article article .content.post_404 {
   font-family: "Ubuntu Mono", monospace;
@@ -578,7 +578,7 @@ footer p a:hover {
 .article article .content blockquote {
   padding-left: 10px;
   font-weight: 300;
-  color: #abb4b9;
+  color: #999999;
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
   margin-bottom: 0;
