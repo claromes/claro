@@ -14,16 +14,12 @@
                     </footer>
                     <header>
                         {% if article.tweet == 'true' %}
-                            <h3 title="this should be a tweet"><a href="{{ SITEURL }}/tag/tweet">🐦</a></h3>
                             <div class="article" role="article">
                                 <article class="tweet">
+                                    <h3 title="this should be a tweet"><a href="{{ SITEURL }}/tag/tweet">🐦</a></h3>
                                     <div class="article">
                                         <div class="content">
-                                            <blockquote>
-                                                <h2>
-                                                    {{ article.content|safe }}
-                                                </h2>
-                                            </blockquote>
+                                            {{ article.content|safe }}
                                         </div>
                                     </div>
                                 </article>
