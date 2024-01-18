@@ -473,6 +473,10 @@ footer p a:hover {
 .articles article .tweet .content {
   font-family: "Ubuntu Mono", monospace;
 }
+.articles article .tweet h2 {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
 .articles article .summary {
   padding-bottom: 1em;
   font-size: 1.125em;
@@ -571,6 +575,7 @@ footer p a:hover {
   color: #abb4b9;
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
+  margin-bottom: 0;
 }
 .article article .content ul, .article article .content ol {
   width: 85%;
