@@ -18,7 +18,7 @@
 $color-primary: #232a2e
 $color-secondary: #f1b712
 $color-third: #e1ecf4
-$color-gray: #999999
+$color-gray: #757575
 /* END VARIABLES */
 
 /* FONTS */
@@ -60,6 +60,10 @@ div#masthead
     padding-left: 0.7em
     a
       text-decoration: none
+      &:hover
+        color: $color-secondary
+        .bar
+          background-color: $color-secondary
     @include breakpoint(mobile)
       margin: 1em 0.9em 0.5em
   a
@@ -172,16 +176,16 @@ footer
     .tweet
       padding-top: 0.5em !important
       .content
-       font-family: 'Ubuntu Mono', monospace
-      p
-        color: $color-gray
-        border-left: 0.3rem solid
-        margin: 0 25px 25px
-        margin-bottom: 0
-        padding-left: 10px
-        padding-bottom: 0 !important
-        padding-top: 0 !important
-        font-size: 1.2em
+        font-family: 'Ubuntu Mono', monospace
+        p
+          color: $color-gray
+          border-left: 0.3rem solid
+          margin: 0 25px 25px
+          margin-bottom: 0
+          padding-left: 10px
+          padding-bottom: 0 !important
+          padding-top: 0 !important
+          font-size: 1.2em
     .summary
       padding-bottom: 1em
       font-size: 1.125em

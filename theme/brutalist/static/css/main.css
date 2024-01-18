@@ -321,6 +321,12 @@ div#masthead h1 {
 div#masthead h1 a {
   text-decoration: none;
 }
+div#masthead h1 a:hover {
+  color: #f1b712;
+}
+div#masthead h1 a:hover .bar {
+  background-color: #f1b712;
+}
 @media (max-width: 55em) {
   div#masthead h1 {
     margin: 1em 0.9em 0.5em;
@@ -422,11 +428,11 @@ footer p:first-child {
   margin-top: 1.4em;
 }
 footer p {
-  color: #999999;
+  color: #757575;
   margin: 0.5em 1em 0.5em 0;
 }
 footer p a {
-  color: #999999;
+  color: #757575;
 }
 footer p a:hover {
   background-color: #f1b712 !important;
@@ -473,8 +479,8 @@ footer p a:hover {
 .articles article .tweet .content {
   font-family: "Ubuntu Mono", monospace;
 }
-.articles article .tweet p {
-  color: #999999;
+.articles article .tweet .content p {
+  color: #757575;
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
   margin-bottom: 0;
@@ -535,7 +541,7 @@ footer p a:hover {
   padding-bottom: 1em;
   font-weight: 300;
   text-align: center;
-  color: #999999;
+  color: #757575;
 }
 .article article .content.post_404 {
   font-family: "Ubuntu Mono", monospace;
@@ -578,7 +584,7 @@ footer p a:hover {
 .article article .content blockquote {
   padding-left: 10px;
   font-weight: 300;
-  color: #999999;
+  color: #757575;
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
   margin-bottom: 0;
