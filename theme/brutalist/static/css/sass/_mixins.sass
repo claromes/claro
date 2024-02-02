@@ -17,6 +17,10 @@
 
   @else if $point == mobile
     @media (max-width: 55em)  
+      @content
+
+  @else if $point == mobile35
+    @media (max-width: 35em)  
       @content 
   
 @mixin text-truncate

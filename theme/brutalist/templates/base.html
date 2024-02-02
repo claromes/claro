@@ -78,6 +78,12 @@
         <div class="page" role="main">
             {% block content %}
             {% endblock content %}
+            
+            {% block footer %}
+            <footer>
+                <p class="information"><script>document.write(moment().format('YYYY'));</script> · <a href="/pages/info">about the blog</a></p>
+            </footer>
+            {% endblock footer %}
         </div>
     <script type="application/ld+json">
         {

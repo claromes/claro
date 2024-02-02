@@ -65,7 +65,7 @@ div#masthead
         .bar
           background-color: $color-secondary
     @include breakpoint(mobile)
-      margin: 1em 0.9em 0.5em
+      margin: 2em 0.9em 0.5em
   a
     width: fit-content
     &:hover
@@ -74,7 +74,7 @@ div#masthead
     position: fixed
     max-width: 20%
     padding-left: 4em
-    padding-top: 5%
+    padding-top: 6em
 
   nav#menu
     clear: both
@@ -135,13 +135,10 @@ div#masthead
 
 /* FOOTER */
 footer
-  margin-bottom: 1em
-  margin-top: 1em
-  p:first-child
-    margin-top: 1.4em
   p
     color: $color-gray
-    margin: 0.5em 1em 0.5em 0
+  .information
+    margin: 02em 0
     a
       color: $color-gray
       &:hover
@@ -153,13 +150,13 @@ footer
 /* ARTICLES */
 .articles
   text-align: left
-  padding: 1.5em
+  padding: 4em 1.5em
   ol li
     padding-bottom: 4em
     padding-top: 1em
   @include breakpoint(medium)
     padding: 2em
-    padding-top: 4.25em
+    padding-top: 4em
   article
     line-height: 2em
     footer
@@ -207,7 +204,7 @@ footer
     /* results in ~60-70 characters per line */
     text-align: left
     line-height: 1.75
-    padding-top: 3em
+    padding-top: 5em
     /* Article published date*/
     footer
       margin-bottom: 0

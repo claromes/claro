@@ -329,7 +329,7 @@ div#masthead h1 a:hover .bar {
 }
 @media (max-width: 55em) {
   div#masthead h1 {
-    margin: 1em 0.9em 0.5em;
+    margin: 2em 0.9em 0.5em;
   }
 }
 div#masthead a {
@@ -343,7 +343,7 @@ div#masthead a:hover {
     position: fixed;
     max-width: 20%;
     padding-left: 4em;
-    padding-top: 5%;
+    padding-top: 6em;
   }
 }
 div#masthead nav#menu {
@@ -420,21 +420,16 @@ div#masthead a#menu-link {
 
 /* END NAVIGATION */
 /* FOOTER */
-footer {
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-footer p:first-child {
-  margin-top: 1.4em;
-}
 footer p {
   color: #757575;
-  margin: 0.5em 1em 0.5em 0;
 }
-footer p a {
+footer .information {
+  margin: 2em 0;
+}
+footer .information a {
   color: #757575;
 }
-footer p a:hover {
+footer .information a:hover {
   background-color: #f1b712 !important;
   color: #232a2e !important;
 }
@@ -443,7 +438,7 @@ footer p a:hover {
 /* ARTICLES */
 .articles {
   text-align: left;
-  padding: 1.5em;
+  padding: 4em 1.5em;
 }
 .articles ol li {
   padding-bottom: 4em;
@@ -452,7 +447,7 @@ footer p a:hover {
 @media (min-width: 55em) {
   .articles {
     padding: 2em;
-    padding-top: 4.25em;
+    padding-top: 4em;
   }
 }
 .articles article {
@@ -514,7 +509,7 @@ footer p a:hover {
   /* results in ~60-70 characters per line */
   text-align: left;
   line-height: 1.75;
-  padding-top: 3em;
+  padding-top: 5em;
   /* Article published date*/
   /*Article Header */
   /* Article content styles */
