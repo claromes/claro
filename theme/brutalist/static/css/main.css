@@ -826,6 +826,10 @@ ul li ul, ul li ul li ul {
 .custom-page li {
   list-style: none;
 }
+.custom-page h2 {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
 
 .whoami {
   float: left;
