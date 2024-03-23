@@ -78,13 +78,14 @@
             {% if LOGO %}
             <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="Logo"></a>
             {% else %}
-            <h1><a href="/">{{ FIRST_NAME }} $ <span class="bar"></span></a></h1>
+            <h1>{{ FIRST_NAME }}</h1>
             {% endif %}
             <nav id="menu">
                 <ul>
                     {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
+                    <li><a class="bar-item">$ <span class="bar"></span></a></li>
                 </ul>
             </nav>
             <a href="#menu" id="menu-link">--More--</a>
@@ -109,7 +110,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "Person",
-            "jobTitle": "Open-source Developer",
+            "jobTitle": "Open Source Developer",
             "alternateName":"Claromes",
             "url": "https://claromes.com"
         }

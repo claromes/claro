@@ -329,7 +329,7 @@ div#masthead h1 a:hover .bar {
 }
 @media (max-width: 55em) {
   div#masthead h1 {
-    margin: 2em 0.9em 0.5em;
+    margin: 2em 0.9em 0.8em;
   }
 }
 div#masthead a {
@@ -362,7 +362,7 @@ div#masthead nav#menu li {
 @media (min-width: 55em) {
   div#masthead nav#menu {
     max-height: none;
-    padding-top: 5%;
+    padding-top: 10%;
   }
   div#masthead nav#menu li {
     display: block;
@@ -817,6 +817,10 @@ ul li ul, ul li ul li ul {
     opacity: 1;
   }
 }
+.bar-item:hover {
+  color: #232a2e !important;
+}
+
 .custom-page {
   font-family: "Ubuntu Mono", monospace;
 }

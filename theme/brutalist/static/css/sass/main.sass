@@ -65,7 +65,7 @@ div#masthead
         .bar
           background-color: $color-secondary
     @include breakpoint(mobile)
-      margin: 2em 0.9em 0.5em
+      margin: 2em 0.9em 0.8em
   a
     width: fit-content
     &:hover
@@ -89,7 +89,7 @@ div#masthead
       font-weight: 600
     @include breakpoint(medium)
       max-height: none
-      padding-top: 5%
+      padding-top: 10%
       li
         display: block
 
@@ -460,6 +460,9 @@ ul li ul, ul li ul li ul
     opacity: 0
   100%
     opacity: 1
+
+.bar-item:hover
+  color: $color-primary !important
 
 .custom-page
   font-family: 'Ubuntu Mono', monospace
