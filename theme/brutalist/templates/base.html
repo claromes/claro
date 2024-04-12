@@ -100,8 +100,9 @@
         <footer>
             <p class="information">
                 <script>document.write(moment().format('YYYY'));</script> · <a href="/pages/info"
-                    title="License, analytics and source code information">About the blog</a> ·
-                <a href="/feeds/rss.xml" title="RSS" target="_blank">RSS</a>
+                    title="License, analytics and source code information">About the blog</a> · 
+                <a href="/{{ FEED_ALL_RSS }}" title="RSS Feed" target="_blank">RSS</a> · 
+                <a href="/{{ FEED_ALL_ATOM }}" title="Atom Feed" target="_blank">Atom</a>
             </p>
         </footer>
         {% endblock footer %}
