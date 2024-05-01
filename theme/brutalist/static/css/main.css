@@ -269,6 +269,7 @@ section, article, header, footer, nav, aside, hgroup {
 /* FONTS */
 body {
   font-family: "Ubuntu Mono", monospace;
+  background-color: aliceblue;
 }
 
 /* END FONTS */
@@ -320,6 +321,7 @@ div#masthead h1 {
 }
 div#masthead h1 a {
   text-decoration: none;
+  font-weight: 600;
 }
 div#masthead h1 a:hover {
   color: #f1b712;
@@ -441,12 +443,11 @@ footer .information a:hover {
   padding: 4em 1.5em;
 }
 .articles ol li {
-  padding-bottom: 3em;
+  padding-bottom: 2em;
   padding-top: 1em;
 }
 @media (min-width: 55em) {
   .articles {
-    padding: 2em;
     padding-top: 4.5em;
   }
 }
@@ -465,24 +466,22 @@ footer .information a:hover {
   text-decoration: none;
 }
 .articles article header h2 {
-  font-size: 2em;
+  font-size: 1.4em;
   line-height: 1.3em;
-}
-.articles article .tweet {
-  padding-top: 0.5em !important;
 }
 .articles article .tweet .content {
   font-family: "Ubuntu Mono", monospace;
 }
+.articles article .tweet .content a {
+  text-decoration: underline;
+}
 .articles article .tweet .content p {
-  color: #757575;
-  border-left: 0.3rem solid;
+  border-left: 0.1rem solid;
   margin: 0 25px 25px;
   margin-bottom: 0;
   padding-left: 10px;
   padding-bottom: 0 !important;
   padding-top: 0 !important;
-  font-size: 1.2em;
 }
 .articles article .summary {
   padding-bottom: 1em;
@@ -718,41 +717,6 @@ footer .information a:hover {
 }
 
 /* TAGS/CATEGORIES */
-/* SOCIAL ICONS */
-.icon {
-  width: 1.4em;
-  height: 1.8em;
-  display: inline-block;
-}
-
-.icons {
-  margin: 0.5em;
-  max-width: 9em;
-}
-.icons a:hover {
-  background-color: transparent;
-}
-
-/* DISQUS COMMENTS */
-#disqus_thread {
-  margin-bottom: 10em;
-}
-
-/* GRAVATARS */
-.gravatar {
-  border-radius: 50%;
-}
-
-/* END GRAVATARS */
-/* EMOJIS */
-img.emoji {
-  margin: 0;
-  vertical-align: -0.3em;
-  display: inline;
-  padding-right: 0.5em;
-}
-
-/* END EMOJIS */
 /* CUSTOM */
 .video-yt {
   aspect-ratio: 16/9;
@@ -842,7 +806,11 @@ ul li ul, ul li ul li ul {
 
 .exhibition-container {
   display: flex;
-  margin-bottom: 5px;
+}
+@media (max-width: 55em) {
+  .exhibition-container {
+    flex-flow: column-reverse;
+  }
 }
 
 .exhibition-img-border {
@@ -851,6 +819,11 @@ ul li ul, ul li ul li ul {
 
 .exhibition-text {
   margin-left: 20px;
+}
+@media (max-width: 55em) {
+  .exhibition-text {
+    margin-left: 0;
+  }
 }
 .exhibition-text p {
   padding-bottom: 10px;

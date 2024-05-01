@@ -24,6 +24,7 @@ $color-gray: #757575
 /* FONTS */
 body
   font-family: 'Ubuntu Mono', monospace
+  background-color: aliceblue
 /* END FONTS */
 
 /* MAIN CONTENT CONTAINER */
@@ -60,6 +61,7 @@ div#masthead
     padding-left: 0.7em
     a
       text-decoration: none
+      font-weight: 600
       &:hover
         color: $color-secondary
         .bar
@@ -152,10 +154,9 @@ footer
   text-align: left
   padding: 4em 1.5em
   ol li
-    padding-bottom: 3em
+    padding-bottom: 2em
     padding-top: 1em
   @include breakpoint(medium)
-    padding: 2em
     padding-top: 4.5em
   article
     line-height: 2em
@@ -168,21 +169,20 @@ footer
       a
         text-decoration: none
       h2
-        font-size: 2em
+        font-size: 1.4em
         line-height: 1.3em
     .tweet
-      padding-top: 0.5em !important
       .content
         font-family: 'Ubuntu Mono', monospace
+        a
+          text-decoration: underline
         p
-          color: $color-gray
-          border-left: 0.3rem solid
+          border-left: 0.1rem solid
           margin: 0 25px 25px
           margin-bottom: 0
           padding-left: 10px
           padding-bottom: 0 !important
           padding-top: 0 !important
-          font-size: 1.2em
     .summary
       padding-bottom: 1em
       font-size: 1em
@@ -376,36 +376,6 @@ footer
   float: right
 /* TAGS/CATEGORIES */
 
-/* SOCIAL ICONS */
-.icon
-  width: 1.4em
-  height: 1.8em
-  display: inline-block
-
-.icons
-  margin: 0.5em
-  max-width: 9em
-  a
-    &:hover
-      background-color: transparent
-
-/* DISQUS COMMENTS */
-#disqus_thread
-  margin-bottom: 10em
-
-/* GRAVATARS */
-.gravatar
-  border-radius: 50%
-/* END GRAVATARS */
-
-/* EMOJIS */
-img.emoji
-  margin: 0
-  vertical-align: -.3em
-  display: inline
-  padding-right: .5em
-/* END EMOJIS */
-
 /* CUSTOM */
 .video-yt
   aspect-ratio: 16 / 9
@@ -480,13 +450,17 @@ ul li ul, ul li ul li ul
 
 .exhibition-container
   display: flex
-  margin-bottom: 5px
+  @include breakpoint(mobile)
+    flex-flow: column-reverse
 
 .exhibition-img-border
   border: 1px solid black
 
 .exhibition-text 
   margin-left: 20px
+  @include breakpoint(mobile)
+    margin-left: 0
   p
     padding-bottom: 10px
+
 /* END CUSTOM */
