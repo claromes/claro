@@ -711,6 +711,9 @@ footer .information a:hover {
   padding-top: 1.5em;
   text-align: left;
 }
+.page-title p {
+  text-align: left;
+}
 
 .count {
   float: right;
