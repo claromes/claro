@@ -812,7 +812,7 @@ ul li ul, ul li ul li ul {
 }
 @media (max-width: 55em) {
   .exhibition-container {
-    flex-flow: column-reverse;
+    flex-flow: column;
   }
 }
 
