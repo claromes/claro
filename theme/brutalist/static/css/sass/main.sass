@@ -144,8 +144,10 @@ footer
     a
       color: $color-gray
       &:hover
-        background-color: $color-secondary !important
+        background-color: $color-secondary
         color: $color-primary !important
+    span
+      margin-right: 15px
 
 /* END FOOTER STYLES */
 
@@ -464,5 +466,19 @@ ul li ul, ul li ul li ul
     margin-left: 0
   p
     padding-bottom: 10px
+
+.atom-feed
+  display: inline-block
+  height: 24px
+  width: 24px
+  vertical-align: top
+  cursor: pointer
+
+  &:hover
+    background-color: transparent !important
+
+    svg
+      path
+        stroke: $color-secondary
 
 /* END CUSTOM */

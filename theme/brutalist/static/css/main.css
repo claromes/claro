@@ -432,8 +432,11 @@ footer .information a {
   color: #757575;
 }
 footer .information a:hover {
-  background-color: #f1b712 !important;
+  background-color: #f1b712;
   color: #232a2e !important;
+}
+footer .information span {
+  margin-right: 15px;
 }
 
 /* END FOOTER STYLES */
@@ -830,6 +833,20 @@ ul li ul, ul li ul li ul {
 }
 .exhibition-text p {
   padding-bottom: 10px;
+}
+
+.atom-feed {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.atom-feed:hover {
+  background-color: transparent !important;
+}
+.atom-feed:hover svg path {
+  stroke: #f1b712;
 }
 
 /* END CUSTOM */
