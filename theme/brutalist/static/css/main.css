@@ -835,20 +835,6 @@ ul li ul, ul li ul li ul {
   padding-bottom: 10px;
 }
 
-.atom-feed {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-  vertical-align: top;
-  cursor: pointer;
-}
-.atom-feed:hover {
-  background-color: transparent !important;
-}
-.atom-feed:hover svg path {
-  stroke: #f1b712;
-}
-
 /* END CUSTOM */
 
 /*# sourceMappingURL=main.css.map */
