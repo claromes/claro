@@ -810,29 +810,33 @@ ul li ul, ul li ul li ul {
   padding-right: 20px;
 }
 
-.exhibition-container {
+.creativecoding-container {
   display: flex;
 }
 @media (max-width: 55em) {
-  .exhibition-container {
+  .creativecoding-container {
     flex-flow: column;
   }
 }
 
-.exhibition-img-border {
+.creativecoding-img-border {
   border: 1px solid black;
 }
 
-.exhibition-text {
+.creativecoding-text {
   margin-left: 20px;
 }
 @media (max-width: 55em) {
-  .exhibition-text {
+  .creativecoding-text {
     margin-left: 0;
   }
 }
-.exhibition-text p {
+.creativecoding-text p {
   padding-bottom: 10px;
+}
+
+.video-yt {
+  width: 100%;
 }
 
 /* END CUSTOM */
