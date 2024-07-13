@@ -51,7 +51,8 @@ a
     background-color: $color-secondary
   h2
     &:hover
-      color: $color-secondary
+      background-color: $color-secondary
+      width: fit-content
 /* END LINKS */
 
 /* NAVIGATION */
@@ -139,8 +140,6 @@ div#masthead
 footer
   p
     color: $color-gray
-  .information
-    margin: 02em 0
     a
       color: $color-gray
       &:hover
@@ -154,45 +153,38 @@ footer
 /* ARTICLES */
 .articles
   text-align: left
-  padding: 4em 1.5em
+  padding: 6em 1.5em
   ol li
-    padding-bottom: 2em
-    padding-top: 1em
-  @include breakpoint(medium)
-    padding-top: 4.5em
+    margin-bottom: 3em
   article
-    line-height: 2em
+    line-height: 1.5em
     footer
-      padding-bottom: .25em
+      padding-right: 1em
       margin-bottom: 0
       margin-top: 0
     header
-      padding-bottom: 1em
       a
         text-decoration: none
       h2
-        font-size: 1.4em
-        line-height: 1.3em
-    .tweet
+        font-size: 1em
+    h3
+      a
+        text-decoration: none
+        background-color: $color-secondary
+    .note
       .content
-        font-family: 'Ubuntu Mono', monospace
+        font-family: monospace
+        margin-bottom: 1em
         a
           text-decoration: underline
-        p
-          border-left: 0.1rem solid
-          margin: 0 25px 25px
-          margin-bottom: 0
-          padding-left: 10px
-          padding-bottom: 0 !important
-          padding-top: 0 !important
     .summary
-      padding-bottom: 1em
       font-size: 1em
       font-weight: 100
     .readmore
       color: $color-secondary
       float: right
       text-decoration: underline
+
 /* END ARTICLES */
 
 /* ARTICLE */
@@ -444,9 +436,12 @@ ul li ul, ul li ul li ul
     margin: 0 !important
   li
     list-style: none
+  h1
+    font-size: 30px
+    padding-bottom: 20px
   h2
     font-size: 20px
-    padding-bottom: 20px
+    padding-bottom: 15px
 
 .whoami
   float: left
@@ -466,8 +461,5 @@ ul li ul, ul li ul li ul
     margin-left: 0
   p
     padding-bottom: 10px
-
-.video-yt
-  width: 100%
 
 /* END CUSTOM */
