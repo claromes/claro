@@ -269,7 +269,7 @@ section, article, header, footer, nav, aside, hgroup {
 /* FONTS */
 body {
   font-family: "Ubuntu Mono", monospace;
-  background-color: aliceblue;
+  background-color: #040108;
 }
 
 /* END FONTS */
@@ -302,13 +302,15 @@ body {
 /* LINKS */
 a {
   text-decoration: underline;
-  color: #232a2e;
+  color: #ffffff;
 }
 a:hover {
-  background-color: #f1b712;
+  color: #040108;
+  background-color: #89e133;
 }
 a h2:hover {
-  background-color: #f1b712;
+  color: #040108;
+  background-color: #89e133;
   width: fit-content;
 }
 
@@ -322,13 +324,13 @@ div#masthead h1 {
 }
 div#masthead h1 a {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 div#masthead h1 a:hover {
-  color: #f1b712;
+  color: #89e133;
 }
 div#masthead h1 a:hover .bar {
-  background-color: #f1b712;
+  background-color: #ffffff;
 }
 @media (max-width: 55em) {
   div#masthead h1 {
@@ -360,7 +362,7 @@ div#masthead nav#menu {
   max-height: 0;
 }
 div#masthead nav#menu li {
-  font-weight: 600;
+  font-weight: 400;
 }
 @media (min-width: 55em) {
   div#masthead nav#menu {
@@ -387,11 +389,12 @@ div#masthead nav#menu ul {
 div#masthead nav#menu li a {
   display: block;
   padding: 0.8em;
+  font-weight: 400;
   text-decoration: none;
   background-color: transparent;
 }
 div#masthead nav#menu li a:hover {
-  color: #f1b712;
+  color: #89e133;
 }
 @media (min-width: 55em) {
   div#masthead nav#menu li a {
@@ -404,9 +407,9 @@ div#masthead a#menu-link {
   padding: 0.2em 0;
   margin: 1.6em;
   font-size: 1em;
-  color: #fafafa;
+  color: #040108;
   text-decoration: none;
-  background: #070707;
+  background: #ffffff;
   -webkit-background-clip: border-box;
   background-clip: border-box;
   -webkit-transition: all 0.6s ease-out;
@@ -424,14 +427,7 @@ div#masthead a#menu-link {
 /* END NAVIGATION */
 /* FOOTER */
 footer p {
-  color: #757575;
-}
-footer p a {
-  color: #757575;
-}
-footer p a:hover {
-  background-color: #f1b712;
-  color: #232a2e !important;
+  color: #a3a3a3;
 }
 footer p span {
   margin-right: 15px;
@@ -441,7 +437,7 @@ footer p span {
 /* ARTICLES */
 .articles {
   text-align: left;
-  padding: 6em 1.5em;
+  padding: 5.4em 1.5em;
 }
 .articles ol li {
   margin-bottom: 3em;
@@ -454,18 +450,36 @@ footer p span {
   margin-bottom: 0;
   margin-top: 0;
 }
+.articles article header {
+  width: fit-content;
+}
 .articles article header a {
   text-decoration: none;
 }
 .articles article header h2 {
-  font-size: 1em;
+  color: #89e133;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.articles article header h2:hover {
+  color: #040108;
+  background-color: #89e133;
 }
 .articles article h3 a {
   text-decoration: none;
-  background-color: #f1b712;
+  background-color: #ffffff;
+}
+.articles article .note {
+  color: #89e133;
+  font-weight: 400;
+}
+.articles article .note .article {
+  font-size: 1em;
+  font-weight: 100;
 }
 .articles article .note .content {
-  font-family: monospace;
+  color: #ffffff;
+  font-size: 1em;
   margin-bottom: 1em;
 }
 .articles article .note .content a {
@@ -474,15 +488,14 @@ footer p span {
 .articles article .summary {
   font-size: 1em;
   font-weight: 100;
-}
-.articles article .readmore {
-  color: #f1b712;
-  float: right;
-  text-decoration: underline;
+  color: #ffffff;
 }
 
 /* END ARTICLES */
 /* ARTICLE */
+.article {
+  color: #ffffff;
+}
 .article img {
   max-width: 100%;
   display: block;
@@ -514,7 +527,7 @@ footer p span {
   font-size: 2em;
   /* 32/16 = 2*/
   padding-bottom: 0.5em;
-  font-weight: 900;
+  font-weight: 400;
   text-align: center;
 }
 .article article header p {
@@ -522,7 +535,7 @@ footer p span {
   padding-bottom: 1em;
   font-weight: 300;
   text-align: center;
-  color: #757575;
+  color: #a3a3a3;
 }
 .article article .content.post_404 {
   font-family: "Ubuntu Mono", monospace;
@@ -544,28 +557,34 @@ footer p span {
   padding-bottom: 0.2em;
   padding-top: 0.8em;
 }
+.article article .content p strong {
+  font-weight: 400;
+}
 .article article .content h2 {
+  font-family: "Ubuntu Mono", monospace;
   font-size: 1.4em;
   padding-bottom: 0.75em;
   padding-top: 1.5em;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content h3 {
+  font-family: "Ubuntu Mono", monospace;
   font-size: 1.2em;
   padding-bottom: 0.75em;
   padding-top: 1.5em;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content h4 {
+  font-family: "Ubuntu Mono", monospace;
   font-size: 1em;
   padding-bottom: 1.25em;
   padding-top: 1em;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content blockquote {
   padding-left: 10px;
   font-weight: 300;
-  color: #757575;
+  color: #a3a3a3;
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
   margin-bottom: 0;
@@ -596,9 +615,8 @@ footer p span {
   padding-bottom: 1.75em;
   padding-top: 1em;
   display: block;
-  background-color: #f5f5f5;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25em;
+  color: #4d4d4d;
+  background-color: #d3d3d3;
   padding: 0.5em;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
@@ -608,7 +626,7 @@ footer p span {
 }
 .article article .content span.nv {
   color: #c65d09;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content span.article-masthead-icon {
   display: none;
@@ -627,7 +645,7 @@ footer p span {
 .back-to-top a {
   font-size: 1.5em;
   /* 24/16=1.5 */
-  font-weight: 900;
+  font-weight: 400;
 }
 
 /* END ARTICLE */
@@ -644,9 +662,9 @@ footer p span {
 }
 
 .tag {
-  background: #e1ecf4;
+  background: #89e133;
   border-radius: 3px;
-  color: #f1b712;
+  color: #040108;
   display: inline-block;
   height: 2em;
   line-height: 2em;
@@ -657,27 +675,32 @@ footer p span {
   -webkit-transition: color 0.2s;
 }
 .tag:hover {
-  background-color: #f1b712;
-  color: white;
+  color: #89e133;
+  background-color: #a3a3a3;
 }
 .tag:hover::after {
-  border-left-color: #f1b712;
+  color: #89e133;
+  border-left-color: #a3a3a3;
 }
 
 .category-tag {
   font-style: italic;
-  color: #f1b712;
+  color: #ffffff;
   text-decoration: underline;
 }
 
 /* END TAGS */
 /* PAGINATION */
 .paginator {
+  color: #ffffff;
   font-size: 3em;
   text-align: center;
 }
 .paginator span {
   font-size: 0.5em;
+}
+.paginator a {
+  text-decoration: none;
 }
 .paginator a.previous {
   float: left;
@@ -714,11 +737,11 @@ footer p span {
 }
 
 .share_post span {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .author_post span {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 code:not(pre code) {
@@ -751,7 +774,7 @@ ul li ul, ul li ul li ul {
   width: 9px;
   height: 17px;
   vertical-align: middle;
-  background-color: #070707;
+  background-color: #ffffff;
   opacity: 0;
   -webkit-animation: bar-anima 1.2s infinite;
   -moz-animation: bar-anima 1.2s infinite;
@@ -772,10 +795,11 @@ ul li ul, ul li ul li ul {
   }
 }
 .bar-item:hover {
-  color: #232a2e !important;
+  color: #ffffff !important;
 }
 
 .custom-page {
+  color: #ffffff;
   font-family: "Ubuntu Mono", monospace;
 }
 .custom-page ul {
@@ -786,10 +810,13 @@ ul li ul, ul li ul li ul {
 }
 .custom-page h1 {
   font-size: 30px;
+  font-weight: 400;
   padding-bottom: 20px;
 }
 .custom-page h2 {
+  color: #89e133;
   font-size: 20px;
+  font-weight: 400;
   padding-bottom: 15px;
 }
 

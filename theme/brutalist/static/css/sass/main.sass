@@ -15,16 +15,18 @@
 /* END MIXINS */
 
 /* VARIABLES */
-$color-primary: #232a2e
-$color-secondary: #f1b712
-$color-third: #e1ecf4
-$color-gray: #757575
+$color-primary: #040108
+$color-secondary: #ffffff
+$color-third: #89e133
+$color-gray: #a3a3a3
+$color-code: #4d4d4d
+$background-color-code: #d3d3d3
 /* END VARIABLES */
 
 /* FONTS */
 body
   font-family: 'Ubuntu Mono', monospace
-  background-color: aliceblue
+  background-color: $color-primary
 /* END FONTS */
 
 /* MAIN CONTENT CONTAINER */
@@ -46,12 +48,14 @@ body
 /* LINKS */
 a
   text-decoration: underline
-  color: $color-primary
+  color: $color-secondary
   &:hover
-    background-color: $color-secondary
+    color: $color-primary
+    background-color: $color-third
   h2
     &:hover
-      background-color: $color-secondary
+      color: $color-primary
+      background-color: $color-third
       width: fit-content
 /* END LINKS */
 
@@ -62,9 +66,9 @@ div#masthead
     padding-left: 0.7em
     a
       text-decoration: none
-      font-weight: 600
+      font-weight: 400
       &:hover
-        color: $color-secondary
+        color: $color-third
         .bar
           background-color: $color-secondary
     @include breakpoint(mobile)
@@ -89,7 +93,7 @@ div#masthead
     overflow: hidden
     max-height: 0
     li
-      font-weight: 600
+      font-weight: 400
     @include breakpoint(medium)
       max-height: none
       padding-top: 10%
@@ -109,10 +113,11 @@ div#masthead
     li a
       display: block
       padding: 0.8em
+      font-weight: 400
       text-decoration: none
       background-color: transparent
       &:hover
-        color: $color-secondary
+        color: $color-third
       @include breakpoint(medium)
         border: 0
 
@@ -122,9 +127,9 @@ div#masthead
     padding: 0.2em 0
     margin: 1.6em
     font-size: 1em
-    color: #fafafa
+    color: $color-primary
     text-decoration: none
-    background: #070707
+    background: $color-secondary
     -webkit-background-clip: border-box
     background-clip: border-box
     -webkit-transition: all 0.6s ease-out
@@ -140,11 +145,6 @@ div#masthead
 footer
   p
     color: $color-gray
-    a
-      color: $color-gray
-      &:hover
-        background-color: $color-secondary
-        color: $color-primary !important
     span
       margin-right: 15px
 
@@ -153,7 +153,7 @@ footer
 /* ARTICLES */
 .articles
   text-align: left
-  padding: 6em 1.5em
+  padding: 5.4em 1.5em
   ol li
     margin-bottom: 3em
   article
@@ -163,32 +163,41 @@ footer
       margin-bottom: 0
       margin-top: 0
     header
+      width: fit-content
       a
         text-decoration: none
       h2
-        font-size: 1em
+        color: $color-third
+        font-size: 1.2em
+        font-weight: 400
+        &:hover
+          color: $color-primary
+          background-color: $color-third
     h3
       a
         text-decoration: none
         background-color: $color-secondary
     .note
+      color: $color-third
+      font-weight: 400
+      .article
+        font-size: 1em
+        font-weight: 100
       .content
-        font-family: monospace
+        color: $color-secondary
+        font-size: 1em
         margin-bottom: 1em
         a
           text-decoration: underline
     .summary
       font-size: 1em
       font-weight: 100
-    .readmore
       color: $color-secondary
-      float: right
-      text-decoration: underline
-
 /* END ARTICLES */
 
 /* ARTICLE */
 .article
+  color: $color-secondary
   img
     max-width: 100%
     @include center-block
@@ -213,7 +222,7 @@ footer
         font-size: 2em
         /* 32/16 = 2*/
         padding-bottom: 0.5em
-        font-weight: 900
+        font-weight: 400
         text-align: center
       p
         font-size: 1em
@@ -234,22 +243,27 @@ footer
       p
         padding-bottom: 0.2em
         padding-top: 0.8em
+        strong
+          font-weight: 400
       /* article headers */
       h2
+        font-family: 'Ubuntu Mono', monospace
         font-size: 1.4em
         padding-bottom: .75em
         padding-top: 1.5em
-        font-weight: 900
+        font-weight: 400
       h3
+        font-family: 'Ubuntu Mono', monospace
         font-size: 1.2em
         padding-bottom: .75em
         padding-top: 1.5em
-        font-weight: 900
+        font-weight: 400
       h4
+        font-family: 'Ubuntu Mono', monospace
         font-size: 1em
         padding-bottom: 1.25em
         padding-top: 1em
-        font-weight: 900
+        font-weight: 400
       blockquote
         padding-left: 10px
         font-weight: 300
@@ -280,9 +294,8 @@ footer
         padding-bottom: 1.75em
         padding-top: 1em
         display: block
-        background-color: #f5f5f5
-        border: 1px solid rgba(0, 0, 0, 0.15)
-        border-radius: .25em
+        color: $color-code
+        background-color: $background-color-code
         padding: .5em
         white-space: pre-wrap
         white-space: -moz-pre-wrap
@@ -292,7 +305,7 @@ footer
 
       span.nv
         color: #c65d09
-        font-weight: 900
+        font-weight: 400
 
       span.article-masthead-icon
         display: none
@@ -309,7 +322,7 @@ footer
   a
     font-size: 1.5em
     /* 24/16=1.5 */
-    font-weight: 900
+    font-weight: 400
 /* END ARTICLE */
 
 /* TAGS */
@@ -324,7 +337,7 @@ footer
 .tag
   background: $color-third
   border-radius: 3px
-  color: $color-secondary
+  color: $color-primary
   display: inline-block
   height: 2em
   line-height: 2em
@@ -334,10 +347,11 @@ footer
   text-decoration: none
   -webkit-transition: color 0.2s
   &:hover
-    background-color: $color-secondary
-    color: white
+    color: $color-third
+    background-color: $color-gray
     &::after
-      border-left-color: $color-secondary
+      color: $color-third
+      border-left-color: $color-gray
 
 .category-tag
   font-style: italic
@@ -347,10 +361,13 @@ footer
 
 /* PAGINATION */
 .paginator
+  color: $color-secondary
   font-size: 3em
   text-align: center
   span
     font-size: .5em
+  a
+    text-decoration: none
   a.previous
     float: left
   a.next
@@ -379,16 +396,16 @@ footer
 
 .share_post
   span
-    font-weight: 600
+    font-weight: 400
 
 .author_post
   span
-    font-weight: 600
+    font-weight: 400
 
 code:not(pre code)
   padding: 0.2em 0.3em
-  color: #4d4d4d
-  background-color: #d3d3d3
+  color: $color-code
+  background-color: $background-color-code
   border-radius: 6px
 
 ul li ul, ul li ul li ul
@@ -411,7 +428,7 @@ ul li ul, ul li ul li ul
   width: 9px
   height: 17px
   vertical-align: middle
-  background-color: #070707
+  background-color: $color-secondary
   opacity: 0
   -webkit-animation: bar-anima 1.2s infinite
   -moz-animation: bar-anima 1.2s infinite
@@ -427,10 +444,12 @@ ul li ul, ul li ul li ul
   100%
     opacity: 1
 
-.bar-item:hover
-  color: $color-primary !important
+.bar-item
+  &:hover
+    color: $color-secondary !important
 
 .custom-page
+  color: $color-secondary
   font-family: 'Ubuntu Mono', monospace
   ul
     margin: 0 !important
@@ -438,9 +457,12 @@ ul li ul, ul li ul li ul
     list-style: none
   h1
     font-size: 30px
+    font-weight: 400
     padding-bottom: 20px
   h2
+    color: $color-third
     font-size: 20px
+    font-weight: 400
     padding-bottom: 15px
 
 .whoami
