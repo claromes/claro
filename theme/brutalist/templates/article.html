@@ -59,13 +59,13 @@
         {% endif %}
           <header>
             <h2>
-              {% if article.tweet == 'true' %}
+              {% if article.note == 'true' %}
                 {{ article.content|safe }}
               {% else %}
                 {{ article.title }}
               {% endif %}
             </h2>
-            {% if article.tweet == 'true' %}
+            {% if article.note == 'true' %}
             {% else %}
               <p>
                 {{ article.description }}
@@ -79,7 +79,7 @@
 
           <br>
 
-          {% if article.tweet == 'true' %}
+          {% if article.note == 'true' %}
           {% else %}
             {{ article.content|safe }}
           {% endif %}
@@ -105,7 +105,7 @@
           <p class="share_post">
             <span>comments?</span>
             ping me on
-            <a href="{{ MASTODON }}" title="Toot me" target="_blank">mastodon</a>, 
+            <a href="{{ MASTODON }}" title="Toot me" target="_blank">mastodon</a>,
             <a href="{{ DISCORD }}" title="Send me a DM" target="_blank" >discord</a>
             or
             <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">matrix</a>

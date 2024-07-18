@@ -13,9 +13,9 @@
                         </p>
                     </footer>
                     <header>
-                        {% if article.tweet == 'true' %}
-                            <div class="tweet" role="article">
-                                <a href="{{ SITEURL }}/tag/tweet"><h3 title="this should be a tweet">🐦</h3></a>
+                        {% if article.note == 'true' %}
+                            <div class="note" role="article">
+                                <h3 title="notes">note</h3>
                                 <div class="article">
                                     <div class="content">
                                         {{ article.content|safe }}
@@ -28,8 +28,8 @@
                             </a>
                         {% endif %}
                     </header>
-                        {% if not article.tweet %}
-                            <div class="summary">{{ article.description }} </div>
+                        {% if not article.note %}
+                            <div class="summary">{{ article.description }}</div>
                         {% endif %}
                 </article>
             </li>

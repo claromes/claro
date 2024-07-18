@@ -15,10 +15,12 @@
 /* END MIXINS */
 
 /* VARIABLES */
-$color-primary: #232a2e
-$color-secondary: #f1b712
-$color-third: #e1ecf4
-$color-gray: #757575
+$color-primary: #ffffff
+$color-secondary: #000000
+$color-third: #f8b008
+$color-gray: #a3a3a3
+$color-code: #4d4d4d
+$background-color-code: #e3e3e3
 /* END VARIABLES */
 
 /* FONTS */
@@ -35,85 +37,53 @@ body
   margin-bottom: 2em
   text-align: center
   line-height: 1.5
-  @include breakpoint(medium)
-    padding-left: 30%
-  @include breakpoint(large)
-    padding-left: 20%
-  @include breakpoint(full)
-    padding-left: 0
 /* END MAIN CONTENT CONTAINER
 
 /* LINKS */
 a
   text-decoration: underline
-  color: $color-primary
+  color: $color-secondary
   &:hover
-    background-color: $color-secondary
+    background-color: $color-third
   h2
     &:hover
-      color: $color-secondary
+      background-color: $color-third
+      width: fit-content
 /* END LINKS */
 
 /* NAVIGATION */
 div#masthead
-  margin-bottom: 2em
+  max-width: 50em
+  margin: auto
+  padding-top: 1.6em
   h1
-    padding-left: 0.7em
+    padding-left: 1.6em
     a
       text-decoration: none
-      font-weight: 600
+      font-weight: 900
       &:hover
-        color: $color-secondary
+        color: $color-third
         .bar
           background-color: $color-secondary
-    @include breakpoint(mobile)
-      margin: 2em 0.9em 0.8em
   a
     width: fit-content
     &:hover
       background-color: transparent
-  @include breakpoint(medium)
-    position: fixed
-    max-width: 20%
-    padding-left: 4em
-    padding-top: 6em
 
   nav#menu
-    clear: both
-    -webkit-transition: all 0.6s ease-out
-    -moz-transition: all 0.6s ease-out
-    -ms-transition: all 0.6s ease-out
-    -o-transition: all 0.6s ease-out
-    transition: all 0.6s ease-out
-    overflow: hidden
-    max-height: 0
+    padding: 0.4em 0 2.5em 0.8em
     li
-      font-weight: 600
-    @include breakpoint(medium)
-      max-height: none
-      padding-top: 10%
-      li
-        display: block
-
-    &#menu.active
-      max-height: 20em
-      padding: 0 0.9em 0.5em
-
+      font-weight: 900
     ul
       text-align: center
-      @include breakpoint(medium)
-        border: 0
-        text-align: left
-
     li a
       display: block
-      padding: 0.8em
+      padding: 0.4em 0.8em
+      font-weight: 900
       text-decoration: none
       background-color: transparent
       &:hover
-        color: $color-secondary
-      @include breakpoint(medium)
-        border: 0
+        color: $color-third
 
   a#menu-link
     float: left
@@ -121,82 +91,66 @@ div#masthead
     padding: 0.2em 0
     margin: 1.6em
     font-size: 1em
-    color: #fafafa
+    color: $color-primary
     text-decoration: none
-    background: #070707
-    -webkit-background-clip: border-box
-    background-clip: border-box
-    -webkit-transition: all 0.6s ease-out
-    -moz-transition: all 0.6s ease-out
-    -ms-transition: all 0.6s ease-out
-    -o-transition: all 0.6s ease-out
-    transition: all 0.6s ease-out
-    @include breakpoint(medium)
-      display: none
+    background: $color-secondary
 /* END NAVIGATION */
 
 /* FOOTER */
 footer
+  margin-top: 4em
   p
     color: $color-gray
-  .information
-    margin: 02em 0
-    a
-      color: $color-gray
-      &:hover
-        background-color: $color-secondary
-        color: $color-primary !important
-    span
-      margin-right: 15px
 
 /* END FOOTER STYLES */
 
 /* ARTICLES */
 .articles
   text-align: left
-  padding: 4em 1.5em
+  padding: 0 1.8em
   ol li
-    padding-bottom: 2em
-    padding-top: 1em
-  @include breakpoint(medium)
-    padding-top: 4.5em
+    margin-bottom: 3em
   article
-    line-height: 2em
+    line-height: 1.5em
     footer
-      padding-bottom: .25em
+      padding-right: 1em
       margin-bottom: 0
       margin-top: 0
     header
-      padding-bottom: 1em
+      width: fit-content
       a
         text-decoration: none
       h2
-        font-size: 1.4em
-        line-height: 1.3em
-    .tweet
+        color: $color-secondary
+        font-size: 1.2em
+        font-weight: 900
+        &:hover
+          background-color: $color-third
+    h3
+      a
+        text-decoration: none
+        background-color: $color-secondary
+    .note
+      color: $color-third
+      font-weight: 900
+      .article
+        font-size: 1em
+        font-weight: 100
       .content
-        font-family: 'Ubuntu Mono', monospace
+        color: $color-secondary
+        font-size: 1em
+        margin-bottom: 1em
         a
           text-decoration: underline
-        p
-          border-left: 0.1rem solid
-          margin: 0 25px 25px
-          margin-bottom: 0
-          padding-left: 10px
-          padding-bottom: 0 !important
-          padding-top: 0 !important
     .summary
-      padding-bottom: 1em
       font-size: 1em
       font-weight: 100
-    .readmore
       color: $color-secondary
-      float: right
-      text-decoration: underline
 /* END ARTICLES */
 
 /* ARTICLE */
 .article
+  color: $color-secondary
   img
     max-width: 100%
     @include center-block
@@ -206,7 +160,7 @@ footer
     /* results in ~60-70 characters per line */
     text-align: left
     line-height: 1.75
-    padding-top: 6em
+    padding-top: 0.5em
     /* Article published date*/
     footer
       margin-bottom: 0
@@ -242,18 +196,23 @@ footer
       p
         padding-bottom: 0.2em
         padding-top: 0.8em
+        strong
+          font-weight: 900
       /* article headers */
       h2
+        font-family: 'Ubuntu Mono', monospace
         font-size: 1.4em
         padding-bottom: .75em
         padding-top: 1.5em
         font-weight: 900
       h3
+        font-family: 'Ubuntu Mono', monospace
         font-size: 1.2em
         padding-bottom: .75em
         padding-top: 1.5em
         font-weight: 900
       h4
+        font-family: 'Ubuntu Mono', monospace
         font-size: 1em
         padding-bottom: 1.25em
         padding-top: 1em
@@ -288,9 +247,8 @@ footer
         padding-bottom: 1.75em
         padding-top: 1em
         display: block
-        background-color: #f5f5f5
-        border: 1px solid rgba(0, 0, 0, 0.15)
-        border-radius: .25em
+        color: $color-code
+        background-color: $background-color-code
         padding: .5em
         white-space: pre-wrap
         white-space: -moz-pre-wrap
@@ -322,6 +280,7 @@ footer
 
 /* TAGS */
 .tags
+  color: $color-primary
   list-style: none
   margin: 0
   overflow: hidden
@@ -332,7 +291,7 @@ footer
 .tag
   background: $color-third
   border-radius: 3px
-  color: $color-secondary
+  color: $color-primary
   display: inline-block
   height: 2em
   line-height: 2em
@@ -342,10 +301,11 @@ footer
   text-decoration: none
   -webkit-transition: color 0.2s
   &:hover
-    background-color: $color-secondary
-    color: white
+    color: $color-third
+    background-color: $color-gray
     &::after
-      border-left-color: $color-secondary
+      color: $color-third
+      border-left-color: $color-gray
 
 .category-tag
   font-style: italic
@@ -355,10 +315,13 @@ footer
 
 /* PAGINATION */
 .paginator
+  color: $color-secondary
   font-size: 3em
   text-align: center
   span
     font-size: .5em
+  a
+    text-decoration: none
   a.previous
     float: left
   a.next
@@ -366,17 +329,8 @@ footer
 /* END PAGINATION */
 
 /* TAGS/CATEGORIES */
-.page-title
-  border-bottom: 2px solid black
-  margin: 0 2em
-  h1
-    font-size: 3em
-    padding-bottom: .75em
-    padding-top: 1.5em
-    text-align: left
-  p
-    text-align: left
 .count
+  color: $color-secondary
   float: right
 /* TAGS/CATEGORIES */
 
@@ -387,31 +341,20 @@ footer
 
 .share_post
   span
-    font-weight: 600
+    font-weight: 900
 
 .author_post
   span
-    font-weight: 600
+    font-weight: 900
 
 code:not(pre code)
   padding: 0.2em 0.3em
-  color: #4d4d4d
-  background-color: #d3d3d3
+  color: $color-code
+  background-color: $background-color-code
   border-radius: 6px
 
 ul li ul, ul li ul li ul
   padding-bottom: 0 !important
-
-.more
-  padding: 1px 0px 3px 0px
-  color: #fafafa
-  text-decoration: none
-  background: #070707
-  -webkit-background-clip: border-box
-  background-clip: border-box
-
-.more:hover
-  color: #070707
 
 .bar
   display: inline-block
@@ -419,7 +362,7 @@ ul li ul, ul li ul li ul
   width: 9px
   height: 17px
   vertical-align: middle
-  background-color: #070707
+  background-color: $color-secondary
   opacity: 0
   -webkit-animation: bar-anima 1.2s infinite
   -moz-animation: bar-anima 1.2s infinite
@@ -435,22 +378,33 @@ ul li ul, ul li ul li ul
   100%
     opacity: 1
 
-.bar-item:hover
-  color: $color-primary !important
+.bar-item
+  &:hover
+    color: $color-secondary !important
 
 .custom-page
+  color: $color-secondary
   font-family: 'Ubuntu Mono', monospace
   ul
     margin: 0 !important
   li
     list-style: none
-  h2
-    font-size: 20px
+  h1
+    text-align: left
+    color: $color-third
+    font-size: 30px
+    font-weight: 900
     padding-bottom: 20px
+  h2
+    color: $color-third
+    font-size: 20px
+    font-weight: 900
+    padding-bottom: 15px
 
-.whoami
-  float: left
-  padding-right: 20px
+  .whoami
+    float: left
+    padding-right: 20px
+    padding-top: 8px
 
 .creativecoding-container
   display: flex
@@ -466,8 +420,5 @@ ul li ul, ul li ul li ul
     margin-left: 0
   p
     padding-bottom: 10px
-
-.video-yt
-  width: 100%
 
 /* END CUSTOM */

@@ -65,8 +65,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <!-- goatcounter -->
     <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <!-- date formatting and menu -->
-    <script defer src="{{ SITEURL }}/theme/js/menu.js"></script>
+    <!-- date formatting -->
     <script src="{{ SITEURL }}/theme/js/moment.js"></script>
     {% endblock head %}
 </head>
@@ -88,7 +87,6 @@
                     <li><a class="bar-item">$ <span class="bar"></span></a></li>
                 </ul>
             </nav>
-            <a href="#menu" id="menu-link">--More--</a>
         </header>
     </div>
     {% endblock header %}
@@ -98,17 +96,8 @@
 
         {% block footer %}
         <footer>
-            <p class="information">
-                <span>© 2022-<script>document.write(moment().format('YYYY'));</script></span>
-                <span>
-                    <a href="/pages/policy" title="Policy">Policy</a>
-                </span>
-                <span>
-                    <a href="/tags" title="Tags">Tags</a>
-                </span>
-                <span>
-                    <a href="/{{ FEED_ALL_ATOM }}" title="Atom Feed">Atom</a>
-                </span>
+            <p>
+                <span>© Claromes 2022-<script>document.write(moment().format('YYYY'));</script></span>
             </p>
         </footer>
         {% endblock footer %}

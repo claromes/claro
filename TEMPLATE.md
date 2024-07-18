@@ -3,15 +3,15 @@ date: 2023-03-24
 slug:
 tags:
 description:
-tweet: true
-tweet_image:
+note: true
+note_image:
 cover_image_credit: Claromes
 show_cover_image: false
 status: published
 
-*Edited August 20, 2023*
+_Edited August 20, 2023_
 
-*Originally published at: [example.com](https://example.com)*
+_Originally published at: [example.com](https://example.com)_
 
 ![Alt]({static}/images/)
 
