@@ -269,7 +269,7 @@ section, article, header, footer, nav, aside, hgroup {
 /* FONTS */
 body {
   font-family: "Ubuntu Mono", monospace;
-  background-color: #040108;
+  background-color: aliceblue;
 }
 
 /* END FONTS */
@@ -282,60 +282,40 @@ body {
   text-align: center;
   line-height: 1.5;
 }
-@media (min-width: 55em) {
-  .page {
-    padding-left: 30%;
-  }
-}
-@media (min-width: 65em) {
-  .page {
-    padding-left: 20%;
-  }
-}
-@media (min-width: 75em) {
-  .page {
-    padding-left: 0;
-  }
-}
 
 /* END MAIN CONTENT CONTAINER */
 /* LINKS */
 a {
   text-decoration: underline;
-  color: #ffffff;
+  color: #000000;
 }
 a:hover {
-  color: #040108;
-  background-color: #89e133;
+  background-color: #f8b008;
 }
 a h2:hover {
-  color: #040108;
-  background-color: #89e133;
+  background-color: #f8b008;
   width: fit-content;
 }
 
 /* END LINKS */
 /* NAVIGATION */
 div#masthead {
-  margin-bottom: 2em;
+  max-width: 50em;
+  margin: auto;
+  padding-top: 1.6em;
 }
 div#masthead h1 {
-  padding-left: 0.7em;
+  padding-left: 1.6em;
 }
 div#masthead h1 a {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 900;
 }
 div#masthead h1 a:hover {
-  color: #89e133;
+  color: #f8b008;
 }
 div#masthead h1 a:hover .bar {
-  background-color: #ffffff;
-}
-@media (max-width: 55em) {
-  div#masthead h1 {
-    margin: 2em 0.9em 0.8em;
-  }
+  background-color: #000000;
 }
 div#masthead a {
   width: fit-content;
@@ -343,63 +323,24 @@ div#masthead a {
 div#masthead a:hover {
   background-color: transparent;
 }
-@media (min-width: 55em) {
-  div#masthead {
-    position: fixed;
-    max-width: 20%;
-    padding-left: 4em;
-    padding-top: 6em;
-  }
-}
 div#masthead nav#menu {
-  clear: both;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -ms-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
-  overflow: hidden;
-  max-height: 0;
+  padding: 0.4em 0 2.5em 0.8em;
 }
 div#masthead nav#menu li {
-  font-weight: 400;
-}
-@media (min-width: 55em) {
-  div#masthead nav#menu {
-    max-height: none;
-    padding-top: 10%;
-  }
-  div#masthead nav#menu li {
-    display: block;
-  }
-}
-div#masthead nav#menu#menu.active {
-  max-height: 20em;
-  padding: 0 0.9em 0.5em;
+  font-weight: 900;
 }
 div#masthead nav#menu ul {
   text-align: center;
 }
-@media (min-width: 55em) {
-  div#masthead nav#menu ul {
-    border: 0;
-    text-align: left;
-  }
-}
 div#masthead nav#menu li a {
   display: block;
-  padding: 0.8em;
-  font-weight: 400;
+  padding: 0.4em 0.8em;
+  font-weight: 900;
   text-decoration: none;
   background-color: transparent;
 }
 div#masthead nav#menu li a:hover {
-  color: #89e133;
-}
-@media (min-width: 55em) {
-  div#masthead nav#menu li a {
-    border: 0;
-  }
+  color: #f8b008;
 }
 div#masthead a#menu-link {
   float: left;
@@ -407,37 +348,25 @@ div#masthead a#menu-link {
   padding: 0.2em 0;
   margin: 1.6em;
   font-size: 1em;
-  color: #040108;
+  color: #ffffff;
   text-decoration: none;
-  background: #ffffff;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -ms-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
-}
-@media (min-width: 55em) {
-  div#masthead a#menu-link {
-    display: none;
-  }
+  background: #000000;
 }
 
 /* END NAVIGATION */
 /* FOOTER */
+footer {
+  margin-top: 4em;
+}
 footer p {
   color: #a3a3a3;
-}
-footer p span {
-  margin-right: 15px;
 }
 
 /* END FOOTER STYLES */
 /* ARTICLES */
 .articles {
   text-align: left;
-  padding: 5.4em 1.5em;
+  padding: 0 1.8em;
 }
 .articles ol li {
   margin-bottom: 3em;
@@ -457,28 +386,27 @@ footer p span {
   text-decoration: none;
 }
 .articles article header h2 {
-  color: #89e133;
+  color: #000000;
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: 900;
 }
 .articles article header h2:hover {
-  color: #040108;
-  background-color: #89e133;
+  background-color: #f8b008;
 }
 .articles article h3 a {
   text-decoration: none;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 .articles article .note {
-  color: #89e133;
-  font-weight: 400;
+  color: #f8b008;
+  font-weight: 900;
 }
 .articles article .note .article {
   font-size: 1em;
   font-weight: 100;
 }
 .articles article .note .content {
-  color: #ffffff;
+  color: #000000;
   font-size: 1em;
   margin-bottom: 1em;
 }
@@ -488,13 +416,13 @@ footer p span {
 .articles article .summary {
   font-size: 1em;
   font-weight: 100;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* END ARTICLES */
 /* ARTICLE */
 .article {
-  color: #ffffff;
+  color: #000000;
 }
 .article img {
   max-width: 100%;
@@ -508,7 +436,7 @@ footer p span {
   /* results in ~60-70 characters per line */
   text-align: left;
   line-height: 1.75;
-  padding-top: 6em;
+  padding-top: 0.5em;
   /* Article published date*/
   /*Article Header */
   /* Article content styles */
@@ -527,7 +455,7 @@ footer p span {
   font-size: 2em;
   /* 32/16 = 2*/
   padding-bottom: 0.5em;
-  font-weight: 400;
+  font-weight: 900;
   text-align: center;
 }
 .article article header p {
@@ -558,28 +486,28 @@ footer p span {
   padding-top: 0.8em;
 }
 .article article .content p strong {
-  font-weight: 400;
+  font-weight: 900;
 }
 .article article .content h2 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.4em;
   padding-bottom: 0.75em;
   padding-top: 1.5em;
-  font-weight: 400;
+  font-weight: 900;
 }
 .article article .content h3 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.2em;
   padding-bottom: 0.75em;
   padding-top: 1.5em;
-  font-weight: 400;
+  font-weight: 900;
 }
 .article article .content h4 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1em;
   padding-bottom: 1.25em;
   padding-top: 1em;
-  font-weight: 400;
+  font-weight: 900;
 }
 .article article .content blockquote {
   padding-left: 10px;
@@ -616,7 +544,7 @@ footer p span {
   padding-top: 1em;
   display: block;
   color: #4d4d4d;
-  background-color: #d3d3d3;
+  background-color: #e3e3e3;
   padding: 0.5em;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
@@ -626,7 +554,7 @@ footer p span {
 }
 .article article .content span.nv {
   color: #c65d09;
-  font-weight: 400;
+  font-weight: 900;
 }
 .article article .content span.article-masthead-icon {
   display: none;
@@ -645,12 +573,13 @@ footer p span {
 .back-to-top a {
   font-size: 1.5em;
   /* 24/16=1.5 */
-  font-weight: 400;
+  font-weight: 900;
 }
 
 /* END ARTICLE */
 /* TAGS */
 .tags {
+  color: #ffffff;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -662,9 +591,9 @@ footer p span {
 }
 
 .tag {
-  background: #89e133;
+  background: #f8b008;
   border-radius: 3px;
-  color: #040108;
+  color: #ffffff;
   display: inline-block;
   height: 2em;
   line-height: 2em;
@@ -675,24 +604,24 @@ footer p span {
   -webkit-transition: color 0.2s;
 }
 .tag:hover {
-  color: #89e133;
+  color: #f8b008;
   background-color: #a3a3a3;
 }
 .tag:hover::after {
-  color: #89e133;
+  color: #f8b008;
   border-left-color: #a3a3a3;
 }
 
 .category-tag {
   font-style: italic;
-  color: #ffffff;
+  color: #000000;
   text-decoration: underline;
 }
 
 /* END TAGS */
 /* PAGINATION */
 .paginator {
-  color: #ffffff;
+  color: #000000;
   font-size: 3em;
   text-align: center;
 }
@@ -711,21 +640,8 @@ footer p span {
 
 /* END PAGINATION */
 /* TAGS/CATEGORIES */
-.page-title {
-  border-bottom: 2px solid black;
-  margin: 0 2em;
-}
-.page-title h1 {
-  font-size: 3em;
-  padding-bottom: 0.75em;
-  padding-top: 1.5em;
-  text-align: left;
-}
-.page-title p {
-  text-align: left;
-}
-
 .count {
+  color: #000000;
   float: right;
 }
 
@@ -737,35 +653,22 @@ footer p span {
 }
 
 .share_post span {
-  font-weight: 400;
+  font-weight: 900;
 }
 
 .author_post span {
-  font-weight: 400;
+  font-weight: 900;
 }
 
 code:not(pre code) {
   padding: 0.2em 0.3em;
   color: #4d4d4d;
-  background-color: #d3d3d3;
+  background-color: #e3e3e3;
   border-radius: 6px;
 }
 
 ul li ul, ul li ul li ul {
   padding-bottom: 0 !important;
-}
-
-.more {
-  padding: 1px 0px 3px 0px;
-  color: #fafafa;
-  text-decoration: none;
-  background: #070707;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-}
-
-.more:hover {
-  color: #070707;
 }
 
 .bar {
@@ -774,7 +677,7 @@ ul li ul, ul li ul li ul {
   width: 9px;
   height: 17px;
   vertical-align: middle;
-  background-color: #ffffff;
+  background-color: #000000;
   opacity: 0;
   -webkit-animation: bar-anima 1.2s infinite;
   -moz-animation: bar-anima 1.2s infinite;
@@ -795,11 +698,11 @@ ul li ul, ul li ul li ul {
   }
 }
 .bar-item:hover {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .custom-page {
-  color: #ffffff;
+  color: #000000;
   font-family: "Ubuntu Mono", monospace;
 }
 .custom-page ul {
@@ -809,20 +712,22 @@ ul li ul, ul li ul li ul {
   list-style: none;
 }
 .custom-page h1 {
+  text-align: left;
+  color: #f8b008;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 900;
   padding-bottom: 20px;
 }
 .custom-page h2 {
-  color: #89e133;
+  color: #f8b008;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 900;
   padding-bottom: 15px;
 }
-
-.whoami {
+.custom-page .whoami {
   float: left;
   padding-right: 20px;
+  padding-top: 8px;
 }
 
 .creativecoding-container {

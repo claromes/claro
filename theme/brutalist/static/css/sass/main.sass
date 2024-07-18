@@ -15,18 +15,18 @@
 /* END MIXINS */
 
 /* VARIABLES */
-$color-primary: #040108
-$color-secondary: #ffffff
-$color-third: #89e133
+$color-primary: #ffffff
+$color-secondary: #000000
+$color-third: #f8b008
 $color-gray: #a3a3a3
 $color-code: #4d4d4d
-$background-color-code: #d3d3d3
+$background-color-code: #e3e3e3
 /* END VARIABLES */
 
 /* FONTS */
 body
   font-family: 'Ubuntu Mono', monospace
-  background-color: $color-primary
+  background-color: aliceblue
 /* END FONTS */
 
 /* MAIN CONTENT CONTAINER */
@@ -37,12 +37,6 @@ body
   margin-bottom: 2em
   text-align: center
   line-height: 1.5
-  @include breakpoint(medium)
-    padding-left: 30%
-  @include breakpoint(large)
-    padding-left: 20%
-  @include breakpoint(full)
-    padding-left: 0
 /* END MAIN CONTENT CONTAINER
 
 /* LINKS */
@@ -50,76 +44,46 @@ a
   text-decoration: underline
   color: $color-secondary
   &:hover
-    color: $color-primary
     background-color: $color-third
   h2
     &:hover
-      color: $color-primary
       background-color: $color-third
       width: fit-content
 /* END LINKS */
 
 /* NAVIGATION */
 div#masthead
-  margin-bottom: 2em
+  max-width: 50em
+  margin: auto
+  padding-top: 1.6em
   h1
-    padding-left: 0.7em
+    padding-left: 1.6em
     a
       text-decoration: none
-      font-weight: 400
+      font-weight: 900
       &:hover
         color: $color-third
         .bar
           background-color: $color-secondary
-    @include breakpoint(mobile)
-      margin: 2em 0.9em 0.8em
   a
     width: fit-content
     &:hover
       background-color: transparent
-  @include breakpoint(medium)
-    position: fixed
-    max-width: 20%
-    padding-left: 4em
-    padding-top: 6em
 
   nav#menu
-    clear: both
-    -webkit-transition: all 0.6s ease-out
-    -moz-transition: all 0.6s ease-out
-    -ms-transition: all 0.6s ease-out
-    -o-transition: all 0.6s ease-out
-    transition: all 0.6s ease-out
-    overflow: hidden
-    max-height: 0
+    padding: 0.4em 0 2.5em 0.8em
     li
-      font-weight: 400
-    @include breakpoint(medium)
-      max-height: none
-      padding-top: 10%
-      li
-        display: block
-
-    &#menu.active
-      max-height: 20em
-      padding: 0 0.9em 0.5em
-
+      font-weight: 900
     ul
       text-align: center
-      @include breakpoint(medium)
-        border: 0
-        text-align: left
-
     li a
       display: block
-      padding: 0.8em
-      font-weight: 400
+      padding: 0.4em 0.8em
+      font-weight: 900
       text-decoration: none
       background-color: transparent
       &:hover
         color: $color-third
-      @include breakpoint(medium)
-        border: 0
 
   a#menu-link
     float: left
@@ -130,30 +94,20 @@ div#masthead
     color: $color-primary
     text-decoration: none
     background: $color-secondary
-    -webkit-background-clip: border-box
-    background-clip: border-box
-    -webkit-transition: all 0.6s ease-out
-    -moz-transition: all 0.6s ease-out
-    -ms-transition: all 0.6s ease-out
-    -o-transition: all 0.6s ease-out
-    transition: all 0.6s ease-out
-    @include breakpoint(medium)
-      display: none
 /* END NAVIGATION */
 
 /* FOOTER */
 footer
+  margin-top: 4em
   p
     color: $color-gray
-    span
-      margin-right: 15px
 
 /* END FOOTER STYLES */
 
 /* ARTICLES */
 .articles
   text-align: left
-  padding: 5.4em 1.5em
+  padding: 0 1.8em
   ol li
     margin-bottom: 3em
   article
@@ -167,11 +121,10 @@ footer
       a
         text-decoration: none
       h2
-        color: $color-third
+        color: $color-secondary
         font-size: 1.2em
-        font-weight: 400
+        font-weight: 900
         &:hover
-          color: $color-primary
           background-color: $color-third
     h3
       a
@@ -179,7 +132,7 @@ footer
         background-color: $color-secondary
     .note
       color: $color-third
-      font-weight: 400
+      font-weight: 900
       .article
         font-size: 1em
         font-weight: 100
@@ -207,7 +160,7 @@ footer
     /* results in ~60-70 characters per line */
     text-align: left
     line-height: 1.75
-    padding-top: 6em
+    padding-top: 0.5em
     /* Article published date*/
     footer
       margin-bottom: 0
@@ -222,7 +175,7 @@ footer
         font-size: 2em
         /* 32/16 = 2*/
         padding-bottom: 0.5em
-        font-weight: 400
+        font-weight: 900
         text-align: center
       p
         font-size: 1em
@@ -244,26 +197,26 @@ footer
         padding-bottom: 0.2em
         padding-top: 0.8em
         strong
-          font-weight: 400
+          font-weight: 900
       /* article headers */
       h2
         font-family: 'Ubuntu Mono', monospace
         font-size: 1.4em
         padding-bottom: .75em
         padding-top: 1.5em
-        font-weight: 400
+        font-weight: 900
       h3
         font-family: 'Ubuntu Mono', monospace
         font-size: 1.2em
         padding-bottom: .75em
         padding-top: 1.5em
-        font-weight: 400
+        font-weight: 900
       h4
         font-family: 'Ubuntu Mono', monospace
         font-size: 1em
         padding-bottom: 1.25em
         padding-top: 1em
-        font-weight: 400
+        font-weight: 900
       blockquote
         padding-left: 10px
         font-weight: 300
@@ -305,7 +258,7 @@ footer
 
       span.nv
         color: #c65d09
-        font-weight: 400
+        font-weight: 900
 
       span.article-masthead-icon
         display: none
@@ -322,11 +275,12 @@ footer
   a
     font-size: 1.5em
     /* 24/16=1.5 */
-    font-weight: 400
+    font-weight: 900
 /* END ARTICLE */
 
 /* TAGS */
 .tags
+  color: $color-primary
   list-style: none
   margin: 0
   overflow: hidden
@@ -375,17 +329,8 @@ footer
 /* END PAGINATION */
 
 /* TAGS/CATEGORIES */
-.page-title
-  border-bottom: 2px solid black
-  margin: 0 2em
-  h1
-    font-size: 3em
-    padding-bottom: .75em
-    padding-top: 1.5em
-    text-align: left
-  p
-    text-align: left
 .count
+  color: $color-secondary
   float: right
 /* TAGS/CATEGORIES */
 
@@ -396,11 +341,11 @@ footer
 
 .share_post
   span
-    font-weight: 400
+    font-weight: 900
 
 .author_post
   span
-    font-weight: 400
+    font-weight: 900
 
 code:not(pre code)
   padding: 0.2em 0.3em
@@ -410,17 +355,6 @@ code:not(pre code)
 
 ul li ul, ul li ul li ul
   padding-bottom: 0 !important
-
-.more
-  padding: 1px 0px 3px 0px
-  color: #fafafa
-  text-decoration: none
-  background: #070707
-  -webkit-background-clip: border-box
-  background-clip: border-box
-
-.more:hover
-  color: #070707
 
 .bar
   display: inline-block
@@ -456,18 +390,21 @@ ul li ul, ul li ul li ul
   li
     list-style: none
   h1
+    text-align: left
+    color: $color-third
     font-size: 30px
-    font-weight: 400
+    font-weight: 900
     padding-bottom: 20px
   h2
     color: $color-third
     font-size: 20px
-    font-weight: 400
+    font-weight: 900
     padding-bottom: 15px
 
-.whoami
-  float: left
-  padding-right: 20px
+  .whoami
+    float: left
+    padding-right: 20px
+    padding-top: 8px
 
 .creativecoding-container
   display: flex
