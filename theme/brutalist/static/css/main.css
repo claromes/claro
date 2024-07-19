@@ -725,31 +725,6 @@ ul li ul, ul li ul li ul {
   padding-bottom: 15px;
 }
 
-.creativecoding-container {
-  display: flex;
-}
-@media (max-width: 55em) {
-  .creativecoding-container {
-    flex-flow: column;
-  }
-}
-
-.creativecoding-img-border {
-  border: 1px solid black;
-}
-
-.creativecoding-text {
-  margin-left: 20px;
-}
-@media (max-width: 55em) {
-  .creativecoding-text {
-    margin-left: 0;
-  }
-}
-.creativecoding-text p {
-  padding-bottom: 10px;
-}
-
 /* END CUSTOM */
 
 /*# sourceMappingURL=main.css.map */
