@@ -709,7 +709,7 @@ ul li ul, ul li ul li ul {
   margin: 0 !important;
 }
 .custom-page li {
-  list-style: none;
+  list-style: square;
 }
 .custom-page h1 {
   text-align: left;
