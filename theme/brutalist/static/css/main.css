@@ -413,6 +413,10 @@ footer p {
 .articles article .note .content a {
   text-decoration: underline;
 }
+.articles article .note-link {
+  color: #f8b008;
+  background-color: transparent;
+}
 .articles article .summary {
   font-size: 1em;
   font-weight: 100;

@@ -15,7 +15,7 @@
                     <header>
                         {% if article.note == 'true' %}
                             <div class="note" role="article">
-                                <h3 title="notes">note</h3>
+                                <h3 title="notes"><a class="note-link" href="{{ SITEURL }}/{{ article.url }}">note</a></h3>
                                 <div class="article">
                                     <div class="content">
                                         {{ article.content|safe }}
