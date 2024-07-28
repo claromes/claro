@@ -73,11 +73,12 @@
             {% endif %}
           </header>
         <div class="content">
+          {% if article.edited %}
+            <p><em>Edited {{ article.edited }}</em></p>
+          {% endif %}
           {% if article.cover_image and article.show_cover_image == 'true' %}
             <img src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }}">
           {% endif %}
-
-          <br>
 
           {% if article.note == 'true' %}
           {% else %}
