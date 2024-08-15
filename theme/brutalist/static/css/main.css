@@ -269,7 +269,7 @@ section, article, header, footer, nav, aside, hgroup {
 /* FONTS */
 body {
   font-family: "Ubuntu Mono", monospace;
-  background-color: aliceblue;
+  background-color: #282A36;
 }
 
 /* END FONTS */
@@ -282,18 +282,23 @@ body {
   text-align: center;
   line-height: 1.5;
 }
+.page .page-title h1 {
+  color: #FFB86C;
+  font-weight: 400;
+  text-align: center;
+}
 
 /* END MAIN CONTENT CONTAINER */
 /* LINKS */
 a {
   text-decoration: underline;
-  color: #000000;
+  color: #8BE9FD;
 }
 a:hover {
-  background-color: #f8b008;
+  background-color: #44475A;
 }
 a h2:hover {
-  background-color: #f8b008;
+  background-color: #FF79C6;
   width: fit-content;
 }
 
@@ -308,26 +313,29 @@ div#masthead h1 {
   padding-left: 1.6em;
 }
 div#masthead h1 a {
+  color: #8BE9FD;
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 400;
 }
 div#masthead h1 a:hover {
-  color: #f8b008;
+  color: #FF79C6;
 }
 div#masthead h1 a:hover .bar {
-  background-color: #000000;
+  background-color: #F8F8F2;
 }
 div#masthead a {
   width: fit-content;
+  color: #8BE9FD;
 }
 div#masthead a:hover {
+  color: #FF79C6 !important;
   background-color: transparent;
 }
 div#masthead nav#menu {
   padding: 0.4em 0 2.5em 0.8em;
 }
 div#masthead nav#menu li {
-  font-weight: 900;
+  font-weight: 400;
 }
 div#masthead nav#menu ul {
   text-align: center;
@@ -335,12 +343,12 @@ div#masthead nav#menu ul {
 div#masthead nav#menu li a {
   display: block;
   padding: 0.4em 0.8em;
-  font-weight: 900;
+  font-weight: 400;
   text-decoration: none;
   background-color: transparent;
 }
 div#masthead nav#menu li a:hover {
-  color: #f8b008;
+  color: #44475A;
 }
 div#masthead a#menu-link {
   float: left;
@@ -348,18 +356,18 @@ div#masthead a#menu-link {
   padding: 0.2em 0;
   margin: 1.6em;
   font-size: 1em;
-  color: #ffffff;
+  color: #282A36;
   text-decoration: none;
-  background: #000000;
+  background: #F8F8F2;
 }
 
 /* END NAVIGATION */
 /* FOOTER */
 footer {
-  margin-top: 4em;
+  margin-top: 1em;
 }
 footer p {
-  color: #a3a3a3;
+  color: #6272A4;
 }
 
 /* END FOOTER STYLES */
@@ -369,7 +377,7 @@ footer p {
   padding: 0 1.8em;
 }
 .articles ol li {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 .articles article {
   line-height: 1.5em;
@@ -382,31 +390,32 @@ footer p {
 .articles article header {
   width: fit-content;
 }
-.articles article header a {
-  text-decoration: none;
+.articles article header a > h2 {
+  text-decoration: underline;
+  color: #FF79C6;
 }
 .articles article header h2 {
-  color: #000000;
-  font-size: 1.2em;
-  font-weight: 900;
+  color: #FF79C6;
+  font-size: 1em;
+  font-weight: 400;
 }
 .articles article header h2:hover {
-  background-color: #f8b008;
+  background-color: #44475A;
 }
 .articles article h3 a {
   text-decoration: none;
-  background-color: #000000;
+  background-color: #F8F8F2;
 }
 .articles article .note {
-  color: #f8b008;
-  font-weight: 900;
+  color: #44475A;
+  font-weight: 400;
 }
 .articles article .note .article {
   font-size: 1em;
   font-weight: 100;
 }
 .articles article .note .content {
-  color: #000000;
+  color: #F8F8F2;
   font-size: 1em;
   margin-bottom: 1em;
 }
@@ -414,19 +423,22 @@ footer p {
   text-decoration: underline;
 }
 .articles article .note-link {
-  color: #f8b008;
+  color: #6272A4;
   background-color: transparent;
+}
+.articles article .note-link:hover {
+  background-color: #44475A;
 }
 .articles article .summary {
   font-size: 1em;
   font-weight: 100;
-  color: #000000;
+  color: #F8F8F2;
 }
 
 /* END ARTICLES */
 /* ARTICLE */
 .article {
-  color: #000000;
+  color: #F8F8F2;
 }
 .article img {
   max-width: 100%;
@@ -459,7 +471,7 @@ footer p {
   font-size: 2em;
   /* 32/16 = 2*/
   padding-bottom: 0.5em;
-  font-weight: 900;
+  font-weight: 400;
   text-align: center;
 }
 .article article header p {
@@ -467,7 +479,7 @@ footer p {
   padding-bottom: 1em;
   font-weight: 300;
   text-align: center;
-  color: #a3a3a3;
+  color: #6272A4;
 }
 .article article .content.post_404 {
   font-family: "Ubuntu Mono", monospace;
@@ -489,34 +501,31 @@ footer p {
   padding-bottom: 0.2em;
   padding-top: 0.8em;
 }
-.article article .content p strong {
-  font-weight: 900;
-}
 .article article .content h2 {
   font-family: "Ubuntu Mono", monospace;
-  font-size: 1.4em;
+  font-size: 1.3em;
   padding-bottom: 0.75em;
   padding-top: 1.5em;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content h3 {
   font-family: "Ubuntu Mono", monospace;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-bottom: 0.75em;
   padding-top: 1.5em;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content h4 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1em;
-  padding-bottom: 1.25em;
+  padding-bottom: 1.15em;
   padding-top: 1em;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content blockquote {
   padding-left: 10px;
   font-weight: 300;
-  color: #a3a3a3;
+  color: #6272A4;
   border-left: 0.3rem solid;
   margin: 0 25px 25px;
   margin-bottom: 0;
@@ -547,7 +556,7 @@ footer p {
   padding-bottom: 1.75em;
   padding-top: 1em;
   display: block;
-  color: #4d4d4d;
+  color: #44475A;
   background-color: #e3e3e3;
   padding: 0.5em;
   white-space: pre-wrap;
@@ -558,7 +567,7 @@ footer p {
 }
 .article article .content span.nv {
   color: #c65d09;
-  font-weight: 900;
+  font-weight: 400;
 }
 .article article .content span.article-masthead-icon {
   display: none;
@@ -577,13 +586,13 @@ footer p {
 .back-to-top a {
   font-size: 1.5em;
   /* 24/16=1.5 */
-  font-weight: 900;
+  font-weight: 400;
 }
 
 /* END ARTICLE */
 /* TAGS */
 .tags {
-  color: #ffffff;
+  color: #282A36;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -595,9 +604,9 @@ footer p {
 }
 
 .tag {
-  background: #f8b008;
+  background: #44475A;
   border-radius: 3px;
-  color: #ffffff;
+  color: #F8F8F2;
   display: inline-block;
   height: 2em;
   line-height: 2em;
@@ -608,24 +617,24 @@ footer p {
   -webkit-transition: color 0.2s;
 }
 .tag:hover {
-  color: #f8b008;
-  background-color: #a3a3a3;
+  color: #44475A;
+  background-color: #6272A4;
 }
 .tag:hover::after {
-  color: #f8b008;
-  border-left-color: #a3a3a3;
+  color: #44475A;
+  border-left-color: #6272A4;
 }
 
 .category-tag {
   font-style: italic;
-  color: #000000;
+  color: #F8F8F2;
   text-decoration: underline;
 }
 
 /* END TAGS */
 /* PAGINATION */
 .paginator {
-  color: #000000;
+  color: #F8F8F2;
   font-size: 3em;
   text-align: center;
 }
@@ -645,7 +654,7 @@ footer p {
 /* END PAGINATION */
 /* TAGS/CATEGORIES */
 .count {
-  color: #000000;
+  color: #F8F8F2;
   float: right;
 }
 
@@ -657,16 +666,16 @@ footer p {
 }
 
 .share_post span {
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .author_post span {
-  font-weight: 900;
+  font-weight: 400;
 }
 
 code:not(pre code) {
   padding: 0.2em 0.3em;
-  color: #4d4d4d;
+  color: #44475A;
   background-color: #e3e3e3;
   border-radius: 6px;
 }
@@ -681,13 +690,16 @@ ul li ul, ul li ul li ul {
   width: 9px;
   height: 17px;
   vertical-align: middle;
-  background-color: #000000;
+  background-color: #8BE9FD;
   opacity: 0;
   -webkit-animation: bar-anima 1.2s infinite;
   -moz-animation: bar-anima 1.2s infinite;
   -ms-animation: bar-anima 1.2s infinite;
   -o-animation: bar-anima 1.2s infinite;
   animation: bar-anima 1.2s infinite;
+}
+.bar:hover {
+  background-color: #FF79C6 !important;
 }
 
 @keyframes bar-anima {
@@ -702,11 +714,15 @@ ul li ul, ul li ul li ul {
   }
 }
 .bar-item:hover {
-  color: #000000 !important;
+  color: #FF79C6 !important;
+  cursor: default;
+}
+.bar-item:hover .bar {
+  background-color: #FF79C6 !important;
 }
 
 .custom-page {
-  color: #000000;
+  color: #F8F8F2;
   font-family: "Ubuntu Mono", monospace;
 }
 .custom-page ul {
@@ -716,17 +732,20 @@ ul li ul, ul li ul li ul {
   list-style: square;
 }
 .custom-page h1 {
+  color: #FFB86C;
   text-align: left;
-  color: #f8b008;
-  font-size: 30px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 400;
   padding-bottom: 20px;
 }
 .custom-page h2 {
-  color: #f8b008;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 15px;
+  font-weight: 400;
   padding-bottom: 15px;
+}
+
+.email {
+  color: #FF79C6;
 }
 
 /* END CUSTOM */

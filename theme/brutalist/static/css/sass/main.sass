@@ -15,18 +15,21 @@
 /* END MIXINS */
 
 /* VARIABLES */
-$color-primary: #ffffff
-$color-secondary: #000000
-$color-third: #f8b008
-$color-gray: #a3a3a3
-$color-code: #4d4d4d
+$color-primary: #282A36
+$color-secondary: #F8F8F2
+$color-third: #44475A
+$color-gray: #6272A4
+$color-code: #44475A
+$color-extra: #FFB86C
+$color-link-primary: #FF79C6
+$color-link-secondary: #8BE9FD
 $background-color-code: #e3e3e3
 /* END VARIABLES */
 
 /* FONTS */
 body
   font-family: 'Ubuntu Mono', monospace
-  background-color: aliceblue
+  background-color: $color-primary
 /* END FONTS */
 
 /* MAIN CONTENT CONTAINER */
@@ -37,17 +40,23 @@ body
   margin-bottom: 2em
   text-align: center
   line-height: 1.5
+  .page-title
+    h1
+      color: $color-extra
+      font-weight: 400
+      text-align: center
+
 /* END MAIN CONTENT CONTAINER
 
 /* LINKS */
 a
   text-decoration: underline
-  color: $color-secondary
+  color: $color-link-secondary
   &:hover
     background-color: $color-third
   h2
     &:hover
-      background-color: $color-third
+      background-color: $color-link-primary
       width: fit-content
 /* END LINKS */
 
@@ -59,27 +68,30 @@ div#masthead
   h1
     padding-left: 1.6em
     a
+      color: $color-link-secondary
       text-decoration: none
-      font-weight: 900
+      font-weight: 400
       &:hover
-        color: $color-third
+        color: $color-link-primary
         .bar
           background-color: $color-secondary
   a
     width: fit-content
+    color: $color-link-secondary
     &:hover
+      color: $color-link-primary !important
       background-color: transparent
 
   nav#menu
     padding: 0.4em 0 2.5em 0.8em
     li
-      font-weight: 900
+      font-weight: 400
     ul
       text-align: center
     li a
       display: block
       padding: 0.4em 0.8em
-      font-weight: 900
+      font-weight: 400
       text-decoration: none
       background-color: transparent
       &:hover
@@ -98,7 +110,7 @@ div#masthead
 
 /* FOOTER */
 footer
-  margin-top: 4em
+  margin-top: 1em
   p
     color: $color-gray
 
@@ -109,7 +121,7 @@ footer
   text-align: left
   padding: 0 1.8em
   ol li
-    margin-bottom: 3em
+    margin-bottom: 2em
   article
     line-height: 1.5em
     footer
@@ -118,12 +130,13 @@ footer
       margin-top: 0
     header
       width: fit-content
-      a
-        text-decoration: none
+      a > h2
+        text-decoration: underline
+        color: $color-link-primary
       h2
-        color: $color-secondary
-        font-size: 1.2em
-        font-weight: 900
+        color: $color-link-primary
+        font-size: 1em
+        font-weight: 400
         &:hover
           background-color: $color-third
     h3
@@ -132,7 +145,7 @@ footer
         background-color: $color-secondary
     .note
       color: $color-third
-      font-weight: 900
+      font-weight: 400
       .article
         font-size: 1em
         font-weight: 100
@@ -143,8 +156,11 @@ footer
         a
           text-decoration: underline
     .note-link
-      color: $color-third
+      color: $color-gray
       background-color: transparent
+      &:hover
+        background-color: $color-third
+
     .summary
       font-size: 1em
       font-weight: 100
@@ -178,7 +194,7 @@ footer
         font-size: 2em
         /* 32/16 = 2*/
         padding-bottom: 0.5em
-        font-weight: 900
+        font-weight: 400
         text-align: center
       p
         font-size: 1em
@@ -199,27 +215,25 @@ footer
       p
         padding-bottom: 0.2em
         padding-top: 0.8em
-        strong
-          font-weight: 900
       /* article headers */
       h2
         font-family: 'Ubuntu Mono', monospace
-        font-size: 1.4em
+        font-size: 1.3em
         padding-bottom: .75em
         padding-top: 1.5em
-        font-weight: 900
+        font-weight: 400
       h3
         font-family: 'Ubuntu Mono', monospace
-        font-size: 1.2em
+        font-size: 1.1em
         padding-bottom: .75em
         padding-top: 1.5em
-        font-weight: 900
+        font-weight: 400
       h4
         font-family: 'Ubuntu Mono', monospace
         font-size: 1em
-        padding-bottom: 1.25em
+        padding-bottom: 1.15em
         padding-top: 1em
-        font-weight: 900
+        font-weight: 400
       blockquote
         padding-left: 10px
         font-weight: 300
@@ -261,7 +275,7 @@ footer
 
       span.nv
         color: #c65d09
-        font-weight: 900
+        font-weight: 400
 
       span.article-masthead-icon
         display: none
@@ -278,7 +292,7 @@ footer
   a
     font-size: 1.5em
     /* 24/16=1.5 */
-    font-weight: 900
+    font-weight: 400
 /* END ARTICLE */
 
 /* TAGS */
@@ -294,7 +308,7 @@ footer
 .tag
   background: $color-third
   border-radius: 3px
-  color: $color-primary
+  color: $color-secondary
   display: inline-block
   height: 2em
   line-height: 2em
@@ -344,11 +358,11 @@ footer
 
 .share_post
   span
-    font-weight: 900
+    font-weight: 400
 
 .author_post
   span
-    font-weight: 900
+    font-weight: 400
 
 code:not(pre code)
   padding: 0.2em 0.3em
@@ -365,13 +379,15 @@ ul li ul, ul li ul li ul
   width: 9px
   height: 17px
   vertical-align: middle
-  background-color: $color-secondary
+  background-color: $color-link-secondary
   opacity: 0
   -webkit-animation: bar-anima 1.2s infinite
   -moz-animation: bar-anima 1.2s infinite
   -ms-animation: bar-anima 1.2s infinite
   -o-animation: bar-anima 1.2s infinite
   animation: bar-anima 1.2s infinite
+  &:hover
+    background-color: $color-link-primary !important
 
 @keyframes bar-anima
   0%
@@ -383,7 +399,10 @@ ul li ul, ul li ul li ul
 
 .bar-item
   &:hover
-    color: $color-secondary !important
+    color: $color-link-primary !important
+    cursor: default
+    .bar
+      background-color: $color-link-primary !important
 
 .custom-page
   color: $color-secondary
@@ -393,15 +412,17 @@ ul li ul, ul li ul li ul
   li
     list-style: square
   h1
+    color: $color-extra
     text-align: left
-    color: $color-third
-    font-size: 30px
-    font-weight: 900
+    font-size: 20px
+    font-weight: 400
     padding-bottom: 20px
   h2
-    color: $color-third
-    font-size: 20px
-    font-weight: 900
+    font-size: 15px
+    font-weight: 400
     padding-bottom: 15px
+
+.email
+  color: $color-link-primary
 
 /* END CUSTOM */

@@ -10,12 +10,14 @@
                                   document.getElementById(`articleListDate{{ article.url }}`).textContent = moment('{{ article.date }}').format('LL');;
                                 </script>
                             </time>
+                            {% if article.note == 'true' %}
+                            · <a class="note-link" href="{{ SITEURL }}/{{ article.url }}">note</a>
+                            {% endif %}
                         </p>
                     </footer>
                     <header>
                         {% if article.note == 'true' %}
                             <div class="note" role="article">
-                                <h3 title="notes"><a class="note-link" href="{{ SITEURL }}/{{ article.url }}">note</a></h3>
                                 <div class="article">
                                     <div class="content">
                                         {{ article.content|safe }}
