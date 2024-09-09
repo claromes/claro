@@ -1,41 +1,44 @@
 {% extends "base.html" %}
-{% block head %}
-  {{ super() }}
-  {% if page.description %}
+{{ super() }}
+{% block title %}{{ page.title }}{% endblock title %}
+{% if page.description %}
     <meta name="description" content="{{ page.description }}">
-  {% endif %}
-
-  {% for tag in page.tags %}
-    <meta name="tags" content="{{tag}}">
-  {% endfor %}
-
-{% endblock %}
-<!-- OG Tags -->
-{% block ogtags %}
-  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
-  <meta property="og:title" content="{{ page.title }} {{ SITENAME }}">
-  <meta property="og:description" content="{{ page.description }}">
-{% if page.cover_image %}
-  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
 {% else %}
-  <meta name="og:image" content="{{ SITEURL }}/images/{{ SITENAME }}">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+{% endif %}
+
+{% if page.tags %}
+    {% for tag in page.tags %}
+        <meta name="tags" content="{{tag}}">
+    {% endfor %}
+{% else %}
+    <meta name="keywords" content="{{ KEYWORDS }}">
+{% endif %}
+{% block ogtags %}
+<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
+<meta property="og:title" content="{{ page.title }} {{ SITENAME }}">
+<meta property="og:description" content="{{ page.description }}">
+{% if page.cover_image %}
+    <meta property="og:image" content="{{ SITEURL }}/images/{{ page.cover_image }}">
+{% else %}
+    <meta name="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
 {% endif %}
 {% endblock ogtags %}
 {% block content %}
-  <div class="articles" role="article">
+<div class="articles" role="article">
     {% if page.date %}
-      <footer>
-          <a name="top"></a>
-          <p>
+    <footer>
+        <a name="top"></a>
+        <p>
             <time id="pageDate" datetime="{{ article.locale_date }}">
-              {{ article.locale_date }}
+            {{ article.locale_date }}
             </time>
-          </p>
-      </footer>
+        </p>
+    </footer>
     {% endif %}
     <div class="content">
         {{ page.content|safe }}
     </div>
-  </div>
+</div>
 <!-- end article -->
 {% endblock content %}

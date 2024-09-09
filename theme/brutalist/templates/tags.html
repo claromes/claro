@@ -1,7 +1,11 @@
 {% extends "base.html" %}
-
-{% block title %}tags {{ SITENAME }}{% endblock %}
-
+{% block title %}tags{% endblock title %}
+<meta name="description" content="{{ SITEDESCRIPTION }}">
+<meta name="keywords" content="{{ KEYWORDS }}">
+{% block ogtags %}
+    <meta property="og:url" content="{{ SITEURL }}/tags">
+    <meta property="og:title" content="tags {{ SITENAME }}">
+{% endblock ogtags %}
 {% block content %}
 <div class="articles">
     <div class="custom-page">

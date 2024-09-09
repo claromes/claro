@@ -1,28 +1,30 @@
 {% extends "base.html" %}
-{% block head %}
-  {{ super() }}
-  <title>{% block title %}{{ article.title }} {{ SITENAME }}{% endblock title %}</title>
-  {% if article.description %}
+{{ super() }}
+{% block title %}{{ article.title }}{% endblock title %}
+
+{% if article.description %}
     <meta name="description" content="{{ article.description }}">
-  {% endif %}
-
-  {% for tag in article.tags %}
-    <meta name="tags" content="{{tag}}">
-  {% endfor %}
-
-{% endblock %}
-<!-- OG Tags -->
-{% block ogtags %}
-<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
-<meta property="og:title" content="{{ article.title }} {{ SITENAME }}">
-<meta property="og:description" content="{{ article.description }}">
-{% if article.cover_image %}
-  <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
 {% else %}
-  <meta property="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+{% endif %}
+
+{% if article.tags %}
+    {% for tag in article.tags %}
+        <meta name="tags" content="{{tag}}">
+    {% endfor %}
+{% else %}
+    <meta name="keywords" content="{{ KEYWORDS }}">
+{% endif %}
+{% block ogtags %}
+    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+    <meta property="og:title" content="{{ article.title }} {{ SITENAME }}">
+    <meta property="og:description" content="{{ article.description }}">
+{% if article.cover_image %}
+    <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
+{% else %}
+    <meta property="og:image" content="{{ SITEURL }}/images/{{ SITEIMAGE }}">
 {% endif %}
 {% endblock ogtags %}
-
 {% block content %}
   {% if article.title == '404' %}
   <div class="article" role="article">

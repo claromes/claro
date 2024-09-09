@@ -1,63 +1,61 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
-
 <head>
     {% block head %}
-    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="{{ SITENAME }}">
-    <meta name="description" content="{{ SITEDESCRIPTION }}">
-    <meta name="keywords" content="{{ KEYWORDS }}">
-    <meta charset="utf-8">
-    {% if FEED_ALL_ATOM %}
-    <link
-        href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
-        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
-    {% endif %}
-    {% if FEED_ALL_RSS %}
-    <link
-        href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
-        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed">
-    {% endif %}
-    {% if FEED_ATOM %}
-    <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
-        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
-    {% endif %}
-    {% if FEED_RSS %}
-    <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
-        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
-    {% endif %}
-    {% if CATEGORY_FEED_ATOM and category %}
-    <link
-        href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM|format(category.slug) }}{% endif %}"
-        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed">
-    {% endif %}
-    {% if CATEGORY_FEED_RSS and category %}
-    <link
-        href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_RSS|format(category.slug) }}{% endif %}"
-        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed">
-    {% endif %}
-    {% if TAG_FEED_ATOM and tag %}
-    <link
-        href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_ATOM|format(tag.slug) }}{% endif %}"
-        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed">
-    {% endif %}
-    {% if TAG_FEED_RSS and tag %}
-    <link
-        href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_RSS|format(tag.slug) }}{% endif %}"
-        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
-    {% endif %}
-    <!-- og tags -->
-    {% block ogtags %}
-    {% endblock ogtags %}
-    <!-- favicon -->
-    {% if FAVICON %}
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
-    {% endif %}
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css">
-    <!-- goatcounter -->
-    <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        <title>{% block title %}{% endblock title %} {{ SITENAME }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="{{ SITENAME }}">
+        <meta charset="utf-8">
+        <!-- feeds -->
+        {% if FEED_ALL_ATOM %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed">
+        {% endif %}
+        {% if FEED_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
+        {% endif %}
+        {% if FEED_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
+        {% endif %}
+        {% if CATEGORY_FEED_ATOM and category %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM|format(category.slug) }}{% endif %}"
+            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed">
+        {% endif %}
+        {% if CATEGORY_FEED_RSS and category %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_RSS|format(category.slug) }}{% endif %}"
+            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed">
+        {% endif %}
+        {% if TAG_FEED_ATOM and tag %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_ATOM|format(tag.slug) }}{% endif %}"
+            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed">
+        {% endif %}
+        {% if TAG_FEED_RSS and tag %}
+        <link
+            href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_RSS|format(tag.slug) }}{% endif %}"
+            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
+        {% endif %}
+        <!-- og tags -->
+        {% block ogtags %}
+        {% endblock ogtags %}
+        <!-- favicon -->
+        {% if FAVICON %}
+        <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
+        {% endif %}
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css">
+        <!-- goatcounter -->
+        <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     {% endblock head %}
 </head>
 
@@ -99,8 +97,9 @@
         {
             "@context": "https://schema.org/",
             "@type": "Person",
-            "jobTitle": "Open-source Developer",
+            "name": "Clarissa Mendes",
             "alternateName":"Claromes",
+            "jobTitle": "Open-source Developer",
             "url": "https://claromes.com"
         }
     </script>
