@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 {{ super() }}
-{% block title %}{{ page.title }}{% endblock title %}
-{% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-{% else %}
-    <meta name="description" content="{{ SITEDESCRIPTION }}">
-{% endif %}
+{% block title %}{{ page.title }}, {% endblock title %}
 
-{% if page.tags %}
-    {% for tag in page.tags %}
-        <meta name="tags" content="{{tag}}">
-    {% endfor %}
-{% else %}
-    <meta name="keywords" content="{{ KEYWORDS }}">
-{% endif %}
+{% block meta %}
+    <meta name="title" content="{{ page.title }}, {{ SITENAME }}">
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+    {% else %}
+        <meta name="description" content="{{ SITEDESCRIPTION }}">
+    {% endif %}
+    {% if page.tags %}
+        {% for tag in page.tags %}
+            <meta name="tags" content="{{ tag }}">
+        {% endfor %}
+    {% else %}
+        <meta name="keywords" content="{{ KEYWORDS }}">
+    {% endif %}
+{% endblock meta %}
+
 {% block ogtags %}
 <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
 <meta property="og:title" content="{{ page.title }} {{ SITENAME }}">

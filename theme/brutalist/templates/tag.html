@@ -1,7 +1,12 @@
 {% extends "base.html" %}
-{% block title %}{{ tag }}{% endblock title %}
-<meta name="description" content="{{ SITEDESCRIPTION }}">
-<meta name="keywords" content="{{ tag }}">
+{% block title %}{{ tag }}, {% endblock title %}
+
+{% block meta %}
+    <meta name="title" content="{{ tag }}, {{ SITENAME }}">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+    <meta name="keywords" content="{{ tag }}">
+{% endblock meta %}
+
 {% block ogtags %}
     <meta property="og:url" content="{{ SITEURL }}/tag/{{ tag }}">
     <meta property="og:title" content="{{ tag }} {{ SITENAME }}">

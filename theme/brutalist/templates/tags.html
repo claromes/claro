@@ -1,15 +1,20 @@
 {% extends "base.html" %}
-{% block title %}tags{% endblock title %}
-<meta name="description" content="{{ SITEDESCRIPTION }}">
-<meta name="keywords" content="{{ KEYWORDS }}">
+{% block title %}Tags, {% endblock title %}
+
+{% block meta %}
+<meta name="title" content="Tags, {{ SITENAME }}">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+    <meta name="keywords" content="{{ KEYWORDS }}">
+{% endblock meta %}
+
 {% block ogtags %}
     <meta property="og:url" content="{{ SITEURL }}/tags">
-    <meta property="og:title" content="tags {{ SITENAME }}">
+    <meta property="og:title" content="Tags {{ SITENAME }}">
 {% endblock ogtags %}
 {% block content %}
 <div class="articles">
     <div class="custom-page">
-        <h1>tags</h1>
+        <h1>Tags</h1>
     </div>
     <ol class="lists">
         {% for tag, articles in tags %}
