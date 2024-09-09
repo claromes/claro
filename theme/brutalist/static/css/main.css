@@ -95,7 +95,7 @@ body {
   max-width: 45em;
   /* 768/16 = 48 (~50) */
   margin: auto;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   text-align: center;
   line-height: 1.5;
 }
@@ -163,7 +163,8 @@ div#masthead a#menu-link {
 /* END NAVIGATION */
 /* FOOTER */
 footer {
-  margin-top: 5em;
+  width: 90%;
+  margin: 5em auto 0 auto;
 }
 
 /* END FOOTER STYLES */
@@ -211,7 +212,7 @@ footer {
 }
 .article article {
   display: inline-block;
-  width: 95%;
+  width: 90%;
   /* results in ~60-70 characters per line */
   text-align: left;
   line-height: 1.75;
