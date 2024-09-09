@@ -1,5 +1,6 @@
 /__pycache__
 /plugins/**/__pycache__
+/.sass-cache
 /blog
 .venv
 /public
