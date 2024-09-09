@@ -1,4 +1,4 @@
-# ~/claromes
+# claromes.com
 
 ## build
 

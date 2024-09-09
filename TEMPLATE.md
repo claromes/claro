@@ -1,4 +1,5 @@
 title:
+locale_date: 2023-03-24
 date: 2023-03-24
 slug:
 tags:

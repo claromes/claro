@@ -3,36 +3,28 @@
             {% for article in articles_page.object_list %}
             <li>
                 <article>
-                    <footer>
-                         <p>
-                            <time id="articleListDate{{ article.url }}" datetime=" {{ article.date }}">
-                                <script>
-                                  document.getElementById(`articleListDate{{ article.url }}`).textContent = moment('{{ article.date }}').format('LL');;
-                                </script>
-                            </time>
-                            {% if article.note == 'true' %}
-                            · <a class="note-link" href="{{ SITEURL }}/{{ article.url }}">note</a>
-                            {% endif %}
-                        </p>
-                    </footer>
                     <header>
+                        <time id="articleListDate{{ article.url }}" datetime="{{ article.locale_date }}">
+                            {{ article.locale_date }}
+                        </time>
                         {% if article.note == 'true' %}
-                            <div class="note" role="article">
-                                <div class="article">
-                                    <div class="content">
-                                        {{ article.content|safe }}
-                                    </div>
-                                </div>
-                            </div>
+                            <h2 class="note">· <a href="{{ SITEURL }}/{{ article.url }}">note</a></h2>
                         {% else %}
-                            <a href="{{ SITEURL }}/{{ article.url }}">
-                                <h2>{{ article.title }}</h2>
-                            </a>
+                            <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                         {% endif %}
                     </header>
-                        {% if not article.note %}
-                            <div class="summary">{{ article.description }}</div>
-                        {% endif %}
+
+                    {% if article.note == 'true' %}
+                        <div class="note" role="article">
+                            <div class="article">
+                                <div class="content">
+                                    {{ article.content|safe }}
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="summary">{{ article.description }}</div>
+                    {% endif %}
                 </article>
             </li>
             {% endfor %}

@@ -9,32 +9,18 @@
  */
 
 /* MIXINS */
-@import pygment.sass
-@import mixins.sass
 @import reset.sass
 /* END MIXINS */
 
-/* VARIABLES */
-$color-primary: #282A36
-$color-secondary: #F8F8F2
-$color-third: #44475A
-$color-gray: #6272A4
-$color-code: #44475A
-$color-extra: #FFB86C
-$color-link-primary: #FF79C6
-$color-link-secondary: #8BE9FD
-$background-color-code: #e3e3e3
-/* END VARIABLES */
-
 /* FONTS */
 body
-  font-family: 'Ubuntu Mono', monospace
-  background-color: $color-primary
+  font-size: large
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 /* END FONTS */
 
 /* MAIN CONTENT CONTAINER */
 .page
-  max-width: 50em
+  max-width: 45em
   /* 768/16 = 48 (~50) */
   margin: auto
   margin-bottom: 2em
@@ -42,60 +28,46 @@ body
   line-height: 1.5
   .page-title
     h1
-      color: $color-extra
-      font-weight: 400
+      font-weight: 600
       text-align: center
-
 /* END MAIN CONTENT CONTAINER
 
 /* LINKS */
 a
   text-decoration: underline
-  color: $color-link-secondary
-  &:hover
-    background-color: $color-third
-  h2
-    &:hover
-      background-color: $color-link-primary
-      width: fit-content
+  &:visited
+    color: #0000ee
+  &:focus
+    color: #ee0000
 /* END LINKS */
 
 /* NAVIGATION */
 div#masthead
-  max-width: 50em
+  max-width: 45em
   margin: auto
   padding-top: 1.6em
   h1
     padding-left: 1.6em
+    text-decoration: none
+    font-weight: 400
+    cursor: default
     a
-      color: $color-link-secondary
       text-decoration: none
       font-weight: 400
-      &:hover
-        color: $color-link-primary
-        .bar
-          background-color: $color-secondary
   a
     width: fit-content
-    color: $color-link-secondary
-    &:hover
-      color: $color-link-primary !important
-      background-color: transparent
 
   nav#menu
     padding: 0.4em 0 2.5em 0.8em
+    ol
+      display: flex
     li
       font-weight: 400
-    ul
-      text-align: center
     li a
       display: block
       padding: 0.4em 0.8em
       font-weight: 400
       text-decoration: none
-      background-color: transparent
-      &:hover
-        color: $color-third
 
   a#menu-link
     float: left
@@ -103,17 +75,12 @@ div#masthead
     padding: 0.2em 0
     margin: 1.6em
     font-size: 1em
-    color: $color-primary
     text-decoration: none
-    background: $color-secondary
 /* END NAVIGATION */
 
 /* FOOTER */
 footer
-  margin-top: 1em
-  p
-    color: $color-gray
-
+  margin-top: 5em
 /* END FOOTER STYLES */
 
 /* ARTICLES */
@@ -121,10 +88,10 @@ footer
   text-align: left
   padding: 0 1.8em
   ol li
-    margin-bottom: 2em
+    margin-bottom: 1.5em
   article
     line-height: 1.5em
-    footer
+    h2
       padding-right: 1em
       margin-bottom: 0
       margin-top: 0
@@ -132,47 +99,24 @@ footer
       width: fit-content
       a > h2
         text-decoration: underline
-        color: $color-link-primary
       h2
-        color: $color-link-primary
         font-size: 1em
         font-weight: 400
-        &:hover
-          background-color: $color-third
-    h3
-      a
-        text-decoration: none
-        background-color: $color-secondary
-    .note
-      color: $color-third
-      font-weight: 400
-      .article
-        font-size: 1em
-        font-weight: 100
-      .content
-        color: $color-secondary
-        font-size: 1em
-        margin-bottom: 1em
-        a
-          text-decoration: underline
-    .note-link
-      color: $color-gray
-      background-color: transparent
-      &:hover
-        background-color: $color-third
+      .note
+        float: right
 
     .summary
       font-size: 1em
       font-weight: 100
-      color: $color-secondary
 /* END ARTICLES */
 
 /* ARTICLE */
 .article
-  color: $color-secondary
   img
     max-width: 100%
-    @include center-block
+    display: block
+    margin-left: auto
+    margin-right: auto
   article
     display: inline-block
     width: 95%
@@ -201,35 +145,28 @@ footer
         padding-bottom: 1em
         font-weight: 300
         text-align: center
-        color: $color-gray
     /* Article content styles */
-    .content.post_404
-      font-family: 'Ubuntu Mono', monospace
+
     .content
       font-size: 1em
       /* 18/16 = 1.125 */
       font-weight: 300
-      font-family: 'Roboto', sans-serif
-      .author_post
-        font-family: 'Ubuntu Mono', monospace
       p
         padding-bottom: 0.2em
         padding-top: 0.8em
+
       /* article headers */
       h2
-        font-family: 'Ubuntu Mono', monospace
         font-size: 1.3em
         padding-bottom: .75em
         padding-top: 1.5em
         font-weight: 400
       h3
-        font-family: 'Ubuntu Mono', monospace
         font-size: 1.1em
         padding-bottom: .75em
         padding-top: 1.5em
         font-weight: 400
       h4
-        font-family: 'Ubuntu Mono', monospace
         font-size: 1em
         padding-bottom: 1.15em
         padding-top: 1em
@@ -237,7 +174,6 @@ footer
       blockquote
         padding-left: 10px
         font-weight: 300
-        color: $color-gray
         border-left: 0.3rem solid
         margin: 0 25px 25px
         margin-bottom: 0
@@ -264,8 +200,6 @@ footer
         padding-bottom: 1.75em
         padding-top: 1em
         display: block
-        color: $color-code
-        background-color: $background-color-code
         padding: .5em
         white-space: pre-wrap
         white-space: -moz-pre-wrap
@@ -287,7 +221,6 @@ footer
 .back-to-top
   padding-top: 2em
   text-align: center
-  margin-bottom: 6em
   margin-top: 2em
   a
     font-size: 1.5em
@@ -297,42 +230,21 @@ footer
 
 /* TAGS */
 .tags
-  color: $color-primary
   list-style: none
   margin: 0
   overflow: hidden
   padding: 0
+  p
+    float: left
   li
     float: left
     padding: 0
 .tag
-  background: $color-third
-  border-radius: 3px
-  color: $color-secondary
-  display: inline-block
-  height: 2em
-  line-height: 2em
-  padding: 0 1em
-  position: relative
   margin: 0 1em 1em 0
-  text-decoration: none
-  -webkit-transition: color 0.2s
-  &:hover
-    color: $color-third
-    background-color: $color-gray
-    &::after
-      color: $color-third
-      border-left-color: $color-gray
-
-.category-tag
-  font-style: italic
-  color: $color-secondary
-  text-decoration: underline
 /* END TAGS */
 
 /* PAGINATION */
 .paginator
-  color: $color-secondary
   font-size: 3em
   text-align: center
   span
@@ -347,7 +259,6 @@ footer
 
 /* TAGS/CATEGORIES */
 .count
-  color: $color-secondary
   float: right
 /* TAGS/CATEGORIES */
 
@@ -366,63 +277,29 @@ footer
 
 code:not(pre code)
   padding: 0.2em 0.3em
-  color: $color-code
-  background-color: $background-color-code
+  color: #44475a
+  background-color: #e3e3e3
   border-radius: 6px
 
 ul li ul, ul li ul li ul
   padding-bottom: 0 !important
 
-.bar
-  display: inline-block
-  margin-bottom: 3px
-  width: 9px
-  height: 17px
-  vertical-align: middle
-  background-color: $color-link-secondary
-  opacity: 0
-  -webkit-animation: bar-anima 1.2s infinite
-  -moz-animation: bar-anima 1.2s infinite
-  -ms-animation: bar-anima 1.2s infinite
-  -o-animation: bar-anima 1.2s infinite
-  animation: bar-anima 1.2s infinite
-  &:hover
-    background-color: $color-link-primary !important
-
-@keyframes bar-anima
-  0%
-    opacity: 0
-  65%
-    opacity: 0
-  100%
-    opacity: 1
-
-.bar-item
-  &:hover
-    color: $color-link-primary !important
-    cursor: default
-    .bar
-      background-color: $color-link-primary !important
-
 .custom-page
-  color: $color-secondary
-  font-family: 'Ubuntu Mono', monospace
-  ul
+  ol
     margin: 0 !important
   li
     list-style: square
   h1
-    color: $color-extra
     text-align: left
     font-size: 20px
-    font-weight: 400
+    font-weight: 600
     padding-bottom: 20px
   h2
     font-size: 15px
     font-weight: 400
     padding-bottom: 15px
 
-.email
-  color: $color-link-primary
-
+.lists
+  li
+    margin-bottom: 0 !important
 /* END CUSTOM */
