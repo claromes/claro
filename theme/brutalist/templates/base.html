@@ -56,8 +56,6 @@
         {% endif %}
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css">
-        <!-- goatcounter -->
-        <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     {% endblock head %}
 </head>
 
@@ -95,6 +93,7 @@
         </footer>
         {% endblock footer %}
     </div>
+    <!-- schema -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
@@ -105,6 +104,8 @@
             "url": "https://claromes.com"
         }
     </script>
+    <!-- goatcounter -->
+    <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>
