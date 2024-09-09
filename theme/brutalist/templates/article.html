@@ -11,16 +11,6 @@
   {% endfor %}
 
 {% endblock %}
-{% block twittercard %}
-<meta name="twitter:title" content="{{ article.title }} {{ SITENAME }}">
-<meta name="twitter:description" content="{{ article.description }}">
-<meta name="twitter:card" content="summary_large_image">
-{% if article.cover_image %}
-  <meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
-{% else %}
-  <meta name="twitter:image" content="{{ SITEURL }}/images/{{ SITENAME }}">
-{% endif %}
-{% endblock twittercard %}
 <!-- OG Tags -->
 {% block ogtags %}
 <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
@@ -49,10 +39,8 @@
           <footer>
               <a name="top"></a>
               <p>
-                <time id="articleDate" datetime=" {{ article.date }}">
-                  <script>
-                    document.getElementById('articleDate').textContent = moment('{{ article.date }}').format('LL');;
-                  </script>
+                <time id="articleDate" datetime="{{ article.locale_date }}">
+                  {{ article.locale_date }}
                 </time>
               </p>
           </footer>
@@ -88,40 +76,38 @@
           <br>
 
           <p class="author_post">
-            <span>by </span><a href="/pages/whoami">{{ AUTHOR }}</a>
+            — <a href="/pages/whoami">{{ AUTHOR }}</a>
           </p>
         </div>
 
         <br>
 
         <div class="tags">
-          <ul class="tags">
+          <p>Tags:&nbsp;</p>
+          <ol class="tags">
           {% for tag in article.tags %}
               <li><a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
           {% endfor %}
-          </ul>
+          </ol>
         </div>
 
         {% if article.share_post and article.status != 'draft' %}
           <p class="share_post">
-            <span>comments?</span>
-            ping me on
-            <a href="{{ MASTODON }}" title="Toot me" target="_blank">mastodon</a>,
-            <a href="{{ DISCORD }}" title="Send me a DM" target="_blank" >discord</a>
+            <span>Comments?</span>
+            Ping me on
+            <a href="{{ MASTODON }}" title="Toot me" target="_blank">Mastodon</a>
             or
-            <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">matrix</a>
+            <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">Matrix</a>
 
             <br>
-            <span>share:</span>
-            <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">mastodon</a>
+            <span>Share:</span>
+            <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
             ·
-            <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank">órbita</a>
+            <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank">Órbita</a>
             ·
-            <a href="{{article.share_post['hacker-news']}}" title="Share on HackerNews" target="_blank">hackernews</a>
+            <a href="{{article.share_post['hacker-news']}}" title="Share on Hacker News" target="_blank">Hacker News</a>
             ·
-            <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank">email</a>
-            <br>
-            <span>licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+            <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank">Email</a>
           </p>
         {% endif %}
 

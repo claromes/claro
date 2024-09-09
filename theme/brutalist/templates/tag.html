@@ -6,11 +6,7 @@
 {% endblock ogtags %}
 {% block content %}
 <div class="page-title">
-    {% if tag == 'note' %}
-        <h1>notes</h1>
-    {% else %}
-        <h1>{{ tag }}</h1>
-    {% endif %}
+    <h1>{{ tag }}</h1>
 </div>
 {% include 'article_list.html' %}
 {% endblock content %}
