@@ -277,22 +277,6 @@ footer {
     font-weight: 400; }
 
 /* END ARTICLE */
-/* TAGS */
-.tags {
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0; }
-  .tags p {
-    float: left; }
-  .tags li {
-    float: left;
-    padding: 0; }
-
-.tag {
-  margin: 0 1em 1em 0; }
-
-/* END TAGS */
 /* PAGINATION */
 .paginator {
   font-size: 3em;
@@ -317,10 +301,10 @@ footer {
   aspect-ratio: 16/9;
   width: 100%; }
 
-.share_post span {
-  font-weight: 400; }
+.footer-post span {
+  font-weight: 600; }
 
-.author_post span {
+.author-post span {
   font-weight: 400; }
 
 code:not(pre code) {

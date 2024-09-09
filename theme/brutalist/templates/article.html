@@ -77,29 +77,27 @@
 
           <br>
 
-          <p class="author_post">
+          <p class="author-post">
             — <a href="/pages/whoami">{{ AUTHOR }}</a>
           </p>
         </div>
 
         <br>
 
-        <div class="tags">
-          <p>Tags:&nbsp;</p>
-          <ol class="tags">
-          {% for tag in article.tags %}
-              <li><a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
-          {% endfor %}
-          </ol>
-        </div>
-
         {% if article.share_post and article.status != 'draft' %}
-          <p class="share_post">
+          <p class="footer-post">
             <span>Comments?</span>
             Ping me on
-            <a href="{{ MASTODON }}" title="Toot me" target="_blank">Mastodon</a>
+            <a href="{{ MASTODON }}" title="Toot me" target="_blank">Mastodon</a>,
+            <a href="{{ BLUESKY }}" title="Skeet me" target="_blank">Bluesky</a>
             or
             <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">Matrix</a>
+
+            <br>
+            <span>Tags:</span>
+            {% for tag in article.tags %}
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
 
             <br>
             <span>Share:</span>
