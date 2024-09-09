@@ -1,4 +1,6 @@
 /__pycache__
+/plugins/**/__pycache__
 /blog
+.venv
 /public
 /draft
