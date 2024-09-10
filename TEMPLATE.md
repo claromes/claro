@@ -19,4 +19,4 @@ _Originally published at: [example.com](https://example.com)_
     <img src="{static}/images/" width="300" alt="" title="">
 </p>
 
-<iframe class="video-yt" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="video-yt" width="560" height="315" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
