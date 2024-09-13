@@ -42,16 +42,16 @@
     <div class="article" role="article">
       <article>
         {% if article.date %}
-          <footer>
+          <div>
               <a name="top"></a>
               <p>
                 <time id="articleDate" datetime="{{ article.locale_date }}">
                   {{ article.locale_date }}
                 </time>
               </p>
-          </footer>
+          </div>
         {% endif %}
-          <header>
+          <div class="post-header">
             <h2>
               {% if article.note == 'true' %}
                 {{ article.content|safe }}
@@ -65,7 +65,7 @@
                 {{ article.description }}
               </p>
             {% endif %}
-          </header>
+          </div>
         <div class="content">
           {% if article.edited %}
             <p><em>Edited {{ article.edited }}</em></p>
@@ -100,12 +100,14 @@
             <br>
             <span>Tags:</span>
             {% for tag in article.tags %}
-              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %} · {% endif %}
             {% endfor %}
 
             <br>
             <span>Share:</span>
-            <a href="https://toot.kytta.dev/?text={{article.title}}%0A{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
+            <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
+            ·
+            <a href="https://bsky.app/intent/compose?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Bluesky" target="_blank">Bluesky</a>
             ·
             <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank">Órbita</a>
             ·

@@ -15,7 +15,7 @@ _Originally published at: [example.com](https://example.com)_
 
 ![Alt]({static}/images/)
 
-<p align="center">
+<p>
     <img src="{static}/images/" width="300" alt="" title="">
 </p>
 

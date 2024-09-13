@@ -15,7 +15,8 @@
 body
   background: #fff
   color: #000
-  font-family: "Times New Roman", Times, serif
+  font-size: large
+  font-family: serif
 
 /* MAIN CONTENT CONTAINER */
 .page
@@ -23,12 +24,13 @@ body
   /* 768/16 = 48 (~50) */
   margin: auto
   margin-bottom: 0.5em
-  text-align: center
+  text-align: left
   line-height: 1.5
   .page-title
+    padding: 0 1.8em 0.8em 1.8em
     h1
       font-weight: 600
-      text-align: center
+      text-align: left
 /* END MAIN CONTENT CONTAINER
 
 /* LINKS */
@@ -41,46 +43,26 @@ a
     color: #ee0000
 /* END LINKS */
 
-/* NAVIGATION */
-div#masthead
-  max-width: 45em
-  margin: auto
-  padding-top: 1.6em
+/* HEADER */
+header
+  padding: 2em 1.8em
+
   h1
-    padding-left: 1.6em
-    text-decoration: none
-    font-weight: 400
-    cursor: default
     a
-      text-decoration: none
-      font-weight: 400
-  a
-    width: fit-content
-
-  nav#menu
-    padding: 0.4em 0 2em 0.8em
-    ol
-      display: flex
-    li
-      font-weight: 400
-    li a
-      display: block
-      padding: 0.4em 0.8em
+      color: #000
+      font-size: 50px
       font-weight: 400
       text-decoration: none
-
-  a#menu-link
-    float: left
-    display: block
-    padding: 0.2em 0
-    margin: 1.6em
-    font-size: 1em
-    text-decoration: none
-/* END NAVIGATION */
+      cursor: pointer
+      &:visited
+        color: #000
+      &:focus
+        color: #ee0000
+    /* END HEADER */
 
 /* FOOTER */
 footer
-  margin: 4em auto 0 auto
+  margin: 2em auto 0 auto
   padding: 0 1.8em
   text-align: left
 /* END FOOTER STYLES */
@@ -97,7 +79,7 @@ footer
       padding-right: 1em
       margin-bottom: 0
       margin-top: 0
-    header
+    div
       width: fit-content
       a > h2
         text-decoration: underline
@@ -117,37 +99,34 @@ footer
   img
     max-width: 100%
     display: block
-    margin-left: auto
-    margin-right: auto
   article
     display: inline-block
     width: 90%
     /* results in ~60-70 characters per line */
     text-align: left
     line-height: 1.75
-    padding-top: 0.5em
     /* Article published date*/
-    footer
+    div
+      padding: 0 1.8em
       margin-bottom: 0
       margin-top: 0
       p
-        text-align: center
+        text-align: left
     /*Article Header */
-    header
-      .project-header-logo
-        padding-bottom: 4em
+    .post-header
       h2
         font-size: 2em
         /* 32/16 = 2*/
         padding-bottom: 0.5em
         font-weight: 400
-        text-align: center
+        text-align: left
         line-height: normal
       p
         font-size: 1em
         padding-bottom: 1em
         font-weight: 300
-        text-align: center
+        text-align: left
+        color: #aaa
     /* Article content styles */
 
     .content
@@ -221,14 +200,13 @@ footer
         margin-top: 1em
         margin-bottom: 2em
 
-.back-to-top
-  padding-top: 2em
-  text-align: center
-  margin-top: 2em
-  a
-    font-size: 1.5em
-    /* 24/16=1.5 */
-    font-weight: 400
+  .back-to-top
+    padding-top: 3em
+    text-align: left
+    a
+      font-size: 1.5em
+      /* 24/16=1.5 */
+      font-weight: 400
 /* END ARTICLE */
 
 /* PAGINATION */
@@ -256,6 +234,7 @@ footer
   width: 100%
 
 .footer-post
+  padding: 0 1.8em
   span
     font-weight: 600
 

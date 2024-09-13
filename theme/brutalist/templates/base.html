@@ -62,36 +62,24 @@
 </head>
 
 <body>
-    {% block header %}
-    <div role="banner" id="masthead">
-        <header>
-            {% if LOGO %}
-            <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="Logo"></a>
-            {% else %}
-            <h1>{{ FIRST_NAME }}</h1>
-            {% endif %}
-            <nav id="menu">
-                <ol>
-                    {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
-                    {% endfor %}
-                </ol>
-            </nav>
-        </header>
-    </div>
-    {% endblock header %}
     <div class="page" role="main">
+        {% block header %}
+        <header>
+            <h1><a href="/">{{ FIRST_NAME }}</a></h1>
+        </header>
+        {% endblock header %}
+
         {% block content %}
         {% endblock content %}
 
         {% block footer %}
         <footer>
             <p>
-                <span>Copyright © 2022-2024 Claromes</span>
+                <a href="/pages/whoami">Whoami</a> ·
+                <a href="/tags">Tags</a> ·
+                <a href="/feeds/rss.xml">Subscribe via RSS</a>
             </p>
-            <p>
-                Content is licensed under CC BY-NC-SA 4.0, with exceptions noted. No cookies are used. Analytics are done with GoatCounter, ensuring user privacy.
-            </p>
+            <p>Copyright © 2022-2024 claromes.com</p>
         </footer>
         {% endblock footer %}
     </div>
@@ -102,7 +90,7 @@
             "@type": "Person",
             "name": "Clarissa Mendes",
             "alternateName":"Claromes",
-            "jobTitle": "Open-source Developer",
+            "jobTitle": "Computer programmer",
             "url": "https://claromes.com"
         }
     </script>
