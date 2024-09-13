@@ -58,9 +58,9 @@
         <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
         {% endif %}
         <!-- css -->
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css?ver={{ CSS_VERSION }}">
-        <!-- canonical -->
-        <link rel="canonical" href="{{ SITEURL }}">
+        <style>
+            {{ CSS_CONTENT | safe }}
+        </style>
     {% endblock head %}
 </head>
 
