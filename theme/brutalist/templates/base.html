@@ -2,12 +2,13 @@
 <html lang="{{ DEFAULT_LANG }}">
 <head>
     {% block head %}
-        <title>{% block title %}{% endblock title %}{{ SITENAME }}</title>
         <!-- meta tags -->
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noarchive">
         {% block meta %}
         {% endblock meta %}
-        <meta charset="utf-8">
+        <title>{% block title %}{% endblock title %}{{ SITENAME }}</title>
         <!-- feeds -->
         {% if FEED_ALL_ATOM %}
         <link
@@ -57,7 +58,9 @@
         <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
         {% endif %}
         <!-- css -->
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css">
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css?ver={{ CSS_VERSION }}">
+        <!-- canonical -->
+        <link rel="canonical" href="{{ SITEURL }}">
     {% endblock head %}
 </head>
 
