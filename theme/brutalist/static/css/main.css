@@ -106,7 +106,7 @@ header {
     /* END HEADER */ }
     header h1 a {
       color: #000;
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 400;
       text-decoration: none;
       cursor: pointer; }
@@ -179,7 +179,7 @@ footer {
     padding-bottom: 1em;
     font-weight: 300;
     text-align: left;
-    color: #aaa; }
+    color: #555; }
   .article article .content {
     font-size: 1em;
     /* 18/16 = 1.125 */
@@ -247,7 +247,7 @@ footer {
       margin-top: 1em;
       margin-bottom: 2em; }
 .article .back-to-top {
-  padding-top: 3em;
+  padding-top: 2em;
   text-align: left; }
   .article .back-to-top a {
     font-size: 1.5em;
