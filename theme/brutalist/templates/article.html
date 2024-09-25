@@ -43,7 +43,6 @@
       <article>
         {% if article.date %}
           <div>
-              <a name="top"></a>
               <p>
                 <time id="articleDate" datetime="{{ article.locale_date }}">
                   {{ article.locale_date }}
@@ -92,8 +91,7 @@
           <p class="footer-post">
             <span>Comments?</span>
             Ping me on
-            <a href="{{ MASTODON }}" title="Toot me" target="_blank">Mastodon</a>,
-            <a href="{{ BLUESKY }}" title="Skeet me" target="_blank">Bluesky</a>
+            <a href="{{ MASTODON }}" title="Toot me" target="_blank">Mastodon</a>
             or
             <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">Matrix</a>
 
@@ -116,10 +114,6 @@
             <a href="{{article.share_post['email']}}" title="Share via Email" target="_blank">Email</a>
           </p>
         {% endif %}
-
-        <div class="back-to-top">
-            <a href="#top">back to top</a>
-        </div>
       </article>
     </div>
   {% endif %}
