@@ -57,6 +57,10 @@
         {% if FAVICON %}
         <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
         {% endif %}
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <!-- css -->
         <style>
             {{ CSS_CONTENT | safe }}
@@ -68,7 +72,7 @@
     <div class="page" role="main">
         {% block header %}
         <header>
-            <a href="/"><img src="{{ SITEURL }}/images/bijiben.svg" alt="This icon is part of the Bijiben/GNOME project, licensed under the GPLv3." title="This icon is part of the Bijiben/GNOME project, licensed under the GPLv3."></a>
+            <a href="/"><img src="{{ SITEURL }}/images/gnote-notebook-new.png" alt="This icon is part of the Gnote project, licensed under the GPLv3."></a>
         </header>
         {% endblock header %}
 
@@ -82,7 +86,7 @@
                 <a href="/tags">Tags</a> ·
                 <a href="/feeds/rss.xml">Subscribe via RSS</a>
             </p>
-            <p>Copyright © 2022-2024 claromes.com</p>
+            <p>Copyright © 2022-2024 claromes.com. <a href="{{ SITEURL }}/pages/licenses">Licenses</a>.</p>
         </footer>
         {% endblock footer %}
     </div>
