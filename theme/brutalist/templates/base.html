@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<!--
+This site is generated using Pelican (https://getpelican.com),
+which is licensed under the GNU Affero General Public License (AGPL) Version 3.0 (https://github.com/getpelican/pelican/blob/main/LICENSE).
+
+The theme used is Brutalist by Matt McManus (https://github.com/mc-buckets/brutalist) and customized by Claromes.
+
+The notebook, pin and tag icons by GNOME are licensed under the GNU General Public License (GPL) Version 3.0 (https://gitlab.gnome.org/GNOME/gnote/-/blob/gnome-3-28/COPYING).
+
+The Roboto font designed by Christian Robertson licensed under the Apache License, Version 2.0 (https://fonts.google.com/specimen/Roboto/license).
+-->
 <html lang="{{ DEFAULT_LANG }}">
 <head>
     {% block head %}
@@ -70,7 +80,7 @@
     <div class="page" role="main">
         {% block header %}
         <header>
-            <a href="/"><img src="{{ SITEURL }}/images/gnote-notebook.png" alt="This icon is part of the Gnote project, licensed under the GPLv3."></a>
+            <a href="/"><img src="{{ SITEURL }}/images/gnote-notebook.png" alt="Notebook icon. This icon is part of the Gnote project, licensed under the GPLv3."></a>
         </header>
         {% endblock header %}
 
@@ -84,7 +94,7 @@
                 <a href="/tags">Tags</a> ·
                 <a href="/feeds/rss.xml">Subscribe via RSS</a>
             </p>
-            <p>Copyright © 2022-2024 claromes.com. <a href="{{ SITEURL }}/pages/licenses">Licenses</a>.</p>
+            <p>Copyright © 2022-2024 claromes.com</p>
         </footer>
         {% endblock footer %}
     </div>
@@ -102,5 +112,4 @@
     <!-- goatcounter -->
     <script data-goatcounter="https://claromes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
-
 </html>
