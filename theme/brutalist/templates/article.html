@@ -81,14 +81,20 @@
           <br>
 
           <p class="author-post">
-            — <a href="/pages/whoami">{{ AUTHOR }}</a>
+            <span><img class="tag" src="{{ SITEURL }}/images/pencil.png" alt="Pencil icon. This icon is part of the Gnote project, licensed under the GPLv3."></span> Written by <a href="/pages/whoami">{{ AUTHOR }}</a>
           </p>
         </div>
 
-        <br>
-
         {% if article.share_post and article.status != 'draft' %}
           <p class="footer-post">
+            <span><img class="tag" src="{{ SITEURL }}/images/tag.png" alt="Tag icon. This icon is part of the Gnote project, licensed under the GPLv3."></span>
+            {% for tag in article.tags %}
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %} · {% endif %}
+            {% endfor %}
+
+            <br>
+            <br>
+
             <span>Comments?</span>
             Ping me on
             <a href="{{ MASTODON }}" title="Toot me" target="_blank">Mastodon</a>
@@ -96,13 +102,7 @@
             <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">Matrix</a>
 
             <br>
-            <span>Tags:</span>
-            {% for tag in article.tags %}
-              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %} · {% endif %}
-            {% endfor %}
-
-            <br>
-            <span>Share:</span>
+            <span>Share on </span>
             <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
             ·
             <a href="https://bsky.app/intent/compose?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Bluesky" target="_blank">Bluesky</a>
