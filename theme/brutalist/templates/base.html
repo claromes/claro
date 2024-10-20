@@ -62,9 +62,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <!-- css -->
-        <style>
-            {{ CSS_CONTENT | safe }}
-        </style>
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/style/main.css">
     {% endblock head %}
 </head>
 
@@ -72,7 +70,7 @@
     <div class="page" role="main">
         {% block header %}
         <header>
-            <a href="/"><img src="{{ SITEURL }}/images/gnote-notebook-new.png" alt="This icon is part of the Gnote project, licensed under the GPLv3."></a>
+            <a href="/"><img src="{{ SITEURL }}/images/gnote-notebook.png" alt="This icon is part of the Gnote project, licensed under the GPLv3."></a>
         </header>
         {% endblock header %}
 
