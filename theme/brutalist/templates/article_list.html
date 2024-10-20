@@ -8,14 +8,14 @@
                             {{ article.locale_date }}
                         </time>
                         {% if article.note == 'true' %}
-                            <a href="{{ SITEURL }}/{{ article.url }}"><img class="note" src="{{ SITEURL }}/images/gnote-pin-active.png" alt="Pin icon. This icon is part of the Gnote project, licensed under the GPLv3."></a>
+                            <a href="{{ SITEURL }}/{{ article.url }}"><img class="pin" src="{{ SITEURL }}/images/website/pin-symbolic.svg" alt="Pin icon. This icon is part of the Gnote project, licensed under the GPLv3."></a>
                         {% else %}
                             <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                         {% endif %}
                     </div>
 
                     {% if article.note == 'true' %}
-                        <div class="note" role="article">
+                        <div role="article">
                             <div class="article">
                                 <div class="content">
                                     {{ article.content|safe }}
