@@ -63,16 +63,13 @@ The Roboto font designed by Christian Robertson licensed under the Apache Licens
         <!-- og tags -->
         {% block ogtags %}
         {% endblock ogtags %}
-        <!-- fediverse tag -->
+        <!-- fediverse tags -->
+        <link rel="me" href="https://ruby.social/@claromes">
         <meta name="fediverse:creator" content="@claromes@ruby.social" >
         <!-- favicon -->
         {% if FAVICON %}
         <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
         {% endif %}
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <!-- css -->
         <link rel="stylesheet" href="{{ SITEURL }}/theme/style/main.css">
     {% endblock head %}
@@ -82,7 +79,7 @@ The Roboto font designed by Christian Robertson licensed under the Apache Licens
     <div class="page" role="main">
         {% block header %}
         <header>
-            <a href="/"><img src="{{ SITEURL }}/images/website/hicolor_actions_scalable_notebook-new.svg" width="48" alt="Notebook icon. This icon is part of the Gnote project, licensed under the GPLv3."></a>
+            <a href="/"><img src="{{ SITEURL }}/images/website/hicolor_actions_scalable_notebook-new-v1.svg" width="48" height="48" alt="Notebook icon. This icon is part of the Gnote project, licensed under the GPLv3."></a>
         </header>
         {% endblock header %}
 
