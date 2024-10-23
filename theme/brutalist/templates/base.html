@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+
 This site is generated using Pelican (https://getpelican.com),
 which is licensed under the GNU Affero General Public License Version 3.0 (AGPLv3.0) (https://github.com/getpelican/pelican/blob/main/LICENSE).
 
@@ -10,6 +11,7 @@ The notebook, pencil and tag SVG icons by GNOME are licensed under the GNU Gener
 The pin SVG icon by GNOME are licensed under the Creative Commons Zero v1.0 Universal License (CC0 1.0 Universal) (https://gitlab.gnome.org/Teams/Design/icon-development-kit/-/blob/main/COPYING.md).
 
 The Roboto font designed by Christian Robertson licensed under the Apache License, Version 2.0 (https://fonts.google.com/specimen/Roboto/license).
+
 -->
 <html lang="{{ DEFAULT_LANG }}">
 <head>
@@ -71,7 +73,7 @@ The Roboto font designed by Christian Robertson licensed under the Apache Licens
         <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
         {% endif %}
         <!-- css -->
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/style/main.css">
+        <link rel="preload" as="style" type="text/css" media="all" href="{{ SITEURL }}/theme/style/main.css">
     {% endblock head %}
 </head>
 
