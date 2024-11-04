@@ -30,16 +30,6 @@
 {% endblock ogtags %}
 {% block content %}
 <div class="articles" role="article">
-    {% if page.date %}
-    <footer>
-        <a name="top"></a>
-        <p>
-            <time id="pageDate" datetime="{{ article.locale_date }}">
-            {{ article.locale_date }}
-            </time>
-        </p>
-    </footer>
-    {% endif %}
     <div class="content">
         {{ page.content|safe }}
     </div>

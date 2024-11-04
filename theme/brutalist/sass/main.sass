@@ -121,13 +121,19 @@ footer
       h2
         font-size: 1em
         font-weight: 400
+      p
+        margin-left: -9px
+    .container-note
+      display: flex
+      flex-direction: row
       .pin
-        transform: rotate(90deg)
-        vertical-align: middle
-
-    .summary
-      font-size: 1em
-      font-weight: 400
+        width: 10px
+        right: 14px
+        top: 1px
+        position: relative
+        img
+          transform: rotate(-62deg)
+          max-width: none
 
 .article
   img
@@ -246,6 +252,10 @@ footer
 .video-yt
   aspect-ratio: 16 / 9
   width: 100%
+
+.video-note
+  max-width: 100%
+  margin-top: 5px
 
 .footer-post
   padding: 0 1.8em
