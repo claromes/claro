@@ -6,7 +6,7 @@
 
 ## dev
 
-`make devserver`
+`make dev`
 
 ## css
 
