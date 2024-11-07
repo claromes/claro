@@ -7,9 +7,14 @@
                         <time id="articleListDate{{ article.url }}" datetime="{{ article.locale_date }}">
                             {{ article.locale_date.replace('-', '/') }}
                         </time>
-                        {% if article.note != 'true' %}
+                        {% if article.note == 'true' %}
+                            <div class="container-note">
+                                <h2><a class="pin" href="{{ SITEURL }}/{{ article.url }}"><img src="{{ SITEURL }}/images/website/pin-symbolic.svg" width="12" height="12" alt="Pin icon. This icon is part of the Gnote project, licensed under the GPLv3."></a></h2>
+                            </div>
+                        {% else %}
                             <h2>
                                 <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                                <p>{{ article.description }}</p>
                             </h2>
                         {% endif %}
                     </div>
@@ -17,8 +22,7 @@
                     {% if article.note == 'true' %}
                     <div role="article">
                         <div class="article">
-                            <div class="content container-note">
-                                <h2><a class="pin" href="{{ SITEURL }}/{{ article.url }}"><img src="{{ SITEURL }}/images/website/pin-symbolic.svg" width="10" height="10" alt="Pin icon. This icon is part of the Gnote project, licensed under the GPLv3."></a></h2>
+                            <div class="content">
                                 {{ article.content|safe }}
                             </div>
                         </div>
