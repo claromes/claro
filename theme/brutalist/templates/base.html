@@ -13,100 +13,100 @@ The Roboto font designed by Christian Robertson is licensed under the Apache Lic
 
 -->
 <html lang="{{ DEFAULT_LANG }}">
-<head>
-    {% block head %}
-        <!-- meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noarchive">
-        {% block meta %}
-        {% endblock meta %}
-        <title>{% block title %}{% endblock title %}{{ SITENAME }}</title>
-        <!-- feeds -->
-        {% if FEED_ALL_ATOM %}
-        <link
-            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
-            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
-        {% endif %}
-        {% if FEED_ALL_RSS %}
-        <link
-            href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
-            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed">
-        {% endif %}
-        {% if FEED_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
-            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
-        {% endif %}
-        {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
-            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
-        {% endif %}
-        {% if CATEGORY_FEED_ATOM and category %}
-        <link
-            href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM|format(category.slug) }}{% endif %}"
-            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed">
-        {% endif %}
-        {% if CATEGORY_FEED_RSS and category %}
-        <link
-            href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_RSS|format(category.slug) }}{% endif %}"
-            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed">
-        {% endif %}
-        {% if TAG_FEED_ATOM and tag %}
-        <link
-            href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_ATOM|format(tag.slug) }}{% endif %}"
-            type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed">
-        {% endif %}
-        {% if TAG_FEED_RSS and tag %}
-        <link
-            href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_RSS|format(tag.slug) }}{% endif %}"
-            type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
-        {% endif %}
-        <!-- og tags -->
-        {% block ogtags %}
-        {% endblock ogtags %}
-        <!-- fediverse tag -->
-        <meta name="fediverse:creator" content="@claromes@ruby.social" >
-        <!-- favicon -->
-        {% if FAVICON %}
-        <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
-        {% endif %}
-        <!-- css -->
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
-    {% endblock head %}
-</head>
+    <head>
+        {% block head %}
+            <!-- meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="robots" content="noarchive">
+            {% block meta %}
+            {% endblock meta %}
+            <title>{% block title %}{% endblock title %}{{ SITENAME }}</title>
+            <!-- feeds -->
+            {% if FEED_ALL_ATOM %}
+            <link
+                href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+                type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
+            {% endif %}
+            {% if FEED_ALL_RSS %}
+            <link
+                href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+                type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed">
+            {% endif %}
+            {% if FEED_ATOM %}
+            <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+                type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
+            {% endif %}
+            {% if FEED_RSS %}
+            <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+                type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
+            {% endif %}
+            {% if CATEGORY_FEED_ATOM and category %}
+            <link
+                href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM|format(category.slug) }}{% endif %}"
+                type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed">
+            {% endif %}
+            {% if CATEGORY_FEED_RSS and category %}
+            <link
+                href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_RSS|format(category.slug) }}{% endif %}"
+                type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed">
+            {% endif %}
+            {% if TAG_FEED_ATOM and tag %}
+            <link
+                href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_ATOM|format(tag.slug) }}{% endif %}"
+                type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed">
+            {% endif %}
+            {% if TAG_FEED_RSS and tag %}
+            <link
+                href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_RSS|format(tag.slug) }}{% endif %}"
+                type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
+            {% endif %}
+            <!-- og tags -->
+            {% block ogtags %}
+            {% endblock ogtags %}
+            <!-- fediverse tag -->
+            <meta name="fediverse:creator" content="@claromes@ruby.social" >
+            <!-- favicon -->
+            {% if FAVICON %}
+            <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
+            {% endif %}
+            <!-- css -->
+            <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+        {% endblock head %}
+    </head>
 
-<body>
-    <div class="page" role="main">
-        {% block header %}
-        <header>
-            <a href="/"><img src="{{ SITEURL }}/images/website/hicolor_actions_scalable_notebook-new.svg" width="48" height="48" alt="Notebook icon. This icon is part of the Gnote project, licensed under the GPLv3."></a>
-        </header>
-        {% endblock header %}
+    <body>
+        <div class="page" role="main">
+            {% block header %}
+            <header>
+                <a href="/"><img src="{{ SITEURL }}/images/website/hicolor_actions_scalable_notebook-new.svg" width="48" height="48" alt="Notebook icon. This icon is part of the Gnote project, licensed under the GPLv3."></a>
+            </header>
+            {% endblock header %}
 
-        {% block content %}
-        {% endblock content %}
+            {% block content %}
+            {% endblock content %}
 
-        {% block footer %}
-        <footer>
-            <p>
-                <a href="/pages/whoami">Whoami</a> ·
-                <a href="/tags">Tags</a> ·
-                <a href="/feeds/rss.xml">Subscribe via RSS</a>
-            </p>
-            <p>Copyright © 2022-2024 claromes.com</p>
-        </footer>
-        {% endblock footer %}
-    </div>
-    <!-- schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "Person",
-            "name": "Clarissa Mendes",
-            "alternateName":"Claromes",
-            "jobTitle": "Software developer",
-            "url": "https://claromes.com"
-        }
-    </script>
-</body>
+            {% block footer %}
+            <footer>
+                <p>
+                    <a href="/pages/whoami">whoami</a> ·
+                    <a href="/tags">Tags</a> ·
+                    <a href="/feeds/rss.xml">Assine via RSS</a>
+                </p>
+                <p>Copyright © 2022-2025 claromes.com</p>
+            </footer>
+            {% endblock footer %}
+        </div>
+        <!-- schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "Person",
+                "name": "Clarissa Mendes",
+                "alternateName":"Claromes",
+                "jobTitle": "Software developer",
+                "url": "https://claromes.com"
+            }
+        </script>
+    </body>
 </html>
