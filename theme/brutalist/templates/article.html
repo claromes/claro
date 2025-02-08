@@ -81,7 +81,7 @@
           <br>
 
           <p class="author-post">
-            <span><img class="tag" src="{{ SITEURL }}/images/website/hicolor_apps_scalable_gnote.svg" width="20" height="18" alt="Pencil icon. This icon is part of the Gnote project, licensed under the GPLv3."></span> Escrito por <a href="/pages/whoami">{{ AUTHOR }}</a>
+            <span><img class="tag" src="{{ SITEURL }}/images/website/hicolor_apps_scalable_gnote.svg" width="20" height="18" alt="Pencil icon. This icon is part of the Gnote project, licensed under the GPLv3."></span> Written by <a href="/pages/whoami">{{ AUTHOR }}</a>
           </p>
         </div>
 
@@ -95,23 +95,23 @@
             <br>
             <br>
 
-            <span>Comentários?</span>
-            Envie pelo
-            <a href="{{ MASTODON }}" title="Me envie um toot" target="_blank">Mastodon</a>
-            ou
-            <a href="{{ MATRIX }}" title="Me envie uma DM" target="_blank">Matrix</a>
+            <span>Comments?</span>
+            Send via
+            <a href="{{ MASTODON }}" title="Send me a toot" target="_blank">Mastodon</a>
+            or
+            <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">Matrix</a>
 
             <br>
-            <span>Compartilhe: </span>
-            <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Compartilhe no Mastodon" target="_blank">Mastodon</a>
+            <span>Share: </span>
+            <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
             ·
-            <a href="https://bsky.app/intent/compose?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Compartilhe no Bluesky" target="_blank">Bluesky</a>
+            <a href="https://bsky.app/intent/compose?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Bluesky" target="_blank">Bluesky</a>
             ·
-            <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Compartilhe no Órbita" target="_blank">Órbita</a>
+            <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank">Órbita</a>
             ·
-            <a href="{{article.share_post['hacker-news']}}" title="Compartilhe no Hacker News" target="_blank">Hacker News</a>
+            <a href="{{article.share_post['hacker-news']}}" title="Share on Hacker News" target="_blank">Hacker News</a>
             ·
-            <a href="{{article.share_post['email']}}" title="Compartilhe via e-mail" target="_blank">E-mail</a>
+            <a href="{{article.share_post['email']}}" title="Share via email" target="_blank">Email</a>
           </p>
         {% endif %}
       </article>
