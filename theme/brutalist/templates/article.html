@@ -81,13 +81,13 @@
           <br>
 
           <p class="author-post">
-            <span><img class="tag" src="{{ SITEURL }}/images/website/hicolor_apps_scalable_gnote.svg" width="20" height="18" alt="Pencil icon. This icon is part of the Gnote project, licensed under the GPLv3."></span> Written by <a href="/pages/whoami">{{ AUTHOR }}</a>
+            <span><img class="tag" src="{{ SITEURL }}/images/website/emoji-pencil.svg" width="20" height="20" alt="Pencil Emoji version 1.0"></span> Written by <a href="/pages/whoami">{{ AUTHOR }}</a>
           </p>
         </div>
 
         {% if article.share_post and article.status != 'draft' %}
           <p class="footer-post">
-            <span><img class="tag" src="{{ SITEURL }}/images/website/tag.svg" width="24" height="24" alt="Tag icon. This icon is part of the Gnote project, licensed under the GPLv3."></span>
+            <span><img class="tag" src="{{ SITEURL }}/images/website/emoji-label.svg" width="20" height="20" alt="Label Emoji version 1.0"></span>
             {% for tag in article.tags %}
               <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %} · {% endif %}
             {% endfor %}
