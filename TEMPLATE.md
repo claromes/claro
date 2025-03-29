@@ -10,6 +10,7 @@ note_image:
 cover_image_credit: Claromes
 show_cover_image: false
 status: published
+custom_css: style="border-left: black 4px solid;"
 
 _Originally published at: [example.com](https://example.com)_
 
