@@ -154,7 +154,6 @@ footer
     .post-header
       h2
         font-size: 2em
-        padding-bottom: 0.5em
         font-weight: 400
         text-align: left
         line-height: normal
@@ -162,13 +161,15 @@ footer
           color: #000
       p
         font-size: 1em
-        padding-bottom: 1em
         font-weight: 300
         text-align: left
-        color: #555
+        color: #3f3f3f
+
+    .post-info
+      padding-bottom: 3em !important
 
     .content
-      padding: 0 1.5em
+      padding: 1.5em
       font-size: 1em
       font-weight: 300
       font-family: 'Roboto', sans-serif
@@ -234,6 +235,9 @@ footer
       span.article-masthead-icon
         display: none
 
+    .content:has(> p:first-child)
+      padding-top: 0
+
 .paginator
   font-size: 3em
   text-align: center
@@ -254,6 +258,7 @@ footer
   width: 100%
 
 .footer-post
+  margin-top: 1em
   padding: 0 1.8em
   span
     font-weight: 600

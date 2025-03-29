@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {{ super() }}
-{% block title %}{{ page.title }}, {% endblock title %}
+{% block title %}{{ page.title }}, {{ SITENAME }}{% endblock title %}
 
 {% block meta %}
     <meta name="title" content="{{ page.title }}, {{ SITENAME }}">

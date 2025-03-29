@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {{ super() }}
-{% block title %}{{ article.title }}, {% endblock title %}
+{% block title %}{{ article.title }}{% endblock title %}
 
 {% block meta %}
-  <meta name="title" content="{{ article.title }}, {{ SITENAME }}">
+  <meta name="title" content="{{ article.title }}">
   {% if article.description %}
       <meta name="description" content="{{ article.description }}">
   {% else %}
@@ -21,7 +21,7 @@
 
 {% block ogtags %}
     <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
-    <meta property="og:title" content="{{ article.title }}, {{ SITENAME }}">
+    <meta property="og:title" content="{{ article.title }}">
     <meta property="og:description" content="{{ article.description }}">
 {% if article.cover_image %}
     <meta property="og:image" content="{{ SITEURL }}/images/{{ article.cover_image }}">
@@ -41,66 +41,46 @@
   {% else %}
     <div class="article" role="article">
       <article>
-        {% if article.date %}
-          <div>
-              <p>
-                <time id="articleDate" datetime="{{ article.locale_date }}">
-                  {{ article.locale_date.replace('-', '/') }}
-                </time>
-              </p>
-          </div>
-        {% endif %}
-          <div class="post-header">
-            <h2>
-              {% if article.note == 'true' %}
-                {{ article.content|safe }}
-              {% else %}
-                {{ article.title }}
-              {% endif %}
-            </h2>
+        <div class="post-header">
+          <h2>
             {% if article.note == 'true' %}
+            {{ article.content|safe }}
             {% else %}
-              <p>
-                {{ article.description }}
-              </p>
+            {{ article.title }}
             {% endif %}
-          </div>
+          </h2>
+          {% if article.note == 'true' %}
+          {% else %}
+          <p>
+            {{ article.description }}
+          </p>
+          {% endif %}
+          {% if article.date %}
+          {% endif %}
+          <br>
+          <br>
+          <p>
+            <time id="articleDate" datetime="{{ article.locale_date }}">
+              {{ article.locale_date.replace('-', '/') }}
+            </time> by <a href="/pages/whoami">{{ AUTHOR }}</a> in
+                {% for tag in article.tags %}
+                  <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+          </p>
+        </div>
         <div class="content">
-          {% if article.edited %}
-            <p><em>Edited {{ article.edited }}</em></p>
-          {% endif %}
           {% if article.cover_image and article.show_cover_image == 'true' %}
-            <img src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }}">
+            <img {{ article.custom_css }} src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }}">
           {% endif %}
-
           {% if article.note == 'true' %}
           {% else %}
             {{ article.content|safe }}
           {% endif %}
-
-          <br>
-
-          <p class="author-post">
-            <span><img class="tag" src="{{ SITEURL }}/images/website/emoji-pencil.svg" width="20" height="20" alt="Pencil Emoji version 1.0"></span> <a href="/pages/whoami">{{ AUTHOR }}</a>
-          </p>
         </div>
 
         {% if article.share_post and article.status != 'draft' %}
           <p class="footer-post">
-            <span><img class="tag" src="{{ SITEURL }}/images/website/emoji-label.svg" width="20" height="20" alt="Label Emoji version 1.0"></span>
-            {% for tag in article.tags %}
-              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %} · {% endif %}
-            {% endfor %}
-
-            <br>
-            <br>
-
-            <span>Got comments?</span>
-            Send via
-            <a href="{{ MASTODON }}" title="Send me a toot" target="_blank">Mastodon</a>
-            or
-            <a href="{{ MATRIX }}" title="Send me a DM" target="_blank">Matrix</a>
-
+            <span>CC BY-SA 4.0</span>
             <br>
             <span>Share: </span>
             <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
