@@ -80,10 +80,12 @@
 
         {% if article.share_post and article.status != 'draft' %}
           <p class="footer-post">
-            <span>CC BY-SA 4.0</span>
+            <span>Content licensed under</span> <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">CC BY-SA 4.0</a>.
             <br>
             <span>Share: </span>
             <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
+            ·
+            <a href="https://bsky.app/intent/compose?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Bluesky" target="_blank">Bluesky</a>
             ·
             <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank">Órbita</a>
             ·
