@@ -51,7 +51,7 @@
           </h2>
           {% if article.note == 'true' %}
           {% else %}
-          <p>
+          <p class="description">
             {{ article.description }}
           </p>
           {% endif %}
@@ -79,10 +79,9 @@
         </div>
 
         {% if article.share_post and article.status != 'draft' %}
+          <br>
           <p class="footer-post">
-            <span>Content licensed under</span> <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">CC BY-SA 4.0</a>.
-            <br>
-            <span>Share: </span>
+            Share:
             <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
             ·
             <a href="https://bsky.app/intent/compose?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Bluesky" target="_blank">Bluesky</a>

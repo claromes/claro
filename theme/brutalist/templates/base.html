@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- "Proudly powered by Pelican, which takes great advantage of Python." -->
 <html lang="{{ DEFAULT_LANG }}">
     <head>
         {% block head %}
@@ -66,7 +67,12 @@
         <div class="page" role="main">
             {% block header %}
             <header>
-                <a href="/"><img src="{{ SITEURL }}/images/website/emoji-face-without-mouth.svg" width="20" height="20" alt="Face Without Mouth Emoji version 1.0"></a>
+                <p>
+                    <a href="/">/index</a> ·
+                    <a href="/pages/whoami">/whoami</a> ·
+                    <a href="/tags">/tags</a> ·
+                    <a href="/feeds/rss.xml">Subscribe via RSS</a>
+                </p>
             </header>
             {% endblock header %}
 
@@ -75,12 +81,7 @@
 
             {% block footer %}
             <footer>
-                <p>
-                    <a href="/pages/whoami">whoami</a> ·
-                    <a href="/tags">Tags</a> ·
-                    <a href="/pages/privacy">Privacy & License</a> ·
-                    <a href="/feeds/rss.xml">Subscribe via RSS</a>
-                </p>
+                <p><i>Content on this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">CC BY-SA 4.0</a>, except where otherwise noted.</i></p>
             </footer>
             {% endblock footer %}
         </div>
