@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {{ super() }}
-{% block title %}{{ page.title }}, {{ SITENAME }}{% endblock title %}
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock title %}
 
 {% block meta %}
-    <meta name="title" content="{{ page.title }}, {{ SITENAME }}">
+    <meta name="title" content="{{ page.title }} - {{ SITENAME }}">
     {% if page.description %}
         <meta name="description" content="{{ page.description }}">
     {% else %}
@@ -20,7 +20,7 @@
 
 {% block ogtags %}
 <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
-<meta property="og:title" content="{{ page.title }}, {{ SITENAME }}">
+<meta property="og:title" content="{{ page.title }} - {{ SITENAME }}">
 <meta property="og:description" content="{{ page.description }}">
 {% if page.cover_image %}
     <meta property="og:image" content="{{ SITEURL }}/images/{{ page.cover_image }}">
