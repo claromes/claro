@@ -58,7 +58,6 @@
           {% if article.date %}
           {% endif %}
           <br>
-          <br>
           <p>
             <time id="articleDate" datetime="{{ article.locale_date }}">
               {{ article.locale_date.replace('-', '/') }}
@@ -67,6 +66,7 @@
                   <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
                 {% endfor %}
           </p>
+          <br>
         </div>
         <div class="content">
           {% if article.cover_image and article.show_cover_image == 'true' %}
