@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }}{% endblock title %}
+{% block title %}
+    {{ SITENAME }}{% if articles_page.number > 1%} / {{ articles_page.number }}{% endif %}{% endblock title %}
 
 {% block meta %}
     <meta name="title" content="{{ SITENAME }}">

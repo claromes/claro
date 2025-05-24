@@ -1,19 +1,19 @@
 {% extends "base.html" %}
-{% block title %}{{ tag }} - {{ SITENAME }}{% endblock title %}
+{% block title %}{{ tag }} / {{ SITENAME }}{% endblock title %}
 
 {% block meta %}
-    <meta name="title" content="{{ tag }} - {{ SITENAME }}">
+    <meta name="title" content="{{ tag }} / {{ SITENAME }}">
     <meta name="description" content="{{ SITEDESCRIPTION }}">
     <meta name="keywords" content="{{ tag }}">
 {% endblock meta %}
 
 {% block ogtags %}
     <meta property="og:url" content="{{ SITEURL }}/tag/{{ tag }}">
-    <meta property="og:title" content="{{ tag }} - {{ SITENAME }}">
+    <meta property="og:title" content="{{ tag }} / {{ SITENAME }}">
 {% endblock ogtags %}
 {% block content %}
     <div class="page-title">
-        <h1>{{ tag }}</h1>
+        <h1>Tag: {{ tag }}</h1>
     </div>
     {% include 'article_list.html' %}
 {% endblock content %}

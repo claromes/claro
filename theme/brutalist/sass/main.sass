@@ -1,75 +1,88 @@
 /* Brutalist Pelican Theme © 2018 Matt McManus
   Customized by claromes */
 
-@import _reset.sass
+@use 'reset'
 
-/* cyrillic-ext */
-@font-face
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 400
-  font-display: swap
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2')
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+:root
+  /* Modes */
+  --light-bg: #ffffff
+  --light-text: #000000
+  --light-text-alt: #3c3c3c
+  --light-link: #585858
+  --light-content: "dark mode"
 
-/* cyrillic */
-@font-face
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 400
-  font-display: swap
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2')
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+  --dark-bg: #000000
+  --dark-text: #ffffff
+  --dark-text-alt: #c9c9c9
+  --dark-link: #a1a1a1
+  --dark-content: "light mode"
 
-/* greek-ext */
-@font-face
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 400
-  font-display: swap
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2')
-  unicode-range: U+1F00-1FFF
+  /* Fixed */
+  --link-hover-color: #a7a7a7
+  --link-focus-color: #ffd343
 
-/* greek */
-@font-face
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 400
-  font-display: swap
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2')
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF
+  --pre-color: #1b1b1b
+  --pre-bg: #dbdbdb
+  --pre-span: #c65d09
 
-/* vietnamese */
-@font-face
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 400
-  font-display: swap
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2')
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
+  --code-color: #44475a
+  --code-bg: #dbdbdb
 
-/* latin-ext */
-@font-face
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 400
-  font-display: swap
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2')
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+/* Theme switcher */
+#modes-toggle:checked ~ #full-page
+  background: var(--dark-bg)
+  color: var(--dark-text)
 
-/* latin */
-@font-face
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 400
-  font-display: swap
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2')
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+  .modes-label
+    &::before
+      content: var(--dark-content)
 
-body
-  background: #f0f0f0
-  color: #1b1b1b
-  font-family: monospace
+  a
+    color: var(--dark-link)
+    &:visited
+      color: var(--dark-link-visited)
+    &:hover
+      color: var(--link-hover-color)
+
+  header
+    a
+      color: var(--dark-text)
+      &:visited
+        color: var(--dark-text)
+
+  .article
+    article
+      .post-header
+        h2
+          p
+            color: var(--dark-text)
+        p
+          color: var(--dark-text-alt)
+          a
+            color: var(--dark-text-alt)
+        .description
+          color: var(--dark-text)
+
+  .footer-post
+    color: var(--dark-text-alt)
+    a
+      color: var(--dark-text-alt)
+
+/* General */
+#full-page
+  background: var(--light-bg)
+  color: var(--light-text)
+  font-family: "Ubuntu Mono", monospace
+  font-size: small
+  min-height: 100vh
+
+.modes-label
+  cursor: pointer
+  text-decoration: underline
+  &:hover
+    color: var(--link-hover-color)
+  &::before
+    content: var(--light-content)
 
 .page
   max-width: 60em
@@ -87,23 +100,32 @@ body
   display: inline !important
 
 a
-  color: #6209ee
+  color: var(--light-link)
   text-decoration: underline
+  &:hover
+    color: var(--link-hover-color) !important
   &:visited
-    color: #6209ee
+    color: var(--light-link)
   &:focus
-    color: #ee3434
+    color: var(--link-focus-color) !important
 
 header
   padding: 4em 1.8em 4em 1.8em
   a
-    text-decoration: none
     padding-right: 1.3em
+    color: var(--light-text)
+    &:visited
+      color: var(--light-text)
+
 
 footer
-  margin: 5em auto 0 auto
+  margin: 4em auto 0 auto
   padding: 0 1.8em 2em 1.8em
   text-align: center
+  a
+    color: var(--light-text)
+    &:visited
+      color: var(--light-text)
 
 .articles
   text-align: left
@@ -154,28 +176,30 @@ footer
         text-align: left
     .post-header
       h2
-        font-size: 2em
+        font-size: 2em !important
         font-weight: 400
         text-align: left
         line-height: normal
         p
-          color: #1b1b1b
+          color: var(--light-text)
       p
-        font-size: 1em
+        font-size: 1em !important
         font-weight: 300
         text-align: left
-        color: #3f3f3f
+        color: var(--light-text-alt)
+        a
+          color: var(--light-text-alt)
       .description
-        font-size: 1.2em
-        color: #1b1b1b
+        font-size: 1.2em !important
+        color: var(--light-text)
 
     .post-info
       padding-bottom: 3em !important
 
     .content
       padding: 1.5em
-      font-size: 1em
-      font-weight: 300
+      font-size: 1.2em !important
+      font-weight: 400
       font-family: 'Roboto', sans-serif
       p
         padding-bottom: 0.2em
@@ -198,7 +222,7 @@ footer
         font-weight: 600
       blockquote
         padding-left: 10px
-        font-weight: 300
+        font-weight: 400
         border-left: 0.3rem solid
         margin: 0 25px 25px
         margin-bottom: 0
@@ -228,12 +252,12 @@ footer
         white-space: -pre-wrap
         white-space: -o-pre-wrap
         word-wrap: break-word
-        color: #1b1b1b
-        background-color: #dbdbdb
+        color: var(--pre-color)
+        background-color: var(--pre-bg)
         border-radius: 6px
 
       span.nv
-        color: #c65d09
+        color: var(--pre-span)
         font-weight: 400
 
       span.article-masthead-icon
@@ -249,6 +273,9 @@ footer
     font-size: .5em
   a
     text-decoration: none
+    color: var(--light-text)
+    &:visited
+      color: var(--light-text)
   a.previous
     float: left
   a.next
@@ -264,18 +291,14 @@ footer
 .footer-post
   margin-top: 1em
   padding: 0 1.8em
-  color: #3f3f3f
-
-
-.author-post
-  font-family: monospace
-  span
-    font-weight: 400
+  color: var(--light-text-alt)
+  a
+    color: var(--light-text-alt)
 
 code:not(pre code)
   padding: 0.2em 0.3em
-  color: #44475a
-  background-color: #dbdbdb
+  color: var(--code-color)
+  background-color: var(--code-bg)
   border-radius: 6px
   overflow-wrap: break-word
 
@@ -300,3 +323,6 @@ ul li ul, ul li ul li ul
 .lists
   li
     margin-bottom: 0 !important
+
+.page-404
+  font-family: "Ubuntu Mono", monospace

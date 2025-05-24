@@ -44,9 +44,9 @@
         <div class="post-header">
           <h2>
             {% if article.note == 'true' %}
-            {{ article.content|safe }}
+            Note
             {% else %}
-            {{ article.title }}
+              {{ article.title }}
             {% endif %}
           </h2>
           {% if article.note == 'true' %}
@@ -65,6 +65,7 @@
                 {% for tag in article.tags %}
                   <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
                 {% endfor %}
+                / read this article in <label title="CSS Only" for="modes-toggle" class="modes-label"></label>
           </p>
           <br>
         </div>
@@ -72,10 +73,7 @@
           {% if article.cover_image and article.show_cover_image == 'true' %}
             <img {{ article.custom_css }} src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }}">
           {% endif %}
-          {% if article.note == 'true' %}
-          {% else %}
-            {{ article.content|safe }}
-          {% endif %}
+          {{ article.content|safe }}
         </div>
 
         {% if article.share_post and article.status != 'draft' %}
@@ -83,13 +81,13 @@
           <p class="footer-post">
             Share:
             <a href="https://toot.kytta.dev/?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Mastodon" target="_blank">Mastodon</a>
-            ·
+            /
             <a href="https://bsky.app/intent/compose?text={{article.title}}%20%2D%20{{article.description}}%20{{ SITEURL }}/{{ article.url }}" title="Share on Bluesky" target="_blank">Bluesky</a>
-            ·
+            /
             <a href="https://manualdousuario.net/orbita/postar?u={{ SITEURL }}/{{ article.url }}&t={{article.title}}" title="Share on Órbita" target="_blank">Órbita</a>
-            ·
+            /
             <a href="{{article.share_post['hacker-news']}}" title="Share on Hacker News" target="_blank">Hacker News</a>
-            ·
+            /
             <a href="{{article.share_post['email']}}" title="Share via email" target="_blank">Email</a>
           </p>
         {% endif %}
