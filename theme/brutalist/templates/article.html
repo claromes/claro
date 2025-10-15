@@ -65,7 +65,6 @@
                 {% for tag in article.tags %}
                   <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
                 {% endfor %}
-                / read this article in <label title="CSS Only" for="modes-toggle" class="modes-label"></label>
           </p>
           <br>
         </div>

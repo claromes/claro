@@ -4,18 +4,10 @@
 @use 'reset'
 
 :root
-  /* Modes */
-  --light-bg: #ffffff
+  --light-bg: #ececec
   --light-text: #000000
   --light-text-alt: #3c3c3c
   --light-link: #000000
-  --light-content: "dark mode"
-
-  --dark-bg: #000000
-  --dark-text: #ffffff
-  --dark-text-alt: #c9c9c9
-  --dark-link: #ffffff
-  --dark-content: "light mode"
 
   /* Fixed */
   --link-hover-color: #3313e9
@@ -28,46 +20,6 @@
   --code-color: #44475a
   --code-bg: #dbdbdb
 
-/* Theme switcher */
-#modes-toggle:checked ~ #full-page
-  background: var(--dark-bg)
-  color: var(--dark-text)
-
-  .modes-label
-    &::before
-      content: var(--dark-content)
-
-  a
-    color: var(--dark-link)
-    &:visited
-      color: var(--dark-link-visited)
-    &:hover
-      color: var(--link-hover-color)
-
-  header
-    a
-      color: var(--dark-text)
-      &:visited
-        color: var(--dark-text)
-
-  .article
-    article
-      .post-header
-        h2
-          p
-            color: var(--dark-text)
-        p
-          color: var(--dark-text-alt)
-          a
-            color: var(--dark-text-alt)
-        .description
-          color: var(--dark-text)
-
-  .footer-post
-    color: var(--dark-text-alt)
-    a
-      color: var(--dark-text-alt)
-
 /* General */
 #full-page
   background: var(--light-bg)
@@ -75,14 +27,6 @@
   font-family: "Ubuntu Mono", monospace
   font-size: small
   min-height: 100vh
-
-.modes-label
-  cursor: pointer
-  text-decoration: underline
-  &:hover
-    color: var(--link-hover-color)
-  &::before
-    content: var(--light-content)
 
 .page
   max-width: 70em
