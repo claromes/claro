@@ -4,7 +4,7 @@ date: 2023-03-24
 slug:
 tags:
 description:
-edited: August 20, 2023
+edited: 20 Aug 2023
 note: true
 note_image:
 cover_image_credit: Claromes

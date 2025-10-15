@@ -60,8 +60,8 @@
           <br>
           <p>
             <time id="articleDate" datetime="{{ article.locale_date }}">
-              {{ article.locale_date.replace('-', '/') }}
-            </time> by <a href="/pages/whoami">{{ AUTHOR }}</a> in
+              {{ article.locale_date }}
+            </time> {% if article.edited %} (edited on <time id="articleDateEdited" datetime="{{ article.edited }}">{{ article.edited }}</time>) {% endif %} by <a href="/pages/whoami">{{ AUTHOR }}</a> in
                 {% for tag in article.tags %}
                   <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
                 {% endfor %}
