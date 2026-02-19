@@ -7,9 +7,9 @@
                         <time id="articleListDate{{ article.url }}" datetime="{{ article.locale_date }}">
                             {{ article.locale_date.replace('-', '/') }}
                         </time>
-                        {% if article.note == 'true' %}
-                            <div class="container-note">
-                                <h2><a class="pin" href="{{ SITEURL }}/{{ article.url }}"><img src="{{ SITEURL }}/images/website/emoji-pin.svg" width="12" height="12" alt="Note"></a></h2>
+                        {% if article.pinned == 'true' %}
+                            <div class="container-pinned">
+                                <h2> ∙ <a class="pin" href="{{ SITEURL }}/{{ article.url }}">pinned</a></h2>
                             </div>
                         {% else %}
                             <h2>
@@ -19,7 +19,7 @@
                         {% endif %}
                     </div>
 
-                    {% if article.note == 'true' %}
+                    {% if article.pinned == 'true' %}
                     <div role="article">
                         <div class="article">
                             <div class="content">

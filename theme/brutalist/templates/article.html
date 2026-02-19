@@ -43,13 +43,13 @@
       <article>
         <div class="post-header">
           <h2>
-            {% if article.note == 'true' %}
-            Note
+            {% if article.pinned == 'true' %}
+            Pinned post
             {% else %}
               {{ article.title }}
             {% endif %}
           </h2>
-          {% if article.note == 'true' %}
+          {% if article.pinned == 'true' %}
           {% else %}
           <p class="description">
             {{ article.description }}
@@ -61,7 +61,7 @@
           <p>
             <time id="articleDate" datetime="{{ article.locale_date }}">
               {{ article.locale_date }}
-            </time> {% if article.edited %} (edited on <time id="articleDateEdited" datetime="{{ article.edited }}">{{ article.edited }}</time>) {% endif %} by <a href="/pages/whoami">{{ AUTHOR }}</a> in
+            </time> {% if article.edited %} (edited on <time id="articleDateEdited" datetime="{{ article.edited }}">{{ article.edited }}</time>) {% endif %} in
                 {% for tag in article.tags %}
                   <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
                 {% endfor %}
@@ -73,6 +73,8 @@
             <img {{ article.custom_css }} src="{{ SITEURL }}/images/{{ article.cover_image }}" alt="{{ article.title }}" title="by {{ article.cover_image_credit }}">
           {% endif %}
           {{ article.content|safe }}
+
+          <p class="author">—<a href="/pages/whoami">Clarissa</a></p>
         </div>
 
         {% if article.share_post and article.status != 'draft' %}
