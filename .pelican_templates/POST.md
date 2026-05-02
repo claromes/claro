@@ -6,7 +6,7 @@ tags:
 description:
 edited: 20 Aug 2023
 pinned: true
-cover_image_credit: Claromes
+cover_image_credit:
 show_cover_image: false
 status: published
 custom_css: style="border-left: #31322d 4px solid;"

@@ -22,7 +22,29 @@ Its templates are designed for a personal blog with:
 - `theme/claro/templates/` contains the Jinja templates used by Pelican
 - `theme/claro/static/css/main.css` contains the compiled theme styles
 - `theme/claro/sass/` contains the source Sass files
-- `TEMPLATE.md` serves as the writing template for new posts
+- `.pelican_templates/POST.md` serves as the writing template for new posts
+- `.pelican_templates/pelicanconf.py` contains the base Pelican settings used by the project
+- `.pelican_templates/publishconf.py` contains the publish-time overrides, such as the production `SITEURL` and `RELATIVE_URLS = False`
+
+## Assets
+
+According to `.pelican_templates/pelicanconf.py`, Pelican uses `PATH = "content"` and `STATIC_PATHS = ["images", "extras/_redirects"]`.
+
+- Store `SITEIMAGE` and `FAVICON` files in `content/images/`
+- Set `SITEIMAGE` and `FAVICON` in `.pelican_templates/pelicanconf.py` using the filename only
+- In the generated site, those files are exposed under `/images/`
+
+For example, if `FAVICON = "favicon.png"` and `SITEIMAGE = "cover.png"`, the theme will resolve them from `/images/favicon.png` and `/images/cover.png`
+
+## Pelican Configuration
+
+The base configuration in `.pelican_templates/pelicanconf.py` enables these plugins:
+
+- `gzip_cache`
+- `share_post`
+- `sitemap`
+
+The sitemap plugin is also configured there with article, page, and index priorities and daily change frequencies.
 
 ## Development
 
