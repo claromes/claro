@@ -26,6 +26,10 @@ Its templates are designed for a personal blog with:
 - `.pelican_templates/pelicanconf.py` contains the base Pelican settings used by the project
 - `.pelican_templates/publishconf.py` contains the publish-time overrides, such as the production `SITEURL` and `RELATIVE_URLS = False`
 
+## Post template note
+
+`.pelican_templates/POST.md` includes the `custom_css` field because the article template injects it directly into the cover image element. This makes it possible to apply one-off inline styling, such as borders, width adjustments, or alignment tweaks for a specific post image, without changing the global theme stylesheet.
+
 ## Assets
 
 According to `.pelican_templates/pelicanconf.py`, Pelican uses `PATH = "content"` and `STATIC_PATHS = ["images", "extras/_redirects"]`.
