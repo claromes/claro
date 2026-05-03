@@ -8,6 +8,22 @@ DEFAULT_DATE_FORMAT = "%d %b %Y"
 
 FAVICON = ""
 FIRST_NAME = ""
+AUTHOR_DISPLAY_NAME = ""
+AUTHOR_PAGE_URL = "/pages/whoami"
+HEADER_TITLE = ""
+FEDIVERSE_CREATOR = ""
+
+MENUITEMS = (
+    ("/index", "/"),
+    ("/whoami", "/pages/whoami"),
+    ("/tags", "/tags"),
+    ("/subscribe", "/pages/subscribe"),
+)
+
+SCHEMA_TYPE = "Person"
+SCHEMA_ALTERNATE_NAME = ""
+SCHEMA_JOB_TITLE = ""
+SCHEMA_URL = ""
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False

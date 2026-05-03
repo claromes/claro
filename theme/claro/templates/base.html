@@ -52,7 +52,9 @@
             {% block ogtags %}
             {% endblock ogtags %}
             <!-- fediverse tag -->
-            <meta name="fediverse:creator" content="@claromes@ruby.social">
+            {% if FEDIVERSE_CREATOR %}
+            <meta name="fediverse:creator" content="{{ FEDIVERSE_CREATOR }}">
+            {% endif %}
             <!-- favicon -->
             {% if FAVICON %}
             <link rel="icon" type="image/png" sizes="192x192" href="{{ SITEURL }}/images/{{ FAVICON }}">
@@ -68,12 +70,11 @@
             <div class="page" role="main">
                 {% block header %}
                 <header>
-                    <h1 hidden>claromes.com</h1>
+                    <h1 hidden>{{ HEADER_TITLE if HEADER_TITLE else SITENAME }}</h1>
                     <nav>
-                        <a href="/">/index</a>
-                        <a href="/pages/whoami">/whoami</a>
-                        <a href="/tags">/tags</a>
-                        <a href="/pages/subscribe">/subscribe</a>
+                        {% for title, link in MENUITEMS %}
+                            <a href="{{ link }}">{{ title }}</a>
+                        {% endfor %}
                     </nav>
                 </header>
                 {% endblock header %}
@@ -90,14 +91,16 @@
             </div>
         </div>
         <!-- schema -->
+        {% if SCHEMA_TYPE and SCHEMA_URL %}
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org/",
-                "@type": "Person",
-                "alternateName":"claromes",
-                "jobTitle": "Software developer",
-                "url": "https://claromes.com"
+                "@type": "{{ SCHEMA_TYPE }}",
+                "alternateName":"{{ SCHEMA_ALTERNATE_NAME }}",
+                "jobTitle": "{{ SCHEMA_JOB_TITLE }}",
+                "url": "{{ SCHEMA_URL }}"
             }
         </script>
+        {% endif %}
     </body>
 </html>

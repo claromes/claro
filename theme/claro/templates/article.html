@@ -74,7 +74,11 @@
           {% endif %}
           {{ article.content|safe }}
 
-          <p class="author">—<a href="/pages/whoami">Clarissa</a></p>
+          {% if AUTHOR_DISPLAY_NAME and AUTHOR_PAGE_URL %}
+            <p class="author">—<a href="{{ AUTHOR_PAGE_URL }}">{{ AUTHOR_DISPLAY_NAME }}</a></p>
+          {% elif AUTHOR_DISPLAY_NAME %}
+            <p class="author">—{{ AUTHOR_DISPLAY_NAME }}</p>
+          {% endif %}
         </div>
 
         {% if article.share_post and article.status != 'draft' %}
