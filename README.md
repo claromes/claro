@@ -6,8 +6,8 @@ Claro is a custom Pelican theme built for [claromes.com](https://claromes.com). 
 
 The theme combines a warm light color palette with two type systems:
 
-- `iA Writer Quattro` for navigation, metadata, and interface elements
-- `Roboto` for article content
+- [`iA Writer Quattro`](https://github.com/iaolo/iA-Fonts) for navigation, metadata, and interface elements
+- [`Roboto`](https://github.com/googlefonts/roboto-3-classic) for article content
 
 Its templates are designed for a personal blog with:
 
